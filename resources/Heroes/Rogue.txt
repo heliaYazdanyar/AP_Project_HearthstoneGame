@@ -1,0 +1,1 @@
+{name:'Rogue',hp:'30',heroPower:'StealMaster'}

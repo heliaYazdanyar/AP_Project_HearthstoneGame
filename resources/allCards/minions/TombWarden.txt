@@ -1,0 +1,1 @@
+{'name':'TombWarden','type':'Minion','rarity':'Rare','className':'Neutral','manaCost':8,'HP':6,'attack':3,'finalHP':6,'taunt':true,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'summon a copy of this minion','permanentCauseExplain':'','price':23}

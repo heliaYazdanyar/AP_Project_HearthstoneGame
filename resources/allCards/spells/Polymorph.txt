@@ -1,0 +1,1 @@
+{'name':'Polymorph','type':'Spell','rarity':'','manaCost':4,'className':'Mage','price':12,'drawCard':false,'manaBurn':false,'summon':false,'dealDamage':false,'discover':false,'changeMinion':true,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':'transform a minion to 1/1 sheep'}

@@ -1,0 +1,1 @@
+{'name':'HolyWater','type':'Spell','rarity':'Rare','manaCost':5,'className':'Neutral','price':16,'drawCard':false,'manaBurn':false,'summon':false,'dealDamage':true,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':4,'damageCondition':'minion-if that kills it add it to your hand','changeMinionExp':''}

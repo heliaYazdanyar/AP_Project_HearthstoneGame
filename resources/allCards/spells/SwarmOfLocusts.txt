@@ -1,0 +1,1 @@
+{'name':'SwarmOfLocusts','type':'Spell','rarity':'Rare','manaCost':6,'className':'Neutral','price':17,'drawCard':false,'manaBurn':false,'summon':true,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'seven 1/1 Locusts with Rush','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

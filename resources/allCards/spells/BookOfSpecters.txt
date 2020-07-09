@@ -1,0 +1,1 @@
+{'name':'BookOfSpecters','type':'Spell','rarity':'Epic','manaCost':2,'className':'Neutral','price':13,'drawCard':true,'manaBurn':false,'summon':false,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

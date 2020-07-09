@@ -1,0 +1,1 @@
+{'name':'WickerflameBurnbristle','type':'Minion','rarity':'Legendary','className':'Rogue','manaCost':3,'HP':2,'attack':2,'finalHP':2,'taunt':true,'battlecry':false,'lifeSteal':true,'rush':false,'permanentCause':false,'battlecryExplain':'','permanentCauseExplain':'','price':20}

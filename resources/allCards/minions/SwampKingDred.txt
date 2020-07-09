@@ -1,0 +1,1 @@
+{'name':'SwampKingDred','type':'Minion','rarity':'Legendary','className':'Hunter','manaCost':7,'HP':9,'attack':9,'finalHP':9,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'After your opponent plays a minion attack it','price':25}

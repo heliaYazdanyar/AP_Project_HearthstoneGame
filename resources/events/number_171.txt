@@ -1,0 +1,7 @@
+player: hey12->FriendlySmith was played.
+player: kingTogwaggle->BearShark was played.
+player: hey12->Ashbringer was played.
+player: hey12->CurioCollector was played.
+player: kingTogwaggle->SecurityRover was played.
+player: hey12->WickerflameBurnbristle was played.
+player: hey12->SecurityRover was played.

@@ -1,0 +1,3 @@
+player: hey12->BearShark was played.
+player: kingTogwaggle->KabalTalonpriest was played.
+player: kingTogwaggle->HighPriestAmet was played.

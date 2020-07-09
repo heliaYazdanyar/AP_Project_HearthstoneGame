@@ -1,0 +1,1 @@
+{'name':'FeastOfSouls','type':'Spell','rarity':'Rare','manaCost':2,'className':'Neutral','price':14,'drawCard':true,'manaBurn':false,'summon':false,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'Draw a card for each minion','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

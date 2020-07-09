@@ -1,0 +1,75 @@
+USER:heli
+CREATED_ADD:2020/06/25 13:34:49
+PASSWORD:222
+
+click_menu_button:2020/06/25 13:34:50>>panel:Mage
+
+GoTo:2020/06/25 13:34:51>>MainMenu
+
+ClickButton:2020/06/25 13:34:56>>shop
+
+buy_card:2020/06/25 13:36:19>>StrengthInNumbers
+
+click_menu_button:2020/06/25 13:36:19>>panel:Mage
+
+sell_card:2020/06/25 13:36:29>>RockpoolHunter
+
+click_menu_button:2020/06/25 13:36:29>>panel:Mage
+
+GoTo:2020/06/25 13:36:32>>MainMenu
+
+ClickButton:2020/06/25 13:36:34>>play
+
+ClickButton:2020/06/25 13:36:38>>collection
+
+mana_filter:2020/06/25 13:36:42>>mana:10
+
+click_menu_button:2020/06/25 13:36:44>>panel:Mage
+
+click_menu_button:2020/06/25 13:36:44>>panel:Mage
+
+build_new_deck:2020/06/25 13:36:56>>name:deck1_hero:mage
+
+mana_filter:2020/06/25 13:38:15>>mana:10
+
+click_menu_button:2020/06/25 13:38:15>>panel:Priest
+
+mana_filter:2020/06/25 13:38:22>>mana:10
+
+click_search_button:2020/06/25 13:38:22>>search for:polymo
+
+click_menu_button:2020/06/25 13:38:22>>panel:Search
+
+mana_filter:2020/06/25 13:38:47>>mana:10
+
+click_search_button:2020/06/25 13:38:47>>search for:blink
+
+click_menu_button:2020/06/25 13:38:47>>panel:Search
+
+mana_filter:2020/06/25 13:39:06>>mana:10
+
+click_menu_button:2020/06/25 13:39:06>>panel:Neutral
+
+mana_filter:2020/06/25 13:39:11>>mana:4
+
+click_menu_button:2020/06/25 13:39:11>>panel:Mage
+
+click_menu_button:2020/06/25 13:39:11>>panel:Neutral
+
+mana_filter:2020/06/25 13:39:43>>mana:4
+
+click_menu_button:2020/06/25 13:39:43>>panel:Mage
+
+mana_filter:2020/06/25 13:39:48>>mana:10
+
+click_menu_button:2020/06/25 13:39:50>>panel:Mage
+
+click_menu_button:2020/06/25 13:39:50>>panel:Mage
+
+mana_filter:2020/06/25 13:42:50>>mana:10
+
+GoTo:2020/06/25 13:42:50>>MainMenu
+
+ClickButton:2020/06/25 13:42:52>>status
+
+GoTo:2020/06/25 13:42:56>>MainMenu

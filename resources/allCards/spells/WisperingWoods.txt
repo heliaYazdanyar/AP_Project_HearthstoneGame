@@ -1,0 +1,1 @@
+{'name':'WisperingWoods','type':'Spell','rarity':'Epic','manaCost':4,'className':'Neutral','price':17,'drawCard':false,'manaBurn':false,'summon':true,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'a 1/1 wisp for each card in your hand','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

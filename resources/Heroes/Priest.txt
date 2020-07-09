@@ -1,0 +1,1 @@
+{name:'Priest',hp:'30',heroPower:'Heal'}

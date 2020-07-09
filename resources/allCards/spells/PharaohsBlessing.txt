@@ -1,0 +1,1 @@
+{'name':'PharaohsBlessing','type':'Spell','rarity':'Rare','manaCost':6,'className':'Neutral','price':19,'drawCard':false,'manaBurn':false,'summon':false,'dealDamage':false,'discover':false,'changeMinion':true,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':'give a minion +4/+4 Divine shield and taunt'}

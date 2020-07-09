@@ -1,0 +1,7 @@
+player: hey12->Polymorph was played.
+player: kingTogwaggle->BearShark was played.
+player: hey12->BearShark was played.
+player: kingTogwaggle->BearShark was played.
+player: hey12->SecurityRover was played.
+player: kingTogwaggle->Polymorph was played.
+player: hey12->CurioCollector was played.

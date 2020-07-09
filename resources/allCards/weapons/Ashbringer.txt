@@ -1,0 +1,1 @@
+{'name':'Ashbringer','type':'Weapon','rarity':'','manaCost':5,'className':'Neutral','attack':5,'shield':3,'price':10}

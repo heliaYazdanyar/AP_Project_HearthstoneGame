@@ -1,0 +1,1 @@
+{'name':'KabalTalonpriest','type':'Minion','rarity':'Common','className':'Priest','manaCost':3,'HP':4,'attack':3,'finalHP':4,'taunt':false,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'give a friendly minion +3 health','permanentCauseExplain':'','price':18}

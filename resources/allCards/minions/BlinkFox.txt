@@ -1,0 +1,1 @@
+{'name':'BlinkFox','type':'Minion','rarity':'','className':'Neutral','manaCost':3,'HP':3,'attack':3,'finalHP':3,'taunt':false,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'add a random card to your hand from your opponents class','permanentCauseExplain':'','price':15}

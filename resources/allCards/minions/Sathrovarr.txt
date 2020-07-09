@@ -1,0 +1,1 @@
+{'name':'Sathrovarr','type':'Minion','rarity':'Legendary','className':'Neutral','manaCost':9,'HP':5,'attack':5,'finalHP':5,'taunt':false,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'choose a friendly minion add a copy of it to your hand and deck and battlefield','permanentCauseExplain':'','price':25}

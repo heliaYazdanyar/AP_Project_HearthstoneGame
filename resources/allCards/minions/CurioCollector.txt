@@ -1,0 +1,1 @@
+{'name':'CurioCollector','type':'Minion','rarity':'Rare','className':'Neutral','manaCost':5,'HP':4,'attack':4,'finalHP':4,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'whenever you draw a card gain +1/+1','price':18}

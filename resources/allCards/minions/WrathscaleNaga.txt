@@ -1,0 +1,1 @@
+{'name':'WrathscaleNaga','type':'Minion','rarity':'Epic','className':'Neutral','manaCost':3,'HP':1,'attack':3,'finalHP':1,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'after a friendly minion dies deal 3 damage to a random enemy','price':18}

@@ -1,0 +1,4 @@
+player: kingTogwaggle->KabalTalonpriest was played.
+player: hey12->FriendlySmith was played.
+player: kingTogwaggle->HighPriestAmet was played.
+player: hey12->Ashbringer was played.

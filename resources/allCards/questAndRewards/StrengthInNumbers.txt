@@ -1,0 +1,1 @@
+{'name':'StrengthInNumbers','type':'QuestAndReward','rarity':'Common','manaCost':1,'className':'Neutral','price':15,'quest':'Spend 10 mana on minions','questSpendMana':true,'manaSpend':10,'reward':'summon a minion from your deck'}

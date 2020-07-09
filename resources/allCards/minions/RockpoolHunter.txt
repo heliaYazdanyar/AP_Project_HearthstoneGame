@@ -1,0 +1,1 @@
+{'name':'RockpoolHunter','type':'Minion','rarity':'Common','className':'Hunter','manaCost':2,'HP':3,'attack':2,'finalHP':3,'taunt':false,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'','permanentCauseExplain':'','price':19}

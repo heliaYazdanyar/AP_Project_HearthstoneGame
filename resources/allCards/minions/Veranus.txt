@@ -1,0 +1,1 @@
+{'name':'Veranus','type':'Minion','rarity':'','className':'Neytral','manaCost':7,'HP':6,'attack':7,'finalHP':6,'taunt':false,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'change hp of all enemy minions to 1','permanentCauseExplain':'','price':20}

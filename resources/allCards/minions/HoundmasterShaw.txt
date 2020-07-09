@@ -1,0 +1,1 @@
+{'name':'HoundmasterShaw','type':'Minion','rarity':'Legendary','className':'Neutral','manaCost':4,'HP':6,'attack':3,'finalHP':6,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':true,'permanentCause':false,'battlecryExplain':'','permanentCauseExplain':'','price':20}

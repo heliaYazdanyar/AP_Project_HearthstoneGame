@@ -1,0 +1,1 @@
+{'name':'Dreadscale','type':'Minion','rarity':'Legendary','className':'Warlock','manaCost':3,'HP':2,'attack':4,'finalHP':2,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'at the end of your turn deal 1 damage to all enemy minions','price':15}

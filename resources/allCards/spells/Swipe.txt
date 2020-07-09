@@ -1,0 +1,1 @@
+{'name':'Swipe','type':'Spell','rarity':'','manaCost':4,'className':'Neutral','price':17,'drawCard':false,'manaBurn':false,'summon':false,'dealDamage':true,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':4,'damageCondition':'4 damage to an enemy and 1 damage to every other enemy','changeMinionExp':''}

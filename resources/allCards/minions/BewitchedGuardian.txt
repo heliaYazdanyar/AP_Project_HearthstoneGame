@@ -1,0 +1,1 @@
+{'name':'BewitchedGuardian','type':'Minion','rarity':'Rare','className':'Neutral','manaCost':5,'HP':1,'attack':4,'finalHP':1,'taunt':true,'battlecry':true,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'gain +1 health for each card in your hand','permanentCauseExplain':'','price':13}

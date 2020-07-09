@@ -1,0 +1,1 @@
+{'name':'Treant','type':'Minion','rarity':'','className':'Neutral','manaCost':2,'HP':2,'attack':2,'finalHP':2,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'','permanentCauseExplain':'','price':11}

@@ -1,0 +1,1 @@
+{'name':'ManaBurn','type':'Spell','rarity':'Common','manaCost':1,'className':'Neutral','price':10,'drawCard':false,'manaBurn':true,'summon':false,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

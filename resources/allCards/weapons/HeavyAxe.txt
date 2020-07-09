@@ -1,0 +1,1 @@
+{'name':'HeavyAxe','type':'Weapon','rarity':'','manaCost':1,'className':'Neutral','attack':1,'shield':3,'price':17}

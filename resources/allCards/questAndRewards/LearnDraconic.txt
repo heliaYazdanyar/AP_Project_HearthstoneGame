@@ -1,0 +1,1 @@
+{'name':'LearnDraconic','type':'QuestAndReward','rarity':'Common','manaCost':1,'className':'Neutral','price':16,'quest':'spend 8 mana on spells','questSpendMana':true,'manaSpend':8,'reward':'summon a 6/6 dragon'}

@@ -1,0 +1,1 @@
+{'name':'Mech','type':'Minion','rarity':'','className':'Neutral','manaCost':3,'HP':2,'attack':3,'finalHP':2,'taunt':true,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':false,'battlecryExplain':'','permanentCauseExplain':'','price':15}

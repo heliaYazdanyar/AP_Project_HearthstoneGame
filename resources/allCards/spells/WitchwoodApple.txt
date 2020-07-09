@@ -1,0 +1,1 @@
+{'name':'WitchwoodApple','type':'Spell','rarity':'Common','manaCost':2,'className':'Neutral','price':16,'drawCard':true,'manaBurn':false,'summon': false,'dealDamage': false,'discover': false,'changeMinion': false,'divineShield': false,'summonWhat':'','drawCardExp':'three 2/2 Treants to your hand','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

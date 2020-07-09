@@ -1,0 +1,1 @@
+{'name':'ForestGuide','type':'Minion','rarity':'Rare','className':'Neutral','manaCost':4,'HP':6,'attack':1,'finalHP':6,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'at the end of your turn both players draw a card','price':16}

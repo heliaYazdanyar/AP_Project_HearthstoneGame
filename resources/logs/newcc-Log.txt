@@ -1,0 +1,17 @@
+USER:newcc
+CREATED_ADD:2020/06/30 17:18:47
+PASSWORD:11
+
+click_menu_button:2020/06/30 17:18:47>>panel:Mage
+
+GoTo:2020/06/30 17:18:49>>MainMenu
+
+ClickButton:2020/06/30 17:18:51>>collection
+
+mana_filter:2020/06/30 17:18:54>>mana:10
+
+click_menu_button:2020/06/30 17:18:56>>panel:Mage
+
+click_menu_button:2020/06/30 17:18:56>>panel:Mage
+
+build_new_deck:2020/06/30 17:19:02>>name:hello_hero:Mage

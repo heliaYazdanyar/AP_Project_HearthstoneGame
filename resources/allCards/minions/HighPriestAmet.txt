@@ -1,0 +1,1 @@
+{'name':'HighPriestAmet','type':'Minion','rarity':'Legendary','className':'Priest','manaCost':4,'HP':7,'attack':2,'finalHP':7,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'whenever you summon a minion set its health equal to this minion','price':20}

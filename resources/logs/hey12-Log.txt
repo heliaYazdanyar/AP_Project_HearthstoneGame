@@ -1,0 +1,5235 @@
+USER:hey12
+CREATED_ADD:2020/06/30 17:21:30
+PASSWORD:12
+
+click_menu_button:2020/06/30 17:21:30>>panel:Mage
+
+GoTo:2020/06/30 17:21:32>>MainMenu
+
+ClickButton:2020/06/30 17:21:35>>collection
+
+mana_filter:2020/06/30 17:21:37>>mana:10
+
+click_menu_button:2020/06/30 17:21:39>>panel:Mage
+
+click_menu_button:2020/06/30 17:21:39>>panel:Warlock
+
+build_new_deck:2020/06/30 17:21:48>>name:hey11_hero:mage
+
+click_menu_button:2020/06/30 17:21:49>>panel:Mage
+
+add_card_toDeck:2020/06/30 17:21:53>>Polymorph
+
+click_menu_button:2020/06/30 17:21:54>>panel:Mage
+
+add_card_toDeck:2020/06/30 17:21:55>>BearShark
+
+click_menu_button:2020/06/30 17:21:56>>panel:Mage
+
+mana_filter:2020/06/30 17:21:58>>mana:10
+
+click_menu_button:2020/06/30 17:21:58>>panel:Priest
+
+mana_filter:2020/06/30 17:22:02>>mana:10
+
+click_menu_button:2020/06/30 17:22:02>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:22:04>>Sathrovarr
+
+click_menu_button:2020/06/30 17:22:05>>panel:Mage
+
+mana_filter:2020/06/30 17:22:08>>mana:10
+
+click_menu_button:2020/06/30 17:22:08>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:22:09>>TombWarden
+
+click_menu_button:2020/06/30 17:22:10>>panel:Mage
+
+mana_filter:2020/06/30 17:22:12>>mana:10
+
+click_menu_button:2020/06/30 17:22:12>>panel:Neutral
+
+click_card:2020/06/30 17:22:17>>go_to_shop
+
+buy_card:2020/06/30 17:22:34>>SecurityRover
+
+click_menu_button:2020/06/30 17:22:36>>panel:Mage
+
+buy_card:2020/06/30 17:22:44>>CurioCollector
+
+click_menu_button:2020/06/30 17:22:45>>panel:Mage
+
+GoTo:2020/06/30 17:22:50>>MainMenu
+
+ClickButton:2020/06/30 17:22:52>>collection
+
+mana_filter:2020/06/30 17:22:57>>mana:10
+
+click_menu_button:2020/06/30 17:22:57>>panel:Hunter
+
+mana_filter:2020/06/30 17:23:00>>mana:10
+
+click_menu_button:2020/06/30 17:23:00>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:23:14>>SecurityRover
+
+click_menu_button:2020/06/30 17:23:15>>panel:Mage
+
+mana_filter:2020/06/30 17:23:18>>mana:10
+
+click_menu_button:2020/06/30 17:23:18>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:23:20>>CurioCollector
+
+click_menu_button:2020/06/30 17:23:21>>panel:Mage
+
+mana_filter:2020/06/30 17:23:24>>mana:10
+
+click_menu_button:2020/06/30 17:23:24>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:23:27>>SecurityRover
+
+click_menu_button:2020/06/30 17:23:28>>panel:Mage
+
+logIn:2020/06/30 17:28:55>>player logged in.
+
+click_menu_button:2020/06/30 17:28:55>>panel:Mage
+
+GoTo:2020/06/30 17:28:56>>MainMenu
+
+ClickButton:2020/06/30 17:28:57>>collection
+
+click_deck_button:2020/06/30 17:28:59>>hey11
+
+mana_filter:2020/06/30 17:29:01>>mana:10
+
+click_menu_button:2020/06/30 17:29:03>>panel:Mage
+
+click_menu_button:2020/06/30 17:29:03>>panel:Mage
+
+add_card_toDeck:2020/06/30 17:29:04>>Polymorph
+
+add_card_toDeck:2020/06/30 17:29:07>>BearShark
+
+mana_filter:2020/06/30 17:29:09>>mana:10
+
+GoTo:2020/06/30 17:29:09>>MainMenu
+
+ClickButton:2020/06/30 17:29:11>>collection
+
+logIn:2020/06/30 17:30:07>>player logged in.
+
+click_menu_button:2020/06/30 17:30:07>>panel:Mage
+
+GoTo:2020/06/30 17:30:08>>MainMenu
+
+ClickButton:2020/06/30 17:30:10>>collection
+
+click_deck_button:2020/06/30 17:30:11>>hey11
+
+mana_filter:2020/06/30 17:30:14>>mana:10
+
+click_menu_button:2020/06/30 17:30:16>>panel:Mage
+
+click_menu_button:2020/06/30 17:30:16>>panel:Mage
+
+add_card_toDeck:2020/06/30 17:30:17>>Polymorph
+
+add_card_toDeck:2020/06/30 17:30:21>>Polymorph
+
+logIn:2020/06/30 17:30:46>>player logged in.
+
+click_menu_button:2020/06/30 17:30:47>>panel:Mage
+
+GoTo:2020/06/30 17:30:48>>MainMenu
+
+ClickButton:2020/06/30 17:30:49>>collection
+
+mana_filter:2020/06/30 17:30:53>>mana:10
+
+click_menu_button:2020/06/30 17:30:55>>panel:Mage
+
+click_menu_button:2020/06/30 17:30:55>>panel:Mage
+
+click_deck_button:2020/06/30 17:30:59>>hey11
+
+add_card_toDeck:2020/06/30 17:31:02>>Polymorph
+
+add_card_toDeck:2020/06/30 17:31:04>>BearShark
+
+mana_filter:2020/06/30 17:31:08>>mana:10
+
+click_menu_button:2020/06/30 17:31:08>>panel:Hunter
+
+mana_filter:2020/06/30 17:31:15>>mana:10
+
+click_menu_button:2020/06/30 17:31:15>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:31:17>>Sathrovarr
+
+mana_filter:2020/06/30 17:31:21>>mana:10
+
+click_menu_button:2020/06/30 17:31:21>>panel:Hunter
+
+logIn:2020/06/30 17:34:46>>player logged in.
+
+click_menu_button:2020/06/30 17:34:47>>panel:Mage
+
+GoTo:2020/06/30 17:34:48>>MainMenu
+
+ClickButton:2020/06/30 17:34:49>>collection
+
+mana_filter:2020/06/30 17:34:52>>mana:10
+
+click_menu_button:2020/06/30 17:34:54>>panel:Mage
+
+click_menu_button:2020/06/30 17:34:54>>panel:Mage
+
+click_deck_button:2020/06/30 17:34:55>>hey11
+
+add_card_toDeck:2020/06/30 17:34:58>>Polymorph
+
+click_menu_button:2020/06/30 17:34:58>>panel:Mage
+
+mana_filter:2020/06/30 17:35:03>>mana:10
+
+click_menu_button:2020/06/30 17:35:03>>panel:Neutral
+
+logIn:2020/06/30 17:35:30>>player logged in.
+
+click_menu_button:2020/06/30 17:35:31>>panel:Mage
+
+GoTo:2020/06/30 17:35:32>>MainMenu
+
+ClickButton:2020/06/30 17:35:34>>collection
+
+click_deck_button:2020/06/30 17:35:35>>hey11
+
+select_deck:2020/06/30 17:35:37>>hey11
+
+click_menu_button:2020/06/30 17:35:37>>panel:Mage
+
+change_Deck_name:2020/06/30 17:35:38>>hey11changed to hey11
+
+build_new_deck:2020/06/30 17:35:50>>name:deev_hero:priest
+
+click_menu_button:2020/06/30 17:35:50>>panel:Mage
+
+mana_filter:2020/06/30 17:35:54>>mana:10
+
+click_menu_button:2020/06/30 17:35:56>>panel:Mage
+
+click_menu_button:2020/06/30 17:35:56>>panel:Hunter
+
+mana_filter:2020/06/30 17:36:00>>mana:10
+
+click_menu_button:2020/06/30 17:36:00>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:01>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:02>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:04>>KabalTalonpriest
+
+click_menu_button:2020/06/30 17:36:05>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:06>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:07>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:07>>KabalTalonpriest
+
+click_menu_button:2020/06/30 17:36:08>>panel:Priest
+
+mana_filter:2020/06/30 17:36:09>>mana:10
+
+click_menu_button:2020/06/30 17:36:09>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:14>>SecurityRover
+
+click_menu_button:2020/06/30 17:36:15>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:16>>Sathrovarr
+
+click_menu_button:2020/06/30 17:36:17>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:18>>TombWarden
+
+click_menu_button:2020/06/30 17:36:19>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:21>>CurioCollector
+
+click_menu_button:2020/06/30 17:36:22>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:31>>CurioCollector
+
+click_menu_button:2020/06/30 17:36:32>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:33>>Sathrovarr
+
+click_menu_button:2020/06/30 17:36:34>>panel:Neutral
+
+mana_filter:2020/06/30 17:36:37>>mana:10
+
+click_menu_button:2020/06/30 17:36:37>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:38>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:39>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:39>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:40>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:40>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:41>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:41>>KabalTalonpriest
+
+click_menu_button:2020/06/30 17:36:42>>panel:Priest
+
+add_card_toDeck:2020/06/30 17:36:42>>KabalTalonpriest
+
+click_menu_button:2020/06/30 17:36:43>>panel:Priest
+
+remove_card_fromDeck:2020/06/30 17:36:45>>HighPriestAmet
+
+click_menu_button:2020/06/30 17:36:46>>panel:Priest
+
+mana_filter:2020/06/30 17:36:49>>mana:10
+
+click_menu_button:2020/06/30 17:36:49>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:36:54>>SecurityRover
+
+mana_filter:2020/06/30 17:37:01>>mana:10
+
+GoTo:2020/06/30 17:37:01>>MainMenu
+
+ClickButton:2020/06/30 17:37:03>>collection
+
+mana_filter:2020/06/30 17:37:08>>mana:10
+
+GoTo:2020/06/30 17:37:08>>MainMenu
+
+ClickButton:2020/06/30 17:37:10>>shop
+
+GoTo:2020/06/30 17:37:13>>MainMenu
+
+ClickButton:2020/06/30 17:37:14>>collection
+
+mana_filter:2020/06/30 17:37:15>>mana:10
+
+GoTo:2020/06/30 17:37:15>>MainMenu
+
+ClickButton:2020/06/30 17:37:16>>play
+
+logIn:2020/06/30 17:39:29>>player logged in.
+
+click_menu_button:2020/06/30 17:39:29>>panel:Mage
+
+GoTo:2020/06/30 17:39:31>>MainMenu
+
+ClickButton:2020/06/30 17:39:32>>collection
+
+click_deck_button:2020/06/30 17:39:33>>deev
+
+change_Deck_name:2020/06/30 17:39:37>>deevchanged to deev
+
+build_new_deck:2020/06/30 17:39:49>>name:metalica_hero:hunter
+
+click_menu_button:2020/06/30 17:39:49>>panel:Mage
+
+mana_filter:2020/06/30 17:39:58>>mana:10
+
+click_menu_button:2020/06/30 17:40:00>>panel:Mage
+
+click_menu_button:2020/06/30 17:40:00>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:40:02>>RockpoolHunter
+
+logIn:2020/06/30 17:56:01>>player logged in.
+
+click_menu_button:2020/06/30 17:56:01>>panel:Mage
+
+GoTo:2020/06/30 17:56:03>>MainMenu
+
+ClickButton:2020/06/30 17:56:04>>collection
+
+click_deck_button:2020/06/30 17:56:05>>metalica
+
+mana_filter:2020/06/30 17:56:09>>mana:10
+
+click_menu_button:2020/06/30 17:56:12>>panel:Mage
+
+click_menu_button:2020/06/30 17:56:12>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:13>>SwampKingDred
+
+click_menu_button:2020/06/30 17:56:14>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:15>>RockpoolHunter
+
+click_menu_button:2020/06/30 17:56:16>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:16>>SwampKingDred
+
+click_menu_button:2020/06/30 17:56:17>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:18>>RockpoolHunter
+
+click_menu_button:2020/06/30 17:56:19>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:21>>SwampKingDred
+
+click_menu_button:2020/06/30 17:56:22>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:56:22>>RockpoolHunter
+
+click_menu_button:2020/06/30 17:56:23>>panel:Hunter
+
+mana_filter:2020/06/30 17:56:26>>mana:10
+
+click_menu_button:2020/06/30 17:56:26>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:28>>Sathrovarr
+
+click_menu_button:2020/06/30 17:56:29>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:30>>TombWarden
+
+click_menu_button:2020/06/30 17:56:31>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:34>>CurioCollector
+
+click_menu_button:2020/06/30 17:56:35>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:37>>SecurityRover
+
+click_menu_button:2020/06/30 17:56:38>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:41>>CurioCollector
+
+click_menu_button:2020/06/30 17:56:42>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:44>>Sathrovarr
+
+click_menu_button:2020/06/30 17:56:44>>panel:Neutral
+
+add_card_toDeck:2020/06/30 17:56:45>>TombWarden
+
+click_menu_button:2020/06/30 17:56:46>>panel:Neutral
+
+mana_filter:2020/06/30 17:56:54>>mana:10
+
+click_menu_button:2020/06/30 17:56:54>>panel:Hunter
+
+remove_card_fromDeck:2020/06/30 17:57:00>>Sathrovarr
+
+click_menu_button:2020/06/30 17:57:01>>panel:Hunter
+
+remove_card_fromDeck:2020/06/30 17:57:01>>TombWarden
+
+click_menu_button:2020/06/30 17:57:02>>panel:Hunter
+
+add_card_toDeck:2020/06/30 17:57:05>>SwampKingDred
+
+click_menu_button:2020/06/30 17:57:06>>panel:Hunter
+
+mana_filter:2020/06/30 17:57:19>>mana:10
+
+GoTo:2020/06/30 17:57:19>>MainMenu
+
+ClickButton:2020/06/30 17:57:20>>collection
+
+change_Deck_name:2020/06/30 17:57:22>>metalicachanged to metalica
+
+click_deck_button:2020/06/30 17:57:23>>metalica
+
+logIn:2020/06/30 17:57:52>>player logged in.
+
+click_menu_button:2020/06/30 17:57:52>>panel:Mage
+
+logIn:2020/06/30 17:58:44>>player logged in.
+
+click_menu_button:2020/06/30 17:58:44>>panel:Mage
+
+GoTo:2020/06/30 17:58:45>>MainMenu
+
+ClickButton:2020/06/30 17:58:47>>collection
+
+click_deck_button:2020/06/30 17:58:48>>metalica
+
+logIn:2020/06/30 18:06:20>>player logged in.
+
+click_menu_button:2020/06/30 18:06:20>>panel:Mage
+
+GoTo:2020/06/30 18:06:21>>MainMenu
+
+ClickButton:2020/06/30 18:06:25>>collection
+
+mana_filter:2020/06/30 18:06:30>>mana:10
+
+click_menu_button:2020/06/30 18:06:33>>panel:Mage
+
+click_menu_button:2020/06/30 18:06:33>>panel:Hunter
+
+click_deck_button:2020/06/30 18:06:33>>metalica
+
+add_card_toDeck:2020/06/30 18:06:35>>RockpoolHunter
+
+click_menu_button:2020/06/30 18:06:36>>panel:Hunter
+
+remove_card_fromDeck:2020/06/30 18:06:41>>TombWarden
+
+click_menu_button:2020/06/30 18:06:42>>panel:Hunter
+
+add_card_toDeck:2020/06/30 18:06:44>>SwampKingDred
+
+click_menu_button:2020/06/30 18:06:45>>panel:Hunter
+
+change_Deck_name:2020/06/30 18:06:50>>metalicachanged to metalica
+
+click_deck_button:2020/06/30 18:06:55>>metalica
+
+remove_card_fromDeck:2020/06/30 18:07:05>>CurioCollector
+
+click_menu_button:2020/06/30 18:07:06>>panel:Hunter
+
+add_card_toDeck:2020/06/30 18:07:07>>RockpoolHunter
+
+click_menu_button:2020/06/30 18:07:08>>panel:Hunter
+
+logIn:2020/06/30 18:07:51>>player logged in.
+
+click_menu_button:2020/06/30 18:07:51>>panel:Mage
+
+logIn:2020/06/30 18:09:58>>player logged in.
+
+click_menu_button:2020/06/30 18:09:58>>panel:Mage
+
+GoTo:2020/06/30 18:10:00>>MainMenu
+
+ClickButton:2020/06/30 18:10:01>>collection
+
+click_deck_button:2020/06/30 18:10:03>>metalica
+
+logIn:2020/06/30 18:10:40>>player logged in.
+
+click_menu_button:2020/06/30 18:10:40>>panel:Mage
+
+GoTo:2020/06/30 18:10:42>>MainMenu
+
+ClickButton:2020/06/30 18:10:43>>collection
+
+click_deck_button:2020/06/30 18:10:45>>metalica
+
+mana_filter:2020/06/30 18:10:51>>mana:10
+
+click_menu_button:2020/06/30 18:10:53>>panel:Mage
+
+click_menu_button:2020/06/30 18:10:53>>panel:Neutral
+
+add_card_toDeck:2020/06/30 18:10:54>>Sathrovarr
+
+click_menu_button:2020/06/30 18:10:55>>panel:Neutral
+
+change_Deck_name:2020/06/30 18:10:59>>metalicachanged to null
+
+mana_filter:2020/06/30 18:11:02>>mana:10
+
+GoTo:2020/06/30 18:11:02>>MainMenu
+
+ClickButton:2020/06/30 18:11:05>>collection
+
+change_Deck_name:2020/06/30 18:11:07>>nullchanged to null
+
+click_deck_button:2020/06/30 18:11:08>>null
+
+logIn:2020/06/30 18:16:24>>player logged in.
+
+logIn:2020/06/30 18:17:01>>player logged in.
+
+logIn:2020/06/30 18:17:58>>player logged in.
+
+logIn:2020/06/30 18:18:55>>player logged in.
+
+click_menu_button:2020/06/30 18:18:55>>panel:Mage
+
+GoTo:2020/06/30 18:18:57>>MainMenu
+
+ClickButton:2020/06/30 18:18:58>>collection
+
+logIn:2020/06/30 18:20:56>>player logged in.
+
+click_menu_button:2020/06/30 18:20:56>>panel:Mage
+
+GoTo:2020/06/30 18:20:57>>MainMenu
+
+ClickButton:2020/06/30 18:21:00>>collection
+
+click_deck_button:2020/06/30 18:21:02>>deev
+
+change_Deck_name:2020/06/30 18:21:07>>deevchanged to dv2
+
+logIn:2020/06/30 18:23:05>>player logged in.
+
+logIn:2020/06/30 18:25:20>>player logged in.
+
+click_menu_button:2020/06/30 18:25:21>>panel:Mage
+
+GoTo:2020/06/30 18:25:22>>MainMenu
+
+ClickButton:2020/06/30 18:25:24>>collection
+
+click_deck_button:2020/06/30 18:25:25>>dv2
+
+change_Deck_name:2020/06/30 18:25:31>>dv2changed to deev3
+
+click_menu_button:2020/06/30 18:25:31>>panel:Mage
+
+click_menu_button:2020/06/30 18:25:31>>panel:Mage
+
+logIn:2020/07/02 19:45:47>>player logged in.
+
+click_menu_button:2020/07/02 19:45:48>>panel:Mage
+
+GoTo:2020/07/02 19:45:52>>MainMenu
+
+ClickButton:2020/07/02 19:45:54>>collection
+
+mana_filter:2020/07/02 19:45:57>>mana:10
+
+click_menu_button:2020/07/02 19:45:59>>panel:Mage
+
+click_menu_button:2020/07/02 19:45:59>>panel:Mage
+
+mana_filter:2020/07/02 19:46:02>>mana:10
+
+click_menu_button:2020/07/02 19:46:02>>panel:Neutral
+
+mana_filter:2020/07/02 19:46:04>>mana:10
+
+click_menu_button:2020/07/02 19:46:04>>panel:Rogue
+
+mana_filter:2020/07/02 19:46:06>>mana:10
+
+click_menu_button:2020/07/02 19:46:06>>panel:Hunter
+
+mana_filter:2020/07/02 19:46:08>>mana:10
+
+click_menu_button:2020/07/02 19:46:08>>panel:Priest
+
+logIn:2020/07/02 19:49:37>>player logged in.
+
+click_menu_button:2020/07/02 19:49:37>>panel:Mage
+
+GoTo:2020/07/02 19:49:39>>MainMenu
+
+ClickButton:2020/07/02 19:49:41>>collection
+
+click_deck_button:2020/07/02 19:49:42>>hey11
+
+select_deck:2020/07/02 19:49:45>>hey11
+
+click_menu_button:2020/07/02 19:49:45>>panel:Mage
+
+mana_filter:2020/07/02 19:49:47>>mana:10
+
+click_menu_button:2020/07/02 19:49:50>>panel:Mage
+
+GoTo:2020/07/02 19:49:50>>MainMenu
+
+ClickButton:2020/07/02 19:49:51>>play
+
+logIn:2020/07/02 19:52:39>>player logged in.
+
+click_menu_button:2020/07/02 19:52:39>>panel:Mage
+
+GoTo:2020/07/02 19:52:40>>MainMenu
+
+ClickButton:2020/07/02 19:52:42>>collection
+
+click_deck_button:2020/07/02 19:52:43>>hey11
+
+select_deck:2020/07/02 19:52:47>>hey11
+
+click_menu_button:2020/07/02 19:52:47>>panel:Mage
+
+mana_filter:2020/07/02 19:52:49>>mana:10
+
+click_menu_button:2020/07/02 19:52:51>>panel:Mage
+
+GoTo:2020/07/02 19:52:51>>MainMenu
+
+ClickButton:2020/07/02 19:52:52>>play
+
+logIn:2020/07/02 19:54:21>>player logged in.
+
+click_menu_button:2020/07/02 19:54:21>>panel:Mage
+
+GoTo:2020/07/02 19:54:23>>MainMenu
+
+ClickButton:2020/07/02 19:54:24>>play
+
+GoTo:2020/07/02 19:54:27>>MainMenu
+
+ClickButton:2020/07/02 19:54:29>>play
+
+logIn:2020/07/02 19:54:53>>player logged in.
+
+click_menu_button:2020/07/02 19:54:54>>panel:Mage
+
+GoTo:2020/07/02 19:54:55>>MainMenu
+
+ClickButton:2020/07/02 19:54:56>>play
+
+logIn:2020/07/02 19:55:23>>player logged in.
+
+click_menu_button:2020/07/02 19:55:23>>panel:Mage
+
+GoTo:2020/07/02 19:55:25>>MainMenu
+
+ClickButton:2020/07/02 19:55:26>>play
+
+logIn:2020/07/02 19:56:33>>player logged in.
+
+click_menu_button:2020/07/02 19:56:34>>panel:Mage
+
+GoTo:2020/07/02 19:56:35>>MainMenu
+
+ClickButton:2020/07/02 19:56:36>>play
+
+logIn:2020/07/02 19:57:08>>player logged in.
+
+click_menu_button:2020/07/02 19:57:09>>panel:Mage
+
+GoTo:2020/07/02 19:57:10>>MainMenu
+
+ClickButton:2020/07/02 19:57:11>>play
+
+logIn:2020/07/02 19:57:40>>player logged in.
+
+click_menu_button:2020/07/02 19:57:40>>panel:Mage
+
+GoTo:2020/07/02 19:57:42>>MainMenu
+
+ClickButton:2020/07/02 19:57:42>>play
+
+logIn:2020/07/02 19:58:12>>player logged in.
+
+click_menu_button:2020/07/02 19:58:12>>panel:Mage
+
+GoTo:2020/07/02 19:58:13>>MainMenu
+
+ClickButton:2020/07/02 19:58:15>>play
+
+logIn:2020/07/02 20:04:15>>player logged in.
+
+click_menu_button:2020/07/02 20:04:15>>panel:Mage
+
+GoTo:2020/07/02 20:04:16>>MainMenu
+
+ClickButton:2020/07/02 20:04:18>>play
+
+GoTo:2020/07/02 20:04:30>>MainMenu
+
+ClickButton:2020/07/02 20:04:34>>play
+
+logIn:2020/07/02 20:06:39>>player logged in.
+
+click_menu_button:2020/07/02 20:06:40>>panel:Mage
+
+GoTo:2020/07/02 20:06:41>>MainMenu
+
+ClickButton:2020/07/02 20:06:43>>play
+
+logIn:2020/07/02 20:07:49>>player logged in.
+
+click_menu_button:2020/07/02 20:07:50>>panel:Mage
+
+GoTo:2020/07/02 20:07:51>>MainMenu
+
+ClickButton:2020/07/02 20:07:52>>play
+
+logIn:2020/07/02 20:09:51>>player logged in.
+
+click_menu_button:2020/07/02 20:09:51>>panel:Mage
+
+GoTo:2020/07/02 20:09:53>>MainMenu
+
+ClickButton:2020/07/02 20:09:54>>play
+
+logIn:2020/07/02 20:11:42>>player logged in.
+
+click_menu_button:2020/07/02 20:11:42>>panel:Mage
+
+GoTo:2020/07/02 20:11:44>>MainMenu
+
+ClickButton:2020/07/02 20:11:45>>play
+
+logIn:2020/07/02 20:15:05>>player logged in.
+
+click_menu_button:2020/07/02 20:15:05>>panel:Mage
+
+GoTo:2020/07/02 20:15:07>>MainMenu
+
+ClickButton:2020/07/02 20:15:07>>play
+
+logIn:2020/07/02 20:15:25>>player logged in.
+
+click_menu_button:2020/07/02 20:15:26>>panel:Mage
+
+GoTo:2020/07/02 20:15:27>>MainMenu
+
+ClickButton:2020/07/02 20:15:28>>play
+
+logIn:2020/07/02 20:15:46>>player logged in.
+
+click_menu_button:2020/07/02 20:15:46>>panel:Mage
+
+GoTo:2020/07/02 20:15:48>>MainMenu
+
+ClickButton:2020/07/02 20:15:49>>play
+
+logIn:2020/07/02 20:16:03>>player logged in.
+
+click_menu_button:2020/07/02 20:16:04>>panel:Mage
+
+GoTo:2020/07/02 20:16:05>>MainMenu
+
+ClickButton:2020/07/02 20:16:06>>play
+
+logIn:2020/07/02 20:16:23>>player logged in.
+
+click_menu_button:2020/07/02 20:16:23>>panel:Mage
+
+GoTo:2020/07/02 20:16:25>>MainMenu
+
+ClickButton:2020/07/02 20:16:26>>play
+
+logIn:2020/07/02 20:16:39>>player logged in.
+
+click_menu_button:2020/07/02 20:16:39>>panel:Mage
+
+GoTo:2020/07/02 20:16:41>>MainMenu
+
+ClickButton:2020/07/02 20:16:42>>play
+
+logIn:2020/07/02 20:16:55>>player logged in.
+
+click_menu_button:2020/07/02 20:16:55>>panel:Mage
+
+GoTo:2020/07/02 20:16:57>>MainMenu
+
+ClickButton:2020/07/02 20:16:58>>play
+
+logIn:2020/07/02 20:17:21>>player logged in.
+
+click_menu_button:2020/07/02 20:17:21>>panel:Mage
+
+GoTo:2020/07/02 20:17:23>>MainMenu
+
+ClickButton:2020/07/02 20:17:24>>play
+
+logIn:2020/07/02 20:17:48>>player logged in.
+
+click_menu_button:2020/07/02 20:17:48>>panel:Mage
+
+GoTo:2020/07/02 20:17:49>>MainMenu
+
+ClickButton:2020/07/02 20:17:51>>play
+
+logIn:2020/07/02 20:18:16>>player logged in.
+
+click_menu_button:2020/07/02 20:18:16>>panel:Mage
+
+GoTo:2020/07/02 20:18:18>>MainMenu
+
+ClickButton:2020/07/02 20:18:19>>play
+
+logIn:2020/07/02 20:19:36>>player logged in.
+
+click_menu_button:2020/07/02 20:19:36>>panel:Mage
+
+GoTo:2020/07/02 20:19:38>>MainMenu
+
+ClickButton:2020/07/02 20:19:39>>play
+
+logIn:2020/07/02 20:20:27>>player logged in.
+
+click_menu_button:2020/07/02 20:20:27>>panel:Mage
+
+GoTo:2020/07/02 20:20:29>>MainMenu
+
+ClickButton:2020/07/02 20:20:30>>play
+
+logIn:2020/07/02 20:21:31>>player logged in.
+
+click_menu_button:2020/07/02 20:21:32>>panel:Mage
+
+GoTo:2020/07/02 20:21:33>>MainMenu
+
+ClickButton:2020/07/02 20:21:34>>play
+
+logIn:2020/07/02 20:22:15>>player logged in.
+
+click_menu_button:2020/07/02 20:22:15>>panel:Mage
+
+GoTo:2020/07/02 20:22:16>>MainMenu
+
+ClickButton:2020/07/02 20:22:18>>play
+
+logIn:2020/07/02 20:23:02>>player logged in.
+
+click_menu_button:2020/07/02 20:23:03>>panel:Mage
+
+GoTo:2020/07/02 20:23:04>>MainMenu
+
+ClickButton:2020/07/02 20:23:06>>play
+
+GoTo:2020/07/02 20:23:29>>MainMenu
+
+ClickButton:2020/07/02 20:23:36>>shop
+
+logIn:2020/07/03 12:17:04>>player logged in.
+
+logIn:2020/07/03 12:17:45>>player logged in.
+
+click_menu_button:2020/07/03 12:17:46>>panel:Mage
+
+GoTo:2020/07/03 12:17:47>>MainMenu
+
+ClickButton:2020/07/03 12:17:49>>play
+
+GoTo:2020/07/03 12:17:51>>MainMenu
+
+ClickButton:2020/07/03 12:17:53>>collection
+
+click_deck_button:2020/07/03 12:17:54>>hey11
+
+select_deck:2020/07/03 12:17:55>>hey11
+
+click_menu_button:2020/07/03 12:17:55>>panel:Mage
+
+mana_filter:2020/07/03 12:17:57>>mana:10
+
+click_menu_button:2020/07/03 12:17:59>>panel:Mage
+
+GoTo:2020/07/03 12:17:59>>MainMenu
+
+ClickButton:2020/07/03 12:18:00>>play
+
+GoTo:2020/07/03 12:18:09>>MainMenu
+
+logIn:2020/07/03 12:42:12>>player logged in.
+
+logIn:2020/07/03 12:43:45>>player logged in.
+
+click_menu_button:2020/07/03 12:43:46>>panel:Mage
+
+GoTo:2020/07/03 12:43:47>>MainMenu
+
+ClickButton:2020/07/03 12:43:48>>collection
+
+click_deck_button:2020/07/03 12:43:50>>hey11
+
+select_deck:2020/07/03 12:43:52>>hey11
+
+click_menu_button:2020/07/03 12:43:52>>panel:Mage
+
+mana_filter:2020/07/03 12:43:53>>mana:10
+
+click_menu_button:2020/07/03 12:43:55>>panel:Mage
+
+GoTo:2020/07/03 12:43:55>>MainMenu
+
+ClickButton:2020/07/03 12:43:56>>play
+
+GoTo:2020/07/03 12:43:58>>MainMenu
+
+ClickButton:2020/07/03 12:43:59>>play
+
+logIn:2020/07/03 12:45:04>>player logged in.
+
+click_menu_button:2020/07/03 12:45:04>>panel:Mage
+
+GoTo:2020/07/03 12:45:05>>MainMenu
+
+ClickButton:2020/07/03 12:45:07>>collection
+
+click_deck_button:2020/07/03 12:45:08>>hey11
+
+select_deck:2020/07/03 12:45:09>>hey11
+
+click_menu_button:2020/07/03 12:45:09>>panel:Mage
+
+mana_filter:2020/07/03 12:45:10>>mana:10
+
+click_menu_button:2020/07/03 12:45:13>>panel:Mage
+
+GoTo:2020/07/03 12:45:13>>MainMenu
+
+ClickButton:2020/07/03 12:45:13>>play
+
+logIn:2020/07/03 12:46:45>>player logged in.
+
+click_menu_button:2020/07/03 12:46:45>>panel:Mage
+
+GoTo:2020/07/03 12:46:46>>MainMenu
+
+ClickButton:2020/07/03 12:46:49>>collection
+
+click_deck_button:2020/07/03 12:46:50>>hey11
+
+select_deck:2020/07/03 12:46:52>>hey11
+
+click_menu_button:2020/07/03 12:46:52>>panel:Mage
+
+mana_filter:2020/07/03 12:46:53>>mana:10
+
+click_menu_button:2020/07/03 12:46:55>>panel:Mage
+
+GoTo:2020/07/03 12:46:55>>MainMenu
+
+ClickButton:2020/07/03 12:46:56>>play
+
+logIn:2020/07/03 12:50:10>>player logged in.
+
+click_menu_button:2020/07/03 12:50:10>>panel:Mage
+
+GoTo:2020/07/03 12:50:11>>MainMenu
+
+ClickButton:2020/07/03 12:50:13>>collection
+
+click_deck_button:2020/07/03 12:50:14>>hey11
+
+select_deck:2020/07/03 12:50:16>>hey11
+
+click_menu_button:2020/07/03 12:50:16>>panel:Mage
+
+mana_filter:2020/07/03 12:50:17>>mana:10
+
+click_menu_button:2020/07/03 12:50:19>>panel:Mage
+
+GoTo:2020/07/03 12:50:19>>MainMenu
+
+ClickButton:2020/07/03 12:50:20>>play
+
+logIn:2020/07/03 12:54:11>>player logged in.
+
+click_menu_button:2020/07/03 12:54:11>>panel:Mage
+
+GoTo:2020/07/03 12:54:12>>MainMenu
+
+ClickButton:2020/07/03 12:54:14>>collection
+
+click_deck_button:2020/07/03 12:54:15>>hey11
+
+select_deck:2020/07/03 12:54:18>>hey11
+
+click_menu_button:2020/07/03 12:54:18>>panel:Mage
+
+mana_filter:2020/07/03 12:54:19>>mana:10
+
+click_menu_button:2020/07/03 12:54:21>>panel:Mage
+
+GoTo:2020/07/03 12:54:21>>MainMenu
+
+ClickButton:2020/07/03 12:54:22>>play
+
+logIn:2020/07/03 12:54:44>>player logged in.
+
+click_menu_button:2020/07/03 12:54:44>>panel:Mage
+
+GoTo:2020/07/03 12:54:45>>MainMenu
+
+ClickButton:2020/07/03 12:54:48>>collection
+
+click_deck_button:2020/07/03 12:54:49>>hey11
+
+select_deck:2020/07/03 12:54:50>>hey11
+
+click_menu_button:2020/07/03 12:54:50>>panel:Mage
+
+mana_filter:2020/07/03 12:54:53>>mana:10
+
+click_menu_button:2020/07/03 12:54:55>>panel:Mage
+
+GoTo:2020/07/03 12:54:55>>MainMenu
+
+ClickButton:2020/07/03 12:54:56>>play
+
+logIn:2020/07/03 12:57:12>>player logged in.
+
+click_menu_button:2020/07/03 12:57:12>>panel:Mage
+
+GoTo:2020/07/03 12:57:13>>MainMenu
+
+ClickButton:2020/07/03 12:57:14>>collection
+
+click_deck_button:2020/07/03 12:57:15>>hey11
+
+select_deck:2020/07/03 12:57:16>>hey11
+
+click_menu_button:2020/07/03 12:57:16>>panel:Mage
+
+mana_filter:2020/07/03 12:57:18>>mana:10
+
+click_menu_button:2020/07/03 12:57:20>>panel:Mage
+
+GoTo:2020/07/03 12:57:20>>MainMenu
+
+ClickButton:2020/07/03 12:57:21>>play
+
+logIn:2020/07/03 12:58:18>>player logged in.
+
+click_menu_button:2020/07/03 12:58:18>>panel:Mage
+
+GoTo:2020/07/03 12:58:20>>MainMenu
+
+ClickButton:2020/07/03 12:58:21>>collection
+
+click_deck_button:2020/07/03 12:58:22>>hey11
+
+select_deck:2020/07/03 12:58:23>>hey11
+
+click_menu_button:2020/07/03 12:58:23>>panel:Mage
+
+mana_filter:2020/07/03 12:58:25>>mana:10
+
+click_menu_button:2020/07/03 12:58:27>>panel:Mage
+
+GoTo:2020/07/03 12:58:27>>MainMenu
+
+ClickButton:2020/07/03 12:58:28>>play
+
+logIn:2020/07/03 12:59:33>>player logged in.
+
+click_menu_button:2020/07/03 12:59:34>>panel:Mage
+
+GoTo:2020/07/03 12:59:35>>MainMenu
+
+ClickButton:2020/07/03 12:59:36>>collection
+
+click_deck_button:2020/07/03 12:59:37>>hey11
+
+select_deck:2020/07/03 12:59:38>>hey11
+
+click_menu_button:2020/07/03 12:59:38>>panel:Mage
+
+mana_filter:2020/07/03 12:59:40>>mana:10
+
+click_menu_button:2020/07/03 12:59:42>>panel:Mage
+
+GoTo:2020/07/03 12:59:42>>MainMenu
+
+ClickButton:2020/07/03 12:59:43>>play
+
+logIn:2020/07/03 13:00:24>>player logged in.
+
+click_menu_button:2020/07/03 13:00:24>>panel:Mage
+
+GoTo:2020/07/03 13:00:26>>MainMenu
+
+ClickButton:2020/07/03 13:00:27>>collection
+
+click_deck_button:2020/07/03 13:00:28>>hey11
+
+select_deck:2020/07/03 13:00:29>>hey11
+
+click_menu_button:2020/07/03 13:00:29>>panel:Mage
+
+mana_filter:2020/07/03 13:00:30>>mana:10
+
+click_menu_button:2020/07/03 13:00:33>>panel:Mage
+
+GoTo:2020/07/03 13:00:33>>MainMenu
+
+ClickButton:2020/07/03 13:00:34>>play
+
+logIn:2020/07/03 13:01:18>>player logged in.
+
+click_menu_button:2020/07/03 13:01:18>>panel:Mage
+
+GoTo:2020/07/03 13:01:20>>MainMenu
+
+ClickButton:2020/07/03 13:01:21>>collection
+
+click_deck_button:2020/07/03 13:01:22>>hey11
+
+select_deck:2020/07/03 13:01:24>>hey11
+
+click_menu_button:2020/07/03 13:01:24>>panel:Mage
+
+mana_filter:2020/07/03 13:01:25>>mana:10
+
+click_menu_button:2020/07/03 13:01:28>>panel:Mage
+
+GoTo:2020/07/03 13:01:28>>MainMenu
+
+ClickButton:2020/07/03 13:01:28>>play
+
+logIn:2020/07/03 15:06:41>>player logged in.
+
+click_menu_button:2020/07/03 15:06:41>>panel:Mage
+
+GoTo:2020/07/03 15:06:42>>MainMenu
+
+ClickButton:2020/07/03 15:06:44>>collection
+
+click_deck_button:2020/07/03 15:06:45>>hey11
+
+select_deck:2020/07/03 15:06:46>>hey11
+
+click_menu_button:2020/07/03 15:06:46>>panel:Mage
+
+mana_filter:2020/07/03 15:06:47>>mana:10
+
+click_menu_button:2020/07/03 15:06:50>>panel:Mage
+
+GoTo:2020/07/03 15:06:50>>MainMenu
+
+ClickButton:2020/07/03 15:06:51>>play
+
+GoTo:2020/07/03 15:06:59>>MainMenu
+
+logIn:2020/07/03 15:08:10>>player logged in.
+
+click_menu_button:2020/07/03 15:08:10>>panel:Mage
+
+GoTo:2020/07/03 15:08:11>>MainMenu
+
+ClickButton:2020/07/03 15:08:13>>collection
+
+click_deck_button:2020/07/03 15:08:14>>hey11
+
+select_deck:2020/07/03 15:08:15>>hey11
+
+click_menu_button:2020/07/03 15:08:15>>panel:Mage
+
+mana_filter:2020/07/03 15:08:17>>mana:10
+
+click_menu_button:2020/07/03 15:08:19>>panel:Mage
+
+GoTo:2020/07/03 15:08:19>>MainMenu
+
+ClickButton:2020/07/03 15:08:20>>play
+
+logIn:2020/07/03 15:09:21>>player logged in.
+
+click_menu_button:2020/07/03 15:09:21>>panel:Mage
+
+GoTo:2020/07/03 15:09:23>>MainMenu
+
+ClickButton:2020/07/03 15:09:24>>collection
+
+click_deck_button:2020/07/03 15:09:26>>hey11
+
+select_deck:2020/07/03 15:09:27>>hey11
+
+click_menu_button:2020/07/03 15:09:27>>panel:Mage
+
+mana_filter:2020/07/03 15:09:29>>mana:10
+
+click_menu_button:2020/07/03 15:09:31>>panel:Mage
+
+GoTo:2020/07/03 15:09:31>>MainMenu
+
+ClickButton:2020/07/03 15:09:32>>play
+
+logIn:2020/07/03 15:14:23>>player logged in.
+
+click_menu_button:2020/07/03 15:14:23>>panel:Mage
+
+GoTo:2020/07/03 15:14:25>>MainMenu
+
+ClickButton:2020/07/03 15:14:26>>collection
+
+click_deck_button:2020/07/03 15:14:27>>hey11
+
+select_deck:2020/07/03 15:14:28>>hey11
+
+click_menu_button:2020/07/03 15:14:28>>panel:Mage
+
+mana_filter:2020/07/03 15:14:29>>mana:10
+
+click_menu_button:2020/07/03 15:14:31>>panel:Mage
+
+GoTo:2020/07/03 15:14:31>>MainMenu
+
+ClickButton:2020/07/03 15:14:33>>play
+
+logIn:2020/07/03 15:19:18>>player logged in.
+
+click_menu_button:2020/07/03 15:19:18>>panel:Mage
+
+GoTo:2020/07/03 15:19:20>>MainMenu
+
+ClickButton:2020/07/03 15:19:21>>collection
+
+click_deck_button:2020/07/03 15:19:22>>hey11
+
+select_deck:2020/07/03 15:19:23>>hey11
+
+click_menu_button:2020/07/03 15:19:23>>panel:Mage
+
+mana_filter:2020/07/03 15:19:24>>mana:10
+
+click_menu_button:2020/07/03 15:19:27>>panel:Mage
+
+GoTo:2020/07/03 15:19:27>>MainMenu
+
+ClickButton:2020/07/03 15:19:28>>play
+
+logIn:2020/07/03 15:27:05>>player logged in.
+
+click_menu_button:2020/07/03 15:27:06>>panel:Mage
+
+GoTo:2020/07/03 15:27:07>>MainMenu
+
+ClickButton:2020/07/03 15:27:10>>collection
+
+click_deck_button:2020/07/03 15:27:13>>hey11
+
+select_deck:2020/07/03 15:27:15>>hey11
+
+click_menu_button:2020/07/03 15:27:15>>panel:Mage
+
+mana_filter:2020/07/03 15:27:16>>mana:10
+
+click_menu_button:2020/07/03 15:27:18>>panel:Mage
+
+GoTo:2020/07/03 15:27:19>>MainMenu
+
+ClickButton:2020/07/03 15:27:20>>play
+
+logIn:2020/07/03 15:29:26>>player logged in.
+
+click_menu_button:2020/07/03 15:29:27>>panel:Mage
+
+GoTo:2020/07/03 15:29:28>>MainMenu
+
+ClickButton:2020/07/03 15:29:29>>collection
+
+click_deck_button:2020/07/03 15:29:30>>hey11
+
+select_deck:2020/07/03 15:29:31>>hey11
+
+click_menu_button:2020/07/03 15:29:31>>panel:Mage
+
+mana_filter:2020/07/03 15:29:32>>mana:10
+
+click_menu_button:2020/07/03 15:29:35>>panel:Mage
+
+GoTo:2020/07/03 15:29:35>>MainMenu
+
+ClickButton:2020/07/03 15:29:35>>play
+
+logIn:2020/07/03 15:42:55>>player logged in.
+
+click_menu_button:2020/07/03 15:42:55>>panel:Mage
+
+GoTo:2020/07/03 15:42:56>>MainMenu
+
+ClickButton:2020/07/03 15:42:58>>collection
+
+click_deck_button:2020/07/03 15:42:59>>hey11
+
+select_deck:2020/07/03 15:43:00>>hey11
+
+click_menu_button:2020/07/03 15:43:00>>panel:Mage
+
+mana_filter:2020/07/03 15:43:02>>mana:10
+
+click_menu_button:2020/07/03 15:43:04>>panel:Mage
+
+GoTo:2020/07/03 15:43:04>>MainMenu
+
+ClickButton:2020/07/03 15:43:06>>play
+
+logIn:2020/07/03 15:49:57>>player logged in.
+
+click_menu_button:2020/07/03 15:49:57>>panel:Mage
+
+GoTo:2020/07/03 15:49:59>>MainMenu
+
+ClickButton:2020/07/03 15:50:00>>collection
+
+click_deck_button:2020/07/03 15:50:01>>hey11
+
+select_deck:2020/07/03 15:50:03>>hey11
+
+click_menu_button:2020/07/03 15:50:03>>panel:Mage
+
+mana_filter:2020/07/03 15:50:04>>mana:10
+
+click_menu_button:2020/07/03 15:50:06>>panel:Mage
+
+GoTo:2020/07/03 15:50:06>>MainMenu
+
+ClickButton:2020/07/03 15:50:08>>play
+
+logIn:2020/07/03 15:52:26>>player logged in.
+
+click_menu_button:2020/07/03 15:52:26>>panel:Mage
+
+GoTo:2020/07/03 15:52:27>>MainMenu
+
+ClickButton:2020/07/03 15:52:29>>collection
+
+click_deck_button:2020/07/03 15:52:30>>hey11
+
+select_deck:2020/07/03 15:52:31>>hey11
+
+click_menu_button:2020/07/03 15:52:31>>panel:Mage
+
+mana_filter:2020/07/03 15:52:32>>mana:10
+
+click_menu_button:2020/07/03 15:52:34>>panel:Mage
+
+GoTo:2020/07/03 15:52:34>>MainMenu
+
+ClickButton:2020/07/03 15:52:35>>play
+
+logIn:2020/07/03 15:55:39>>player logged in.
+
+click_menu_button:2020/07/03 15:55:39>>panel:Mage
+
+GoTo:2020/07/03 15:55:41>>MainMenu
+
+ClickButton:2020/07/03 15:55:42>>collection
+
+click_deck_button:2020/07/03 15:55:43>>hey11
+
+select_deck:2020/07/03 15:55:44>>hey11
+
+click_menu_button:2020/07/03 15:55:44>>panel:Mage
+
+mana_filter:2020/07/03 15:55:46>>mana:10
+
+click_menu_button:2020/07/03 15:55:48>>panel:Mage
+
+GoTo:2020/07/03 15:55:48>>MainMenu
+
+ClickButton:2020/07/03 15:55:49>>play
+
+logIn:2020/07/03 17:01:49>>player logged in.
+
+click_menu_button:2020/07/03 17:01:49>>panel:Mage
+
+GoTo:2020/07/03 17:01:50>>MainMenu
+
+ClickButton:2020/07/03 17:01:52>>collection
+
+click_deck_button:2020/07/03 17:01:53>>hey11
+
+select_deck:2020/07/03 17:01:54>>hey11
+
+click_menu_button:2020/07/03 17:01:54>>panel:Mage
+
+mana_filter:2020/07/03 17:01:56>>mana:10
+
+click_menu_button:2020/07/03 17:01:58>>panel:Mage
+
+GoTo:2020/07/03 17:01:58>>MainMenu
+
+ClickButton:2020/07/03 17:01:59>>play
+
+logIn:2020/07/03 17:09:48>>player logged in.
+
+click_menu_button:2020/07/03 17:09:48>>panel:Mage
+
+GoTo:2020/07/03 17:09:49>>MainMenu
+
+ClickButton:2020/07/03 17:09:52>>collection
+
+click_deck_button:2020/07/03 17:09:53>>hey11
+
+select_deck:2020/07/03 17:09:55>>hey11
+
+click_menu_button:2020/07/03 17:09:55>>panel:Mage
+
+mana_filter:2020/07/03 17:09:56>>mana:10
+
+click_menu_button:2020/07/03 17:09:58>>panel:Mage
+
+GoTo:2020/07/03 17:09:58>>MainMenu
+
+ClickButton:2020/07/03 17:09:59>>play
+
+logIn:2020/07/03 17:12:11>>player logged in.
+
+click_menu_button:2020/07/03 17:12:11>>panel:Mage
+
+GoTo:2020/07/03 17:12:13>>MainMenu
+
+ClickButton:2020/07/03 17:12:14>>collection
+
+click_deck_button:2020/07/03 17:12:15>>hey11
+
+select_deck:2020/07/03 17:12:16>>hey11
+
+click_menu_button:2020/07/03 17:12:16>>panel:Mage
+
+mana_filter:2020/07/03 17:12:17>>mana:10
+
+click_menu_button:2020/07/03 17:12:20>>panel:Mage
+
+GoTo:2020/07/03 17:12:20>>MainMenu
+
+ClickButton:2020/07/03 17:12:21>>play
+
+logIn:2020/07/03 17:16:20>>player logged in.
+
+click_menu_button:2020/07/03 17:16:21>>panel:Mage
+
+GoTo:2020/07/03 17:16:22>>MainMenu
+
+ClickButton:2020/07/03 17:16:23>>collection
+
+click_deck_button:2020/07/03 17:16:24>>deev3
+
+select_deck:2020/07/03 17:16:25>>deev3
+
+click_menu_button:2020/07/03 17:16:25>>panel:Mage
+
+mana_filter:2020/07/03 17:16:26>>mana:10
+
+click_menu_button:2020/07/03 17:16:28>>panel:Mage
+
+GoTo:2020/07/03 17:16:28>>MainMenu
+
+ClickButton:2020/07/03 17:16:29>>play
+
+logIn:2020/07/03 22:24:41>>player logged in.
+
+click_menu_button:2020/07/03 22:24:41>>panel:Mage
+
+GoTo:2020/07/03 22:24:43>>MainMenu
+
+ClickButton:2020/07/03 22:24:45>>collection
+
+click_deck_button:2020/07/03 22:24:47>>hey11
+
+select_deck:2020/07/03 22:24:49>>hey11
+
+click_menu_button:2020/07/03 22:24:49>>panel:Mage
+
+mana_filter:2020/07/03 22:24:50>>mana:10
+
+click_menu_button:2020/07/03 22:24:52>>panel:Mage
+
+GoTo:2020/07/03 22:24:52>>MainMenu
+
+ClickButton:2020/07/03 22:24:53>>play
+
+logIn:2020/07/03 22:26:06>>player logged in.
+
+click_menu_button:2020/07/03 22:26:06>>panel:Mage
+
+GoTo:2020/07/03 22:26:08>>MainMenu
+
+ClickButton:2020/07/03 22:26:09>>collection
+
+click_deck_button:2020/07/03 22:26:10>>deev3
+
+select_deck:2020/07/03 22:26:12>>deev3
+
+click_menu_button:2020/07/03 22:26:12>>panel:Mage
+
+mana_filter:2020/07/03 22:26:13>>mana:10
+
+click_menu_button:2020/07/03 22:26:15>>panel:Mage
+
+GoTo:2020/07/03 22:26:15>>MainMenu
+
+ClickButton:2020/07/03 22:26:16>>play
+
+logIn:2020/07/03 22:28:47>>player logged in.
+
+click_menu_button:2020/07/03 22:28:47>>panel:Mage
+
+GoTo:2020/07/03 22:28:49>>MainMenu
+
+ClickButton:2020/07/03 22:28:50>>collection
+
+click_deck_button:2020/07/03 22:28:51>>hey11
+
+select_deck:2020/07/03 22:28:53>>hey11
+
+click_menu_button:2020/07/03 22:28:53>>panel:Mage
+
+mana_filter:2020/07/03 22:28:55>>mana:10
+
+click_menu_button:2020/07/03 22:28:57>>panel:Mage
+
+GoTo:2020/07/03 22:28:57>>MainMenu
+
+ClickButton:2020/07/03 22:28:58>>play
+
+logIn:2020/07/03 22:31:21>>player logged in.
+
+click_menu_button:2020/07/03 22:31:21>>panel:Mage
+
+GoTo:2020/07/03 22:31:23>>MainMenu
+
+ClickButton:2020/07/03 22:31:24>>collection
+
+click_deck_button:2020/07/03 22:31:25>>hey11
+
+select_deck:2020/07/03 22:31:27>>hey11
+
+click_menu_button:2020/07/03 22:31:27>>panel:Mage
+
+mana_filter:2020/07/03 22:31:29>>mana:10
+
+click_menu_button:2020/07/03 22:31:31>>panel:Mage
+
+GoTo:2020/07/03 22:31:31>>MainMenu
+
+ClickButton:2020/07/03 22:31:32>>play
+
+logIn:2020/07/03 22:32:04>>player logged in.
+
+click_menu_button:2020/07/03 22:32:05>>panel:Mage
+
+GoTo:2020/07/03 22:32:06>>MainMenu
+
+ClickButton:2020/07/03 22:32:07>>collection
+
+click_deck_button:2020/07/03 22:32:09>>deev3
+
+select_deck:2020/07/03 22:32:10>>deev3
+
+click_menu_button:2020/07/03 22:32:10>>panel:Mage
+
+mana_filter:2020/07/03 22:32:12>>mana:10
+
+click_menu_button:2020/07/03 22:32:14>>panel:Mage
+
+GoTo:2020/07/03 22:32:14>>MainMenu
+
+ClickButton:2020/07/03 22:32:15>>play
+
+logIn:2020/07/03 22:34:24>>player logged in.
+
+click_menu_button:2020/07/03 22:34:24>>panel:Mage
+
+GoTo:2020/07/03 22:34:26>>MainMenu
+
+ClickButton:2020/07/03 22:34:27>>collection
+
+click_deck_button:2020/07/03 22:34:28>>hey11
+
+select_deck:2020/07/03 22:34:29>>hey11
+
+click_menu_button:2020/07/03 22:34:29>>panel:Mage
+
+mana_filter:2020/07/03 22:34:30>>mana:10
+
+click_menu_button:2020/07/03 22:34:32>>panel:Mage
+
+GoTo:2020/07/03 22:34:32>>MainMenu
+
+ClickButton:2020/07/03 22:34:33>>play
+
+logIn:2020/07/03 22:35:51>>player logged in.
+
+click_menu_button:2020/07/03 22:35:52>>panel:Mage
+
+GoTo:2020/07/03 22:35:53>>MainMenu
+
+ClickButton:2020/07/03 22:35:54>>collection
+
+click_deck_button:2020/07/03 22:35:56>>deev3
+
+select_deck:2020/07/03 22:35:57>>deev3
+
+click_menu_button:2020/07/03 22:35:57>>panel:Mage
+
+mana_filter:2020/07/03 22:35:58>>mana:10
+
+click_menu_button:2020/07/03 22:36:00>>panel:Mage
+
+GoTo:2020/07/03 22:36:00>>MainMenu
+
+ClickButton:2020/07/03 22:36:01>>play
+
+logIn:2020/07/03 22:37:47>>player logged in.
+
+click_menu_button:2020/07/03 22:37:48>>panel:Mage
+
+GoTo:2020/07/03 22:37:49>>MainMenu
+
+ClickButton:2020/07/03 22:37:51>>collection
+
+click_deck_button:2020/07/03 22:37:52>>deev3
+
+select_deck:2020/07/03 22:37:53>>deev3
+
+click_menu_button:2020/07/03 22:37:53>>panel:Mage
+
+mana_filter:2020/07/03 22:37:54>>mana:10
+
+click_menu_button:2020/07/03 22:37:56>>panel:Mage
+
+GoTo:2020/07/03 22:37:56>>MainMenu
+
+ClickButton:2020/07/03 22:37:58>>play
+
+logIn:2020/07/03 22:41:03>>player logged in.
+
+click_menu_button:2020/07/03 22:41:03>>panel:Mage
+
+GoTo:2020/07/03 22:41:05>>MainMenu
+
+ClickButton:2020/07/03 22:41:07>>collection
+
+click_deck_button:2020/07/03 22:41:08>>hey11
+
+select_deck:2020/07/03 22:41:09>>hey11
+
+click_menu_button:2020/07/03 22:41:09>>panel:Mage
+
+mana_filter:2020/07/03 22:41:11>>mana:10
+
+click_menu_button:2020/07/03 22:41:13>>panel:Mage
+
+GoTo:2020/07/03 22:41:13>>MainMenu
+
+ClickButton:2020/07/03 22:41:14>>play
+
+logIn:2020/07/03 22:54:56>>player logged in.
+
+click_menu_button:2020/07/03 22:54:56>>panel:Mage
+
+GoTo:2020/07/03 22:54:58>>MainMenu
+
+ClickButton:2020/07/03 22:54:58>>collection
+
+click_deck_button:2020/07/03 22:55:00>>hey11
+
+mana_filter:2020/07/03 22:55:01>>mana:10
+
+click_menu_button:2020/07/03 22:55:03>>panel:Mage
+
+GoTo:2020/07/03 22:55:03>>MainMenu
+
+ClickButton:2020/07/03 22:55:05>>play
+
+GoTo:2020/07/03 22:55:48>>MainMenu
+
+ClickButton:2020/07/03 22:55:49>>collection
+
+select_deck:2020/07/03 22:55:51>>hey11
+
+click_menu_button:2020/07/03 22:55:52>>panel:Mage
+
+mana_filter:2020/07/03 22:55:54>>mana:10
+
+GoTo:2020/07/03 22:55:54>>MainMenu
+
+ClickButton:2020/07/03 22:55:55>>play
+
+logIn:2020/07/03 22:56:44>>player logged in.
+
+click_menu_button:2020/07/03 22:56:45>>panel:Mage
+
+GoTo:2020/07/03 22:56:46>>MainMenu
+
+ClickButton:2020/07/03 22:56:47>>collection
+
+click_deck_button:2020/07/03 22:56:48>>deev3
+
+select_deck:2020/07/03 22:56:50>>deev3
+
+click_menu_button:2020/07/03 22:56:50>>panel:Mage
+
+mana_filter:2020/07/03 22:56:51>>mana:10
+
+click_menu_button:2020/07/03 22:56:53>>panel:Mage
+
+GoTo:2020/07/03 22:56:53>>MainMenu
+
+ClickButton:2020/07/03 22:56:54>>play
+
+logIn:2020/07/03 23:08:18>>player logged in.
+
+click_menu_button:2020/07/03 23:08:19>>panel:Mage
+
+GoTo:2020/07/03 23:08:20>>MainMenu
+
+ClickButton:2020/07/03 23:08:21>>collection
+
+click_deck_button:2020/07/03 23:08:24>>hey11
+
+select_deck:2020/07/03 23:08:26>>hey11
+
+click_menu_button:2020/07/03 23:08:26>>panel:Mage
+
+mana_filter:2020/07/03 23:08:27>>mana:10
+
+click_menu_button:2020/07/03 23:08:29>>panel:Mage
+
+GoTo:2020/07/03 23:08:29>>MainMenu
+
+ClickButton:2020/07/03 23:08:30>>play
+
+GoTo:2020/07/03 23:08:55>>MainMenu
+
+ClickButton:2020/07/03 23:08:56>>collection
+
+select_deck:2020/07/03 23:08:58>>hey11
+
+click_menu_button:2020/07/03 23:08:59>>panel:Mage
+
+change_Deck_name:2020/07/03 23:09:00>>hey11changed to hey11
+
+mana_filter:2020/07/03 23:09:03>>mana:10
+
+GoTo:2020/07/03 23:09:03>>MainMenu
+
+ClickButton:2020/07/03 23:09:03>>play
+
+logIn:2020/07/03 23:09:47>>player logged in.
+
+click_menu_button:2020/07/03 23:09:47>>panel:Mage
+
+GoTo:2020/07/03 23:09:49>>MainMenu
+
+ClickButton:2020/07/03 23:09:50>>collection
+
+click_deck_button:2020/07/03 23:09:51>>deev3
+
+select_deck:2020/07/03 23:09:52>>deev3
+
+click_menu_button:2020/07/03 23:09:52>>panel:Mage
+
+mana_filter:2020/07/03 23:09:53>>mana:10
+
+click_menu_button:2020/07/03 23:09:55>>panel:Mage
+
+GoTo:2020/07/03 23:09:55>>MainMenu
+
+ClickButton:2020/07/03 23:09:57>>play
+
+logIn:2020/07/03 23:11:05>>player logged in.
+
+click_menu_button:2020/07/03 23:11:05>>panel:Mage
+
+GoTo:2020/07/03 23:11:07>>MainMenu
+
+ClickButton:2020/07/03 23:11:08>>collection
+
+click_deck_button:2020/07/03 23:11:10>>hey11
+
+select_deck:2020/07/03 23:11:11>>hey11
+
+click_menu_button:2020/07/03 23:11:11>>panel:Mage
+
+mana_filter:2020/07/03 23:11:13>>mana:10
+
+click_menu_button:2020/07/03 23:11:15>>panel:Mage
+
+GoTo:2020/07/03 23:11:15>>MainMenu
+
+ClickButton:2020/07/03 23:11:17>>play
+
+logIn:2020/07/03 23:13:35>>player logged in.
+
+click_menu_button:2020/07/03 23:13:35>>panel:Mage
+
+GoTo:2020/07/03 23:13:37>>MainMenu
+
+ClickButton:2020/07/03 23:13:39>>collection
+
+click_deck_button:2020/07/03 23:13:40>>hey11
+
+select_deck:2020/07/03 23:13:41>>hey11
+
+click_menu_button:2020/07/03 23:13:41>>panel:Mage
+
+mana_filter:2020/07/03 23:13:42>>mana:10
+
+click_menu_button:2020/07/03 23:13:44>>panel:Mage
+
+GoTo:2020/07/03 23:13:44>>MainMenu
+
+ClickButton:2020/07/03 23:13:46>>play
+
+logIn:2020/07/03 23:15:19>>player logged in.
+
+click_menu_button:2020/07/03 23:15:19>>panel:Mage
+
+GoTo:2020/07/03 23:15:20>>MainMenu
+
+ClickButton:2020/07/03 23:15:22>>collection
+
+click_deck_button:2020/07/03 23:15:23>>hey11
+
+select_deck:2020/07/03 23:15:24>>hey11
+
+click_menu_button:2020/07/03 23:15:24>>panel:Mage
+
+mana_filter:2020/07/03 23:15:25>>mana:10
+
+click_menu_button:2020/07/03 23:15:27>>panel:Mage
+
+GoTo:2020/07/03 23:15:27>>MainMenu
+
+ClickButton:2020/07/03 23:15:28>>play
+
+logIn:2020/07/03 23:41:16>>player logged in.
+
+click_menu_button:2020/07/03 23:41:17>>panel:Mage
+
+GoTo:2020/07/03 23:41:18>>MainMenu
+
+ClickButton:2020/07/03 23:41:20>>collection
+
+click_deck_button:2020/07/03 23:41:21>>deev3
+
+select_deck:2020/07/03 23:41:23>>deev3
+
+click_menu_button:2020/07/03 23:41:23>>panel:Mage
+
+mana_filter:2020/07/03 23:41:25>>mana:10
+
+click_menu_button:2020/07/03 23:41:27>>panel:Mage
+
+GoTo:2020/07/03 23:41:27>>MainMenu
+
+ClickButton:2020/07/03 23:41:28>>play
+
+logIn:2020/07/03 23:44:42>>player logged in.
+
+click_menu_button:2020/07/03 23:44:42>>panel:Mage
+
+GoTo:2020/07/03 23:44:44>>MainMenu
+
+ClickButton:2020/07/03 23:44:45>>collection
+
+click_deck_button:2020/07/03 23:44:47>>deev3
+
+select_deck:2020/07/03 23:44:49>>deev3
+
+click_menu_button:2020/07/03 23:44:49>>panel:Mage
+
+mana_filter:2020/07/03 23:44:50>>mana:10
+
+click_menu_button:2020/07/03 23:44:52>>panel:Mage
+
+GoTo:2020/07/03 23:44:52>>MainMenu
+
+ClickButton:2020/07/03 23:44:55>>play
+
+logIn:2020/07/03 23:46:44>>player logged in.
+
+click_menu_button:2020/07/03 23:46:44>>panel:Mage
+
+GoTo:2020/07/03 23:46:46>>MainMenu
+
+ClickButton:2020/07/03 23:46:47>>collection
+
+click_deck_button:2020/07/03 23:46:49>>hey11
+
+select_deck:2020/07/03 23:46:51>>hey11
+
+click_menu_button:2020/07/03 23:46:51>>panel:Mage
+
+mana_filter:2020/07/03 23:46:52>>mana:10
+
+click_menu_button:2020/07/03 23:46:54>>panel:Mage
+
+GoTo:2020/07/03 23:46:54>>MainMenu
+
+ClickButton:2020/07/03 23:46:55>>play
+
+logIn:2020/07/03 23:47:59>>player logged in.
+
+click_menu_button:2020/07/03 23:47:59>>panel:Mage
+
+GoTo:2020/07/03 23:48:00>>MainMenu
+
+ClickButton:2020/07/03 23:48:01>>collection
+
+click_deck_button:2020/07/03 23:48:03>>hey11
+
+select_deck:2020/07/03 23:48:04>>hey11
+
+click_menu_button:2020/07/03 23:48:04>>panel:Mage
+
+mana_filter:2020/07/03 23:48:06>>mana:10
+
+click_menu_button:2020/07/03 23:48:08>>panel:Mage
+
+GoTo:2020/07/03 23:48:08>>MainMenu
+
+ClickButton:2020/07/03 23:48:09>>play
+
+logIn:2020/07/03 23:53:06>>player logged in.
+
+click_menu_button:2020/07/03 23:53:06>>panel:Mage
+
+GoTo:2020/07/03 23:53:07>>MainMenu
+
+ClickButton:2020/07/03 23:53:10>>collection
+
+click_deck_button:2020/07/03 23:53:11>>hey11
+
+select_deck:2020/07/03 23:53:13>>hey11
+
+click_menu_button:2020/07/03 23:53:13>>panel:Mage
+
+mana_filter:2020/07/03 23:53:14>>mana:10
+
+click_menu_button:2020/07/03 23:53:16>>panel:Mage
+
+GoTo:2020/07/03 23:53:16>>MainMenu
+
+ClickButton:2020/07/03 23:53:17>>play
+
+logIn:2020/07/03 23:55:40>>player logged in.
+
+click_menu_button:2020/07/03 23:55:41>>panel:Mage
+
+GoTo:2020/07/03 23:55:42>>MainMenu
+
+ClickButton:2020/07/03 23:55:43>>collection
+
+click_deck_button:2020/07/03 23:55:45>>hey11
+
+select_deck:2020/07/03 23:55:47>>hey11
+
+click_menu_button:2020/07/03 23:55:47>>panel:Mage
+
+mana_filter:2020/07/03 23:55:48>>mana:10
+
+click_menu_button:2020/07/03 23:55:50>>panel:Mage
+
+GoTo:2020/07/03 23:55:50>>MainMenu
+
+ClickButton:2020/07/03 23:55:51>>play
+
+logIn:2020/07/03 23:56:48>>player logged in.
+
+click_menu_button:2020/07/03 23:56:48>>panel:Mage
+
+GoTo:2020/07/03 23:56:50>>MainMenu
+
+ClickButton:2020/07/03 23:56:50>>collection
+
+click_deck_button:2020/07/03 23:56:52>>hey11
+
+select_deck:2020/07/03 23:56:53>>hey11
+
+click_menu_button:2020/07/03 23:56:53>>panel:Mage
+
+mana_filter:2020/07/03 23:56:55>>mana:10
+
+click_menu_button:2020/07/03 23:56:57>>panel:Mage
+
+GoTo:2020/07/03 23:56:57>>MainMenu
+
+ClickButton:2020/07/03 23:56:59>>play
+
+logIn:2020/07/04 08:46:31>>player logged in.
+
+click_menu_button:2020/07/04 08:46:31>>panel:Mage
+
+GoTo:2020/07/04 08:46:33>>MainMenu
+
+ClickButton:2020/07/04 08:46:33>>collection
+
+click_deck_button:2020/07/04 08:46:35>>hey11
+
+select_deck:2020/07/04 08:46:36>>hey11
+
+click_menu_button:2020/07/04 08:46:36>>panel:Mage
+
+mana_filter:2020/07/04 08:46:37>>mana:10
+
+click_menu_button:2020/07/04 08:46:39>>panel:Mage
+
+GoTo:2020/07/04 08:46:39>>MainMenu
+
+ClickButton:2020/07/04 08:46:41>>play
+
+logIn:2020/07/04 08:48:45>>player logged in.
+
+click_menu_button:2020/07/04 08:48:45>>panel:Mage
+
+GoTo:2020/07/04 08:48:47>>MainMenu
+
+ClickButton:2020/07/04 08:48:50>>collection
+
+click_deck_button:2020/07/04 08:48:51>>hey11
+
+select_deck:2020/07/04 08:48:53>>hey11
+
+click_menu_button:2020/07/04 08:48:53>>panel:Mage
+
+mana_filter:2020/07/04 08:48:54>>mana:10
+
+click_menu_button:2020/07/04 08:48:56>>panel:Mage
+
+GoTo:2020/07/04 08:48:56>>MainMenu
+
+ClickButton:2020/07/04 08:48:57>>play
+
+logIn:2020/07/04 08:51:12>>player logged in.
+
+click_menu_button:2020/07/04 08:51:12>>panel:Mage
+
+GoTo:2020/07/04 08:51:14>>MainMenu
+
+ClickButton:2020/07/04 08:51:15>>collection
+
+click_deck_button:2020/07/04 08:51:16>>hey11
+
+select_deck:2020/07/04 08:51:17>>hey11
+
+click_menu_button:2020/07/04 08:51:17>>panel:Mage
+
+mana_filter:2020/07/04 08:51:18>>mana:10
+
+click_menu_button:2020/07/04 08:51:21>>panel:Mage
+
+GoTo:2020/07/04 08:51:21>>MainMenu
+
+ClickButton:2020/07/04 08:51:22>>play
+
+logIn:2020/07/04 09:00:22>>player logged in.
+
+click_menu_button:2020/07/04 09:00:22>>panel:Mage
+
+GoTo:2020/07/04 09:00:24>>MainMenu
+
+ClickButton:2020/07/04 09:00:25>>collection
+
+click_deck_button:2020/07/04 09:00:26>>hey11
+
+select_deck:2020/07/04 09:00:27>>hey11
+
+click_menu_button:2020/07/04 09:00:27>>panel:Mage
+
+mana_filter:2020/07/04 09:00:28>>mana:10
+
+click_menu_button:2020/07/04 09:00:30>>panel:Mage
+
+GoTo:2020/07/04 09:00:30>>MainMenu
+
+ClickButton:2020/07/04 09:00:31>>play
+
+logIn:2020/07/04 09:11:54>>player logged in.
+
+click_menu_button:2020/07/04 09:11:54>>panel:Mage
+
+GoTo:2020/07/04 09:11:55>>MainMenu
+
+ClickButton:2020/07/04 09:11:57>>collection
+
+click_deck_button:2020/07/04 09:11:59>>hey11
+
+select_deck:2020/07/04 09:12:00>>hey11
+
+click_menu_button:2020/07/04 09:12:00>>panel:Mage
+
+mana_filter:2020/07/04 09:12:01>>mana:10
+
+click_menu_button:2020/07/04 09:12:04>>panel:Mage
+
+GoTo:2020/07/04 09:12:04>>MainMenu
+
+ClickButton:2020/07/04 09:12:05>>play
+
+logIn:2020/07/04 09:15:53>>player logged in.
+
+click_menu_button:2020/07/04 09:15:53>>panel:Mage
+
+GoTo:2020/07/04 09:15:54>>MainMenu
+
+ClickButton:2020/07/04 09:15:55>>collection
+
+click_deck_button:2020/07/04 09:15:57>>deev3
+
+select_deck:2020/07/04 09:15:58>>deev3
+
+click_menu_button:2020/07/04 09:15:58>>panel:Mage
+
+mana_filter:2020/07/04 09:15:59>>mana:10
+
+click_menu_button:2020/07/04 09:16:01>>panel:Mage
+
+GoTo:2020/07/04 09:16:01>>MainMenu
+
+ClickButton:2020/07/04 09:16:02>>play
+
+logIn:2020/07/04 10:49:22>>player logged in.
+
+click_menu_button:2020/07/04 10:49:22>>panel:Mage
+
+GoTo:2020/07/04 10:49:23>>MainMenu
+
+ClickButton:2020/07/04 10:49:24>>collection
+
+click_deck_button:2020/07/04 10:49:25>>hey11
+
+select_deck:2020/07/04 10:49:27>>hey11
+
+click_menu_button:2020/07/04 10:49:27>>panel:Mage
+
+mana_filter:2020/07/04 10:49:28>>mana:10
+
+click_menu_button:2020/07/04 10:49:30>>panel:Mage
+
+GoTo:2020/07/04 10:49:30>>MainMenu
+
+ClickButton:2020/07/04 10:49:31>>play
+
+logIn:2020/07/04 10:51:09>>player logged in.
+
+click_menu_button:2020/07/04 10:51:09>>panel:Mage
+
+GoTo:2020/07/04 10:51:11>>MainMenu
+
+ClickButton:2020/07/04 10:51:12>>collection
+
+click_deck_button:2020/07/04 10:51:13>>deev3
+
+select_deck:2020/07/04 10:51:15>>deev3
+
+click_menu_button:2020/07/04 10:51:15>>panel:Mage
+
+mana_filter:2020/07/04 10:51:17>>mana:10
+
+click_menu_button:2020/07/04 10:51:19>>panel:Mage
+
+GoTo:2020/07/04 10:51:19>>MainMenu
+
+ClickButton:2020/07/04 10:51:20>>play
+
+logIn:2020/07/04 11:44:39>>player logged in.
+
+click_menu_button:2020/07/04 11:44:39>>panel:Mage
+
+GoTo:2020/07/04 11:44:41>>MainMenu
+
+ClickButton:2020/07/04 11:44:42>>collection
+
+click_deck_button:2020/07/04 11:44:43>>hey11
+
+select_deck:2020/07/04 11:44:45>>hey11
+
+click_menu_button:2020/07/04 11:44:45>>panel:Mage
+
+mana_filter:2020/07/04 11:44:46>>mana:10
+
+click_menu_button:2020/07/04 11:44:48>>panel:Mage
+
+GoTo:2020/07/04 11:44:48>>MainMenu
+
+ClickButton:2020/07/04 11:44:49>>play
+
+logIn:2020/07/04 11:45:54>>player logged in.
+
+click_menu_button:2020/07/04 11:45:54>>panel:Mage
+
+GoTo:2020/07/04 11:45:56>>MainMenu
+
+ClickButton:2020/07/04 11:45:57>>collection
+
+click_deck_button:2020/07/04 11:45:58>>hey11
+
+select_deck:2020/07/04 11:46:00>>hey11
+
+click_menu_button:2020/07/04 11:46:00>>panel:Mage
+
+mana_filter:2020/07/04 11:46:01>>mana:10
+
+click_menu_button:2020/07/04 11:46:03>>panel:Mage
+
+GoTo:2020/07/04 11:46:03>>MainMenu
+
+ClickButton:2020/07/04 11:46:05>>play
+
+logIn:2020/07/04 11:49:17>>player logged in.
+
+click_menu_button:2020/07/04 11:49:17>>panel:Mage
+
+GoTo:2020/07/04 11:49:18>>MainMenu
+
+ClickButton:2020/07/04 11:49:20>>collection
+
+click_deck_button:2020/07/04 11:49:21>>deev3
+
+select_deck:2020/07/04 11:49:23>>deev3
+
+click_menu_button:2020/07/04 11:49:23>>panel:Mage
+
+change_Deck_name:2020/07/04 11:49:25>>deev3changed to deev3
+
+mana_filter:2020/07/04 11:49:29>>mana:10
+
+click_menu_button:2020/07/04 11:49:31>>panel:Mage
+
+GoTo:2020/07/04 11:49:31>>MainMenu
+
+ClickButton:2020/07/04 11:49:33>>play
+
+logIn:2020/07/04 11:58:36>>player logged in.
+
+click_menu_button:2020/07/04 11:58:36>>panel:Mage
+
+GoTo:2020/07/04 11:58:38>>MainMenu
+
+ClickButton:2020/07/04 11:58:39>>collection
+
+click_deck_button:2020/07/04 11:58:40>>hey11
+
+select_deck:2020/07/04 11:58:42>>hey11
+
+click_menu_button:2020/07/04 11:58:42>>panel:Mage
+
+mana_filter:2020/07/04 11:58:44>>mana:10
+
+click_menu_button:2020/07/04 11:58:46>>panel:Mage
+
+GoTo:2020/07/04 11:58:46>>MainMenu
+
+ClickButton:2020/07/04 11:58:47>>play
+
+logIn:2020/07/04 12:00:25>>player logged in.
+
+click_menu_button:2020/07/04 12:00:25>>panel:Mage
+
+GoTo:2020/07/04 12:00:26>>MainMenu
+
+ClickButton:2020/07/04 12:00:29>>collection
+
+click_deck_button:2020/07/04 12:00:30>>deev3
+
+select_deck:2020/07/04 12:00:32>>deev3
+
+click_menu_button:2020/07/04 12:00:32>>panel:Mage
+
+mana_filter:2020/07/04 12:00:34>>mana:10
+
+click_menu_button:2020/07/04 12:00:36>>panel:Mage
+
+GoTo:2020/07/04 12:00:36>>MainMenu
+
+ClickButton:2020/07/04 12:00:37>>play
+
+logIn:2020/07/04 12:04:34>>player logged in.
+
+click_menu_button:2020/07/04 12:04:35>>panel:Mage
+
+GoTo:2020/07/04 12:04:36>>MainMenu
+
+ClickButton:2020/07/04 12:04:37>>collection
+
+click_deck_button:2020/07/04 12:04:39>>hey11
+
+select_deck:2020/07/04 12:04:40>>hey11
+
+click_menu_button:2020/07/04 12:04:40>>panel:Mage
+
+mana_filter:2020/07/04 12:04:41>>mana:10
+
+click_menu_button:2020/07/04 12:04:43>>panel:Mage
+
+GoTo:2020/07/04 12:04:43>>MainMenu
+
+ClickButton:2020/07/04 12:04:44>>play
+
+logIn:2020/07/04 12:06:01>>player logged in.
+
+click_menu_button:2020/07/04 12:06:01>>panel:Mage
+
+GoTo:2020/07/04 12:06:02>>MainMenu
+
+ClickButton:2020/07/04 12:06:04>>collection
+
+click_deck_button:2020/07/04 12:06:05>>deev3
+
+select_deck:2020/07/04 12:06:07>>deev3
+
+click_menu_button:2020/07/04 12:06:07>>panel:Mage
+
+mana_filter:2020/07/04 12:06:08>>mana:10
+
+click_menu_button:2020/07/04 12:06:10>>panel:Mage
+
+GoTo:2020/07/04 12:06:10>>MainMenu
+
+ClickButton:2020/07/04 12:06:12>>play
+
+logIn:2020/07/04 12:07:08>>player logged in.
+
+click_menu_button:2020/07/04 12:07:08>>panel:Mage
+
+GoTo:2020/07/04 12:07:09>>MainMenu
+
+ClickButton:2020/07/04 12:07:10>>collection
+
+click_deck_button:2020/07/04 12:07:12>>deev3
+
+select_deck:2020/07/04 12:07:14>>deev3
+
+click_menu_button:2020/07/04 12:07:14>>panel:Mage
+
+mana_filter:2020/07/04 12:07:15>>mana:10
+
+click_menu_button:2020/07/04 12:07:17>>panel:Mage
+
+GoTo:2020/07/04 12:07:17>>MainMenu
+
+ClickButton:2020/07/04 12:07:20>>play
+
+logIn:2020/07/04 12:08:59>>player logged in.
+
+click_menu_button:2020/07/04 12:08:59>>panel:Mage
+
+GoTo:2020/07/04 12:09:00>>MainMenu
+
+ClickButton:2020/07/04 12:09:02>>collection
+
+click_deck_button:2020/07/04 12:09:04>>hey11
+
+select_deck:2020/07/04 12:09:05>>hey11
+
+click_menu_button:2020/07/04 12:09:05>>panel:Mage
+
+mana_filter:2020/07/04 12:09:06>>mana:10
+
+click_menu_button:2020/07/04 12:09:08>>panel:Mage
+
+GoTo:2020/07/04 12:09:08>>MainMenu
+
+ClickButton:2020/07/04 12:09:09>>play
+
+logIn:2020/07/04 12:13:39>>player logged in.
+
+click_menu_button:2020/07/04 12:13:40>>panel:Mage
+
+GoTo:2020/07/04 12:13:41>>MainMenu
+
+ClickButton:2020/07/04 12:13:43>>collection
+
+click_deck_button:2020/07/04 12:13:45>>deev3
+
+select_deck:2020/07/04 12:13:47>>deev3
+
+click_menu_button:2020/07/04 12:13:47>>panel:Mage
+
+mana_filter:2020/07/04 12:13:48>>mana:10
+
+click_menu_button:2020/07/04 12:13:50>>panel:Mage
+
+GoTo:2020/07/04 12:13:50>>MainMenu
+
+ClickButton:2020/07/04 12:13:52>>play
+
+logIn:2020/07/04 12:15:08>>player logged in.
+
+click_menu_button:2020/07/04 12:15:08>>panel:Mage
+
+GoTo:2020/07/04 12:15:10>>MainMenu
+
+ClickButton:2020/07/04 12:15:11>>collection
+
+click_deck_button:2020/07/04 12:15:12>>deev3
+
+select_deck:2020/07/04 12:15:13>>deev3
+
+click_menu_button:2020/07/04 12:15:13>>panel:Mage
+
+mana_filter:2020/07/04 12:15:14>>mana:10
+
+click_menu_button:2020/07/04 12:15:16>>panel:Mage
+
+GoTo:2020/07/04 12:15:16>>MainMenu
+
+ClickButton:2020/07/04 12:15:18>>play
+
+logIn:2020/07/04 12:20:01>>player logged in.
+
+click_menu_button:2020/07/04 12:20:02>>panel:Mage
+
+GoTo:2020/07/04 12:20:03>>MainMenu
+
+ClickButton:2020/07/04 12:20:07>>collection
+
+click_deck_button:2020/07/04 12:20:09>>deev3
+
+select_deck:2020/07/04 12:20:10>>deev3
+
+click_menu_button:2020/07/04 12:20:10>>panel:Mage
+
+mana_filter:2020/07/04 12:20:12>>mana:10
+
+click_menu_button:2020/07/04 12:20:14>>panel:Mage
+
+GoTo:2020/07/04 12:20:14>>MainMenu
+
+ClickButton:2020/07/04 12:20:15>>play
+
+logIn:2020/07/04 12:43:46>>player logged in.
+
+click_menu_button:2020/07/04 12:43:46>>panel:Mage
+
+GoTo:2020/07/04 12:43:48>>MainMenu
+
+ClickButton:2020/07/04 12:43:50>>collection
+
+click_deck_button:2020/07/04 12:43:52>>deev3
+
+select_deck:2020/07/04 12:43:54>>deev3
+
+click_menu_button:2020/07/04 12:43:54>>panel:Mage
+
+mana_filter:2020/07/04 12:43:55>>mana:10
+
+click_menu_button:2020/07/04 12:43:58>>panel:Mage
+
+GoTo:2020/07/04 12:43:58>>MainMenu
+
+ClickButton:2020/07/04 12:44:00>>play
+
+logIn:2020/07/04 12:45:46>>player logged in.
+
+click_menu_button:2020/07/04 12:45:46>>panel:Mage
+
+GoTo:2020/07/04 12:45:47>>MainMenu
+
+ClickButton:2020/07/04 12:45:49>>collection
+
+click_deck_button:2020/07/04 12:45:50>>hey11
+
+select_deck:2020/07/04 12:45:52>>hey11
+
+click_menu_button:2020/07/04 12:45:52>>panel:Mage
+
+mana_filter:2020/07/04 12:45:53>>mana:10
+
+click_menu_button:2020/07/04 12:45:56>>panel:Mage
+
+GoTo:2020/07/04 12:45:56>>MainMenu
+
+ClickButton:2020/07/04 12:45:57>>play
+
+logIn:2020/07/04 12:51:49>>player logged in.
+
+click_menu_button:2020/07/04 12:51:50>>panel:Mage
+
+GoTo:2020/07/04 12:51:51>>MainMenu
+
+ClickButton:2020/07/04 12:51:55>>collection
+
+click_deck_button:2020/07/04 12:51:57>>deev3
+
+select_deck:2020/07/04 12:51:59>>deev3
+
+click_menu_button:2020/07/04 12:51:59>>panel:Mage
+
+mana_filter:2020/07/04 12:52:01>>mana:10
+
+click_menu_button:2020/07/04 12:52:04>>panel:Mage
+
+GoTo:2020/07/04 12:52:04>>MainMenu
+
+ClickButton:2020/07/04 12:52:05>>play
+
+logIn:2020/07/04 13:16:16>>player logged in.
+
+click_menu_button:2020/07/04 13:16:16>>panel:Mage
+
+GoTo:2020/07/04 13:16:18>>MainMenu
+
+ClickButton:2020/07/04 13:16:19>>collection
+
+click_deck_button:2020/07/04 13:16:20>>deev3
+
+select_deck:2020/07/04 13:16:21>>deev3
+
+click_menu_button:2020/07/04 13:16:21>>panel:Mage
+
+mana_filter:2020/07/04 13:16:23>>mana:10
+
+click_menu_button:2020/07/04 13:16:26>>panel:Mage
+
+GoTo:2020/07/04 13:16:26>>MainMenu
+
+ClickButton:2020/07/04 13:16:27>>play
+
+logIn:2020/07/04 15:03:16>>player logged in.
+
+click_menu_button:2020/07/04 15:03:16>>panel:Mage
+
+GoTo:2020/07/04 15:03:18>>MainMenu
+
+ClickButton:2020/07/04 15:03:19>>collection
+
+click_deck_button:2020/07/04 15:03:20>>hey11
+
+select_deck:2020/07/04 15:03:21>>hey11
+
+click_menu_button:2020/07/04 15:03:21>>panel:Mage
+
+mana_filter:2020/07/04 15:03:23>>mana:10
+
+click_menu_button:2020/07/04 15:03:25>>panel:Mage
+
+GoTo:2020/07/04 15:03:26>>MainMenu
+
+ClickButton:2020/07/04 15:03:27>>play
+
+logIn:2020/07/04 15:09:53>>player logged in.
+
+click_menu_button:2020/07/04 15:09:53>>panel:Mage
+
+GoTo:2020/07/04 15:09:55>>MainMenu
+
+ClickButton:2020/07/04 15:09:57>>collection
+
+click_deck_button:2020/07/04 15:09:59>>hey11
+
+select_deck:2020/07/04 15:10:01>>hey11
+
+click_menu_button:2020/07/04 15:10:01>>panel:Mage
+
+mana_filter:2020/07/04 15:10:03>>mana:10
+
+click_menu_button:2020/07/04 15:10:05>>panel:Mage
+
+GoTo:2020/07/04 15:10:05>>MainMenu
+
+ClickButton:2020/07/04 15:10:07>>play
+
+logIn:2020/07/04 15:13:38>>player logged in.
+
+click_menu_button:2020/07/04 15:13:38>>panel:Mage
+
+GoTo:2020/07/04 15:13:39>>MainMenu
+
+ClickButton:2020/07/04 15:13:41>>collection
+
+click_deck_button:2020/07/04 15:13:42>>hey11
+
+select_deck:2020/07/04 15:13:43>>hey11
+
+click_menu_button:2020/07/04 15:13:43>>panel:Mage
+
+mana_filter:2020/07/04 15:13:45>>mana:10
+
+click_menu_button:2020/07/04 15:13:47>>panel:Mage
+
+GoTo:2020/07/04 15:13:47>>MainMenu
+
+ClickButton:2020/07/04 15:13:49>>play
+
+logIn:2020/07/04 15:15:02>>player logged in.
+
+click_menu_button:2020/07/04 15:15:02>>panel:Mage
+
+GoTo:2020/07/04 15:15:04>>MainMenu
+
+ClickButton:2020/07/04 15:15:06>>collection
+
+click_deck_button:2020/07/04 15:15:08>>hey11
+
+select_deck:2020/07/04 15:15:09>>hey11
+
+click_menu_button:2020/07/04 15:15:09>>panel:Mage
+
+mana_filter:2020/07/04 15:15:11>>mana:10
+
+click_menu_button:2020/07/04 15:15:13>>panel:Mage
+
+GoTo:2020/07/04 15:15:13>>MainMenu
+
+ClickButton:2020/07/04 15:15:14>>play
+
+logIn:2020/07/04 15:17:10>>player logged in.
+
+click_menu_button:2020/07/04 15:17:11>>panel:Mage
+
+GoTo:2020/07/04 15:17:12>>MainMenu
+
+ClickButton:2020/07/04 15:17:13>>collection
+
+click_deck_button:2020/07/04 15:17:14>>deev3
+
+select_deck:2020/07/04 15:17:16>>deev3
+
+click_menu_button:2020/07/04 15:17:16>>panel:Mage
+
+mana_filter:2020/07/04 15:17:18>>mana:10
+
+click_menu_button:2020/07/04 15:17:20>>panel:Mage
+
+GoTo:2020/07/04 15:17:20>>MainMenu
+
+ClickButton:2020/07/04 15:17:21>>play
+
+logIn:2020/07/04 15:21:04>>player logged in.
+
+click_menu_button:2020/07/04 15:21:05>>panel:Mage
+
+GoTo:2020/07/04 15:21:06>>MainMenu
+
+ClickButton:2020/07/04 15:21:09>>collection
+
+click_deck_button:2020/07/04 15:21:10>>hey11
+
+select_deck:2020/07/04 15:21:11>>hey11
+
+click_menu_button:2020/07/04 15:21:11>>panel:Mage
+
+mana_filter:2020/07/04 15:21:12>>mana:10
+
+click_menu_button:2020/07/04 15:21:15>>panel:Mage
+
+GoTo:2020/07/04 15:21:15>>MainMenu
+
+ClickButton:2020/07/04 15:21:17>>play
+
+GoTo:2020/07/04 15:23:59>>MainMenu
+
+ClickButton:2020/07/04 15:24:00>>play
+
+logIn:2020/07/04 15:24:29>>player logged in.
+
+click_menu_button:2020/07/04 15:24:29>>panel:Mage
+
+GoTo:2020/07/04 15:24:31>>MainMenu
+
+ClickButton:2020/07/04 15:24:32>>collection
+
+click_deck_button:2020/07/04 15:24:33>>deev3
+
+select_deck:2020/07/04 15:24:34>>deev3
+
+click_menu_button:2020/07/04 15:24:34>>panel:Mage
+
+mana_filter:2020/07/04 15:24:37>>mana:10
+
+click_menu_button:2020/07/04 15:24:39>>panel:Mage
+
+GoTo:2020/07/04 15:24:39>>MainMenu
+
+ClickButton:2020/07/04 15:24:41>>play
+
+logIn:2020/07/04 15:27:34>>player logged in.
+
+click_menu_button:2020/07/04 15:27:34>>panel:Mage
+
+GoTo:2020/07/04 15:27:36>>MainMenu
+
+ClickButton:2020/07/04 15:27:37>>collection
+
+click_deck_button:2020/07/04 15:27:39>>hey11
+
+select_deck:2020/07/04 15:27:40>>hey11
+
+click_menu_button:2020/07/04 15:27:40>>panel:Mage
+
+mana_filter:2020/07/04 15:27:42>>mana:10
+
+click_menu_button:2020/07/04 15:27:44>>panel:Mage
+
+GoTo:2020/07/04 15:27:44>>MainMenu
+
+ClickButton:2020/07/04 15:27:46>>play
+
+logIn:2020/07/04 15:29:25>>player logged in.
+
+click_menu_button:2020/07/04 15:29:26>>panel:Mage
+
+GoTo:2020/07/04 15:29:27>>MainMenu
+
+ClickButton:2020/07/04 15:29:28>>collection
+
+click_deck_button:2020/07/04 15:29:30>>deev3
+
+select_deck:2020/07/04 15:29:32>>deev3
+
+click_menu_button:2020/07/04 15:29:32>>panel:Mage
+
+mana_filter:2020/07/04 15:29:34>>mana:10
+
+click_menu_button:2020/07/04 15:29:36>>panel:Mage
+
+GoTo:2020/07/04 15:29:36>>MainMenu
+
+ClickButton:2020/07/04 15:29:38>>play
+
+logIn:2020/07/04 15:30:48>>player logged in.
+
+click_menu_button:2020/07/04 15:30:48>>panel:Mage
+
+GoTo:2020/07/04 15:30:49>>MainMenu
+
+ClickButton:2020/07/04 15:30:51>>collection
+
+click_deck_button:2020/07/04 15:30:52>>deev3
+
+select_deck:2020/07/04 15:30:53>>deev3
+
+click_menu_button:2020/07/04 15:30:53>>panel:Mage
+
+mana_filter:2020/07/04 15:30:55>>mana:10
+
+click_menu_button:2020/07/04 15:30:58>>panel:Mage
+
+GoTo:2020/07/04 15:30:58>>MainMenu
+
+ClickButton:2020/07/04 15:30:59>>play
+
+logIn:2020/07/04 15:33:03>>player logged in.
+
+click_menu_button:2020/07/04 15:33:04>>panel:Mage
+
+GoTo:2020/07/04 15:33:05>>MainMenu
+
+ClickButton:2020/07/04 15:33:09>>collection
+
+click_deck_button:2020/07/04 15:33:10>>hey11
+
+select_deck:2020/07/04 15:33:12>>hey11
+
+click_menu_button:2020/07/04 15:33:12>>panel:Mage
+
+mana_filter:2020/07/04 15:33:13>>mana:10
+
+click_menu_button:2020/07/04 15:33:16>>panel:Mage
+
+GoTo:2020/07/04 15:33:16>>MainMenu
+
+ClickButton:2020/07/04 15:33:17>>play
+
+logIn:2020/07/04 15:41:27>>player logged in.
+
+click_menu_button:2020/07/04 15:41:27>>panel:Mage
+
+GoTo:2020/07/04 15:41:28>>MainMenu
+
+ClickButton:2020/07/04 15:41:30>>collection
+
+click_deck_button:2020/07/04 15:41:32>>deev3
+
+select_deck:2020/07/04 15:41:33>>deev3
+
+click_menu_button:2020/07/04 15:41:33>>panel:Mage
+
+mana_filter:2020/07/04 15:41:35>>mana:10
+
+click_menu_button:2020/07/04 15:41:37>>panel:Mage
+
+GoTo:2020/07/04 15:41:37>>MainMenu
+
+ClickButton:2020/07/04 15:41:39>>play
+
+logIn:2020/07/04 15:43:21>>player logged in.
+
+click_menu_button:2020/07/04 15:43:21>>panel:Mage
+
+GoTo:2020/07/04 15:43:22>>MainMenu
+
+ClickButton:2020/07/04 15:43:28>>collection
+
+click_deck_button:2020/07/04 15:43:29>>hey11
+
+select_deck:2020/07/04 15:43:31>>hey11
+
+click_menu_button:2020/07/04 15:43:31>>panel:Mage
+
+mana_filter:2020/07/04 15:43:32>>mana:10
+
+click_menu_button:2020/07/04 15:43:35>>panel:Mage
+
+GoTo:2020/07/04 15:43:35>>MainMenu
+
+ClickButton:2020/07/04 15:43:39>>play
+
+logIn:2020/07/04 15:45:39>>player logged in.
+
+click_menu_button:2020/07/04 15:45:39>>panel:Mage
+
+GoTo:2020/07/04 15:45:40>>MainMenu
+
+ClickButton:2020/07/04 15:45:42>>collection
+
+click_deck_button:2020/07/04 15:45:44>>deev3
+
+select_deck:2020/07/04 15:45:45>>deev3
+
+click_menu_button:2020/07/04 15:45:45>>panel:Mage
+
+mana_filter:2020/07/04 15:45:46>>mana:10
+
+click_menu_button:2020/07/04 15:45:49>>panel:Mage
+
+GoTo:2020/07/04 15:45:49>>MainMenu
+
+ClickButton:2020/07/04 15:45:50>>play
+
+logIn:2020/07/04 15:48:06>>player logged in.
+
+click_menu_button:2020/07/04 15:48:06>>panel:Mage
+
+GoTo:2020/07/04 15:48:08>>MainMenu
+
+ClickButton:2020/07/04 15:48:09>>collection
+
+click_deck_button:2020/07/04 15:48:11>>deev3
+
+select_deck:2020/07/04 15:48:12>>deev3
+
+click_menu_button:2020/07/04 15:48:12>>panel:Mage
+
+mana_filter:2020/07/04 15:48:13>>mana:10
+
+click_menu_button:2020/07/04 15:48:16>>panel:Mage
+
+GoTo:2020/07/04 15:48:16>>MainMenu
+
+ClickButton:2020/07/04 15:48:18>>play
+
+logIn:2020/07/04 15:50:14>>player logged in.
+
+click_menu_button:2020/07/04 15:50:15>>panel:Mage
+
+GoTo:2020/07/04 15:50:16>>MainMenu
+
+ClickButton:2020/07/04 15:50:17>>collection
+
+click_deck_button:2020/07/04 15:50:19>>deev3
+
+select_deck:2020/07/04 15:50:20>>deev3
+
+click_menu_button:2020/07/04 15:50:20>>panel:Mage
+
+mana_filter:2020/07/04 15:50:22>>mana:10
+
+click_menu_button:2020/07/04 15:50:24>>panel:Mage
+
+GoTo:2020/07/04 15:50:24>>MainMenu
+
+ClickButton:2020/07/04 15:50:26>>play
+
+logIn:2020/07/04 16:10:39>>player logged in.
+
+click_menu_button:2020/07/04 16:10:40>>panel:Mage
+
+GoTo:2020/07/04 16:10:41>>MainMenu
+
+ClickButton:2020/07/04 16:10:42>>collection
+
+click_deck_button:2020/07/04 16:10:44>>deev3
+
+select_deck:2020/07/04 16:10:45>>deev3
+
+click_menu_button:2020/07/04 16:10:45>>panel:Mage
+
+mana_filter:2020/07/04 16:10:47>>mana:10
+
+click_menu_button:2020/07/04 16:10:49>>panel:Mage
+
+GoTo:2020/07/04 16:10:49>>MainMenu
+
+ClickButton:2020/07/04 16:10:51>>play
+
+logIn:2020/07/04 16:13:55>>player logged in.
+
+click_menu_button:2020/07/04 16:13:56>>panel:Mage
+
+GoTo:2020/07/04 16:13:57>>MainMenu
+
+ClickButton:2020/07/04 16:14:14>>collection
+
+click_deck_button:2020/07/04 16:14:16>>hey11
+
+select_deck:2020/07/04 16:14:18>>hey11
+
+click_menu_button:2020/07/04 16:14:18>>panel:Mage
+
+mana_filter:2020/07/04 16:14:19>>mana:10
+
+click_menu_button:2020/07/04 16:14:22>>panel:Mage
+
+GoTo:2020/07/04 16:14:22>>MainMenu
+
+ClickButton:2020/07/04 16:14:23>>play
+
+logIn:2020/07/04 16:16:27>>player logged in.
+
+click_menu_button:2020/07/04 16:16:27>>panel:Mage
+
+GoTo:2020/07/04 16:16:29>>MainMenu
+
+ClickButton:2020/07/04 16:16:30>>collection
+
+click_deck_button:2020/07/04 16:16:32>>deev3
+
+select_deck:2020/07/04 16:16:33>>deev3
+
+click_menu_button:2020/07/04 16:16:33>>panel:Mage
+
+mana_filter:2020/07/04 16:16:34>>mana:10
+
+click_menu_button:2020/07/04 16:16:37>>panel:Mage
+
+GoTo:2020/07/04 16:16:37>>MainMenu
+
+ClickButton:2020/07/04 16:16:38>>play
+
+logIn:2020/07/04 16:20:20>>player logged in.
+
+click_menu_button:2020/07/04 16:20:20>>panel:Mage
+
+GoTo:2020/07/04 16:20:22>>MainMenu
+
+ClickButton:2020/07/04 16:20:23>>collection
+
+click_deck_button:2020/07/04 16:20:24>>deev3
+
+select_deck:2020/07/04 16:20:25>>deev3
+
+click_menu_button:2020/07/04 16:20:25>>panel:Mage
+
+mana_filter:2020/07/04 16:20:27>>mana:10
+
+click_menu_button:2020/07/04 16:20:29>>panel:Mage
+
+GoTo:2020/07/04 16:20:29>>MainMenu
+
+ClickButton:2020/07/04 16:20:31>>play
+
+logIn:2020/07/04 16:25:44>>player logged in.
+
+click_menu_button:2020/07/04 16:25:45>>panel:Mage
+
+GoTo:2020/07/04 16:25:46>>MainMenu
+
+ClickButton:2020/07/04 16:25:47>>collection
+
+click_deck_button:2020/07/04 16:25:49>>hey11
+
+select_deck:2020/07/04 16:25:50>>hey11
+
+click_menu_button:2020/07/04 16:25:50>>panel:Mage
+
+mana_filter:2020/07/04 16:25:51>>mana:10
+
+click_menu_button:2020/07/04 16:25:54>>panel:Mage
+
+GoTo:2020/07/04 16:25:54>>MainMenu
+
+ClickButton:2020/07/04 16:25:55>>play
+
+logIn:2020/07/06 17:27:26>>player logged in.
+
+click_menu_button:2020/07/06 17:27:26>>panel:Mage
+
+GoTo:2020/07/06 17:27:28>>MainMenu
+
+ClickButton:2020/07/06 17:27:29>>collection
+
+click_deck_button:2020/07/06 17:27:30>>hey11
+
+select_deck:2020/07/06 17:27:31>>hey11
+
+click_menu_button:2020/07/06 17:27:31>>panel:Mage
+
+mana_filter:2020/07/06 17:27:33>>mana:10
+
+click_menu_button:2020/07/06 17:27:36>>panel:Mage
+
+GoTo:2020/07/06 17:27:36>>MainMenu
+
+ClickButton:2020/07/06 17:27:37>>play
+
+logIn:2020/07/06 17:31:11>>player logged in.
+
+click_menu_button:2020/07/06 17:31:12>>panel:Mage
+
+GoTo:2020/07/06 17:31:13>>MainMenu
+
+ClickButton:2020/07/06 17:31:15>>collection
+
+click_deck_button:2020/07/06 17:31:16>>hey11
+
+select_deck:2020/07/06 17:31:17>>hey11
+
+click_menu_button:2020/07/06 17:31:17>>panel:Mage
+
+mana_filter:2020/07/06 17:31:18>>mana:10
+
+click_menu_button:2020/07/06 17:31:21>>panel:Mage
+
+GoTo:2020/07/06 17:31:21>>MainMenu
+
+ClickButton:2020/07/06 17:31:22>>play
+
+logIn:2020/07/06 18:24:45>>player logged in.
+
+click_menu_button:2020/07/06 18:24:46>>panel:Mage
+
+GoTo:2020/07/06 18:24:47>>MainMenu
+
+ClickButton:2020/07/06 18:24:49>>collection
+
+click_deck_button:2020/07/06 18:24:50>>hey11
+
+select_deck:2020/07/06 18:24:52>>hey11
+
+click_menu_button:2020/07/06 18:24:52>>panel:Mage
+
+mana_filter:2020/07/06 18:24:54>>mana:10
+
+click_menu_button:2020/07/06 18:24:56>>panel:Mage
+
+GoTo:2020/07/06 18:24:56>>MainMenu
+
+ClickButton:2020/07/06 18:24:57>>play
+
+logIn:2020/07/06 18:26:52>>player logged in.
+
+click_menu_button:2020/07/06 18:26:53>>panel:Mage
+
+GoTo:2020/07/06 18:26:54>>MainMenu
+
+ClickButton:2020/07/06 18:26:55>>collection
+
+click_deck_button:2020/07/06 18:26:56>>deev3
+
+select_deck:2020/07/06 18:26:58>>deev3
+
+click_menu_button:2020/07/06 18:26:58>>panel:Mage
+
+mana_filter:2020/07/06 18:26:59>>mana:10
+
+click_menu_button:2020/07/06 18:27:02>>panel:Mage
+
+GoTo:2020/07/06 18:27:02>>MainMenu
+
+ClickButton:2020/07/06 18:27:03>>play
+
+logIn:2020/07/06 18:38:56>>player logged in.
+
+click_menu_button:2020/07/06 18:38:56>>panel:Mage
+
+GoTo:2020/07/06 18:38:57>>MainMenu
+
+ClickButton:2020/07/06 18:39:00>>collection
+
+click_deck_button:2020/07/06 18:39:01>>deev3
+
+select_deck:2020/07/06 18:39:02>>deev3
+
+click_menu_button:2020/07/06 18:39:02>>panel:Mage
+
+mana_filter:2020/07/06 18:39:03>>mana:10
+
+click_menu_button:2020/07/06 18:39:06>>panel:Mage
+
+GoTo:2020/07/06 18:39:06>>MainMenu
+
+ClickButton:2020/07/06 18:39:07>>play
+
+logIn:2020/07/06 18:42:21>>player logged in.
+
+click_menu_button:2020/07/06 18:42:21>>panel:Mage
+
+GoTo:2020/07/06 18:42:22>>MainMenu
+
+ClickButton:2020/07/06 18:42:23>>collection
+
+click_deck_button:2020/07/06 18:42:24>>hey11
+
+select_deck:2020/07/06 18:42:27>>hey11
+
+click_menu_button:2020/07/06 18:42:27>>panel:Mage
+
+mana_filter:2020/07/06 18:42:28>>mana:10
+
+click_menu_button:2020/07/06 18:42:31>>panel:Mage
+
+GoTo:2020/07/06 18:42:31>>MainMenu
+
+ClickButton:2020/07/06 18:42:32>>play
+
+logIn:2020/07/06 18:43:57>>player logged in.
+
+click_menu_button:2020/07/06 18:43:57>>panel:Mage
+
+GoTo:2020/07/06 18:43:58>>MainMenu
+
+ClickButton:2020/07/06 18:44:00>>collection
+
+click_deck_button:2020/07/06 18:44:01>>hey11
+
+select_deck:2020/07/06 18:44:02>>hey11
+
+click_menu_button:2020/07/06 18:44:02>>panel:Mage
+
+mana_filter:2020/07/06 18:44:04>>mana:10
+
+click_menu_button:2020/07/06 18:44:06>>panel:Mage
+
+GoTo:2020/07/06 18:44:06>>MainMenu
+
+ClickButton:2020/07/06 18:44:07>>play
+
+logIn:2020/07/06 18:47:43>>player logged in.
+
+click_menu_button:2020/07/06 18:47:43>>panel:Mage
+
+GoTo:2020/07/06 18:47:44>>MainMenu
+
+ClickButton:2020/07/06 18:47:46>>collection
+
+click_deck_button:2020/07/06 18:47:48>>deev3
+
+select_deck:2020/07/06 18:47:49>>deev3
+
+click_menu_button:2020/07/06 18:47:49>>panel:Mage
+
+mana_filter:2020/07/06 18:47:50>>mana:10
+
+click_menu_button:2020/07/06 18:47:53>>panel:Mage
+
+GoTo:2020/07/06 18:47:53>>MainMenu
+
+ClickButton:2020/07/06 18:47:54>>play
+
+logIn:2020/07/06 19:02:07>>player logged in.
+
+click_menu_button:2020/07/06 19:02:07>>panel:Mage
+
+GoTo:2020/07/06 19:02:09>>MainMenu
+
+ClickButton:2020/07/06 19:02:10>>collection
+
+click_deck_button:2020/07/06 19:02:12>>deev3
+
+select_deck:2020/07/06 19:02:15>>deev3
+
+click_menu_button:2020/07/06 19:02:15>>panel:Mage
+
+mana_filter:2020/07/06 19:02:17>>mana:10
+
+click_menu_button:2020/07/06 19:02:19>>panel:Mage
+
+GoTo:2020/07/06 19:02:19>>MainMenu
+
+ClickButton:2020/07/06 19:02:21>>play
+
+logIn:2020/07/06 19:04:54>>player logged in.
+
+click_menu_button:2020/07/06 19:04:54>>panel:Mage
+
+GoTo:2020/07/06 19:04:56>>MainMenu
+
+ClickButton:2020/07/06 19:04:57>>collection
+
+click_deck_button:2020/07/06 19:04:58>>deev3
+
+select_deck:2020/07/06 19:05:00>>deev3
+
+click_menu_button:2020/07/06 19:05:00>>panel:Mage
+
+mana_filter:2020/07/06 19:05:01>>mana:10
+
+click_menu_button:2020/07/06 19:05:04>>panel:Mage
+
+GoTo:2020/07/06 19:05:04>>MainMenu
+
+ClickButton:2020/07/06 19:05:05>>play
+
+logIn:2020/07/06 19:10:46>>player logged in.
+
+click_menu_button:2020/07/06 19:10:46>>panel:Mage
+
+GoTo:2020/07/06 19:10:47>>MainMenu
+
+ClickButton:2020/07/06 19:10:49>>collection
+
+click_deck_button:2020/07/06 19:10:50>>deev3
+
+select_deck:2020/07/06 19:10:51>>deev3
+
+click_menu_button:2020/07/06 19:10:51>>panel:Mage
+
+mana_filter:2020/07/06 19:10:52>>mana:10
+
+click_menu_button:2020/07/06 19:10:55>>panel:Mage
+
+GoTo:2020/07/06 19:10:55>>MainMenu
+
+ClickButton:2020/07/06 19:10:56>>play
+
+logIn:2020/07/06 19:19:08>>player logged in.
+
+click_menu_button:2020/07/06 19:19:08>>panel:Mage
+
+GoTo:2020/07/06 19:19:10>>MainMenu
+
+ClickButton:2020/07/06 19:19:11>>collection
+
+click_deck_button:2020/07/06 19:19:13>>hey11
+
+select_deck:2020/07/06 19:19:15>>hey11
+
+click_menu_button:2020/07/06 19:19:15>>panel:Mage
+
+mana_filter:2020/07/06 19:19:17>>mana:10
+
+click_menu_button:2020/07/06 19:19:20>>panel:Mage
+
+GoTo:2020/07/06 19:19:20>>MainMenu
+
+ClickButton:2020/07/06 19:19:21>>play
+
+logIn:2020/07/07 09:57:38>>player logged in.
+
+click_menu_button:2020/07/07 09:57:38>>panel:Mage
+
+GoTo:2020/07/07 09:57:40>>MainMenu
+
+ClickButton:2020/07/07 09:57:41>>collection
+
+click_deck_button:2020/07/07 09:57:43>>hey11
+
+select_deck:2020/07/07 09:57:44>>hey11
+
+click_menu_button:2020/07/07 09:57:44>>panel:Mage
+
+mana_filter:2020/07/07 09:57:46>>mana:10
+
+click_menu_button:2020/07/07 09:57:48>>panel:Mage
+
+GoTo:2020/07/07 09:57:48>>MainMenu
+
+ClickButton:2020/07/07 09:57:50>>play
+
+logIn:2020/07/07 10:02:12>>player logged in.
+
+click_menu_button:2020/07/07 10:02:12>>panel:Mage
+
+GoTo:2020/07/07 10:02:14>>MainMenu
+
+ClickButton:2020/07/07 10:02:15>>collection
+
+click_deck_button:2020/07/07 10:02:17>>hey11
+
+select_deck:2020/07/07 10:02:18>>hey11
+
+click_menu_button:2020/07/07 10:02:18>>panel:Mage
+
+mana_filter:2020/07/07 10:02:19>>mana:10
+
+click_menu_button:2020/07/07 10:02:22>>panel:Mage
+
+GoTo:2020/07/07 10:02:22>>MainMenu
+
+ClickButton:2020/07/07 10:02:23>>play
+
+logIn:2020/07/07 10:14:30>>player logged in.
+
+click_menu_button:2020/07/07 10:14:30>>panel:Mage
+
+GoTo:2020/07/07 10:14:32>>MainMenu
+
+ClickButton:2020/07/07 10:14:33>>collection
+
+click_deck_button:2020/07/07 10:14:35>>hey11
+
+select_deck:2020/07/07 10:14:37>>hey11
+
+click_menu_button:2020/07/07 10:14:37>>panel:Mage
+
+mana_filter:2020/07/07 10:14:38>>mana:10
+
+click_menu_button:2020/07/07 10:14:40>>panel:Mage
+
+GoTo:2020/07/07 10:14:40>>MainMenu
+
+ClickButton:2020/07/07 10:14:42>>play
+
+logIn:2020/07/07 10:17:20>>player logged in.
+
+click_menu_button:2020/07/07 10:17:20>>panel:Mage
+
+GoTo:2020/07/07 10:17:22>>MainMenu
+
+ClickButton:2020/07/07 10:17:23>>collection
+
+click_deck_button:2020/07/07 10:17:25>>hey11
+
+select_deck:2020/07/07 10:17:26>>hey11
+
+click_menu_button:2020/07/07 10:17:26>>panel:Mage
+
+mana_filter:2020/07/07 10:17:27>>mana:10
+
+click_menu_button:2020/07/07 10:17:30>>panel:Mage
+
+GoTo:2020/07/07 10:17:30>>MainMenu
+
+ClickButton:2020/07/07 10:17:31>>play
+
+logIn:2020/07/07 10:18:55>>player logged in.
+
+click_menu_button:2020/07/07 10:18:56>>panel:Mage
+
+GoTo:2020/07/07 10:18:57>>MainMenu
+
+ClickButton:2020/07/07 10:18:58>>collection
+
+click_deck_button:2020/07/07 10:19:00>>hey11
+
+select_deck:2020/07/07 10:19:01>>hey11
+
+click_menu_button:2020/07/07 10:19:01>>panel:Mage
+
+mana_filter:2020/07/07 10:19:02>>mana:10
+
+click_menu_button:2020/07/07 10:19:04>>panel:Mage
+
+GoTo:2020/07/07 10:19:04>>MainMenu
+
+ClickButton:2020/07/07 10:19:05>>play
+
+logIn:2020/07/07 10:21:06>>player logged in.
+
+click_menu_button:2020/07/07 10:21:06>>panel:Mage
+
+GoTo:2020/07/07 10:21:08>>MainMenu
+
+ClickButton:2020/07/07 10:21:09>>collection
+
+click_deck_button:2020/07/07 10:21:10>>hey11
+
+select_deck:2020/07/07 10:21:12>>hey11
+
+click_menu_button:2020/07/07 10:21:12>>panel:Mage
+
+mana_filter:2020/07/07 10:21:13>>mana:10
+
+click_menu_button:2020/07/07 10:21:16>>panel:Mage
+
+GoTo:2020/07/07 10:21:16>>MainMenu
+
+ClickButton:2020/07/07 10:21:17>>play
+
+logIn:2020/07/07 10:22:16>>player logged in.
+
+click_menu_button:2020/07/07 10:22:16>>panel:Mage
+
+GoTo:2020/07/07 10:22:18>>MainMenu
+
+ClickButton:2020/07/07 10:22:19>>collection
+
+click_deck_button:2020/07/07 10:22:20>>hey11
+
+select_deck:2020/07/07 10:22:21>>hey11
+
+click_menu_button:2020/07/07 10:22:21>>panel:Mage
+
+mana_filter:2020/07/07 10:22:24>>mana:10
+
+click_menu_button:2020/07/07 10:22:26>>panel:Mage
+
+GoTo:2020/07/07 10:22:26>>MainMenu
+
+ClickButton:2020/07/07 10:22:27>>play
+
+logIn:2020/07/07 10:23:32>>player logged in.
+
+click_menu_button:2020/07/07 10:23:32>>panel:Mage
+
+GoTo:2020/07/07 10:23:34>>MainMenu
+
+ClickButton:2020/07/07 10:23:35>>collection
+
+click_deck_button:2020/07/07 10:23:36>>hey11
+
+select_deck:2020/07/07 10:23:38>>hey11
+
+click_menu_button:2020/07/07 10:23:38>>panel:Mage
+
+mana_filter:2020/07/07 10:23:39>>mana:10
+
+click_menu_button:2020/07/07 10:23:42>>panel:Mage
+
+GoTo:2020/07/07 10:23:42>>MainMenu
+
+ClickButton:2020/07/07 10:23:43>>play
+
+logIn:2020/07/07 10:25:17>>player logged in.
+
+click_menu_button:2020/07/07 10:25:17>>panel:Mage
+
+GoTo:2020/07/07 10:25:19>>MainMenu
+
+ClickButton:2020/07/07 10:25:20>>collection
+
+click_deck_button:2020/07/07 10:25:21>>hey11
+
+select_deck:2020/07/07 10:25:22>>hey11
+
+click_menu_button:2020/07/07 10:25:22>>panel:Mage
+
+mana_filter:2020/07/07 10:25:23>>mana:10
+
+click_menu_button:2020/07/07 10:25:26>>panel:Mage
+
+GoTo:2020/07/07 10:25:26>>MainMenu
+
+ClickButton:2020/07/07 10:25:28>>play
+
+logIn:2020/07/07 10:28:32>>player logged in.
+
+click_menu_button:2020/07/07 10:28:32>>panel:Mage
+
+GoTo:2020/07/07 10:28:33>>MainMenu
+
+ClickButton:2020/07/07 10:28:45>>collection
+
+click_deck_button:2020/07/07 10:28:46>>hey11
+
+select_deck:2020/07/07 10:28:47>>hey11
+
+click_menu_button:2020/07/07 10:28:47>>panel:Mage
+
+select_deck:2020/07/07 10:28:52>>hey11
+
+click_menu_button:2020/07/07 10:28:52>>panel:Mage
+
+mana_filter:2020/07/07 10:28:53>>mana:10
+
+click_menu_button:2020/07/07 10:28:56>>panel:Mage
+
+GoTo:2020/07/07 10:28:56>>MainMenu
+
+ClickButton:2020/07/07 10:28:57>>play
+
+logIn:2020/07/07 10:30:53>>player logged in.
+
+click_menu_button:2020/07/07 10:30:53>>panel:Mage
+
+GoTo:2020/07/07 10:30:54>>MainMenu
+
+ClickButton:2020/07/07 10:30:56>>collection
+
+click_deck_button:2020/07/07 10:30:57>>hey11
+
+change_Deck_name:2020/07/07 10:30:59>>hey11changed to hey11
+
+click_deck_button:2020/07/07 10:31:00>>deev3
+
+select_deck:2020/07/07 10:31:01>>deev3
+
+click_menu_button:2020/07/07 10:31:01>>panel:Mage
+
+mana_filter:2020/07/07 10:31:03>>mana:10
+
+click_menu_button:2020/07/07 10:31:06>>panel:Mage
+
+GoTo:2020/07/07 10:31:06>>MainMenu
+
+ClickButton:2020/07/07 10:31:15>>play
+
+logIn:2020/07/07 10:37:56>>player logged in.
+
+click_menu_button:2020/07/07 10:37:56>>panel:Mage
+
+GoTo:2020/07/07 10:37:58>>MainMenu
+
+ClickButton:2020/07/07 10:37:59>>collection
+
+click_deck_button:2020/07/07 10:38:01>>hey11
+
+select_deck:2020/07/07 10:38:02>>hey11
+
+click_menu_button:2020/07/07 10:38:02>>panel:Mage
+
+mana_filter:2020/07/07 10:38:04>>mana:10
+
+click_menu_button:2020/07/07 10:38:06>>panel:Mage
+
+GoTo:2020/07/07 10:38:06>>MainMenu
+
+ClickButton:2020/07/07 10:38:07>>play
+
+logIn:2020/07/07 15:49:41>>player logged in.
+
+click_menu_button:2020/07/07 15:49:41>>panel:Mage
+
+GoTo:2020/07/07 15:49:42>>MainMenu
+
+ClickButton:2020/07/07 15:49:44>>collection
+
+click_deck_button:2020/07/07 15:49:45>>hey11
+
+select_deck:2020/07/07 15:49:46>>hey11
+
+click_menu_button:2020/07/07 15:49:46>>panel:Mage
+
+mana_filter:2020/07/07 15:49:47>>mana:10
+
+click_menu_button:2020/07/07 15:49:50>>panel:Mage
+
+GoTo:2020/07/07 15:49:50>>MainMenu
+
+ClickButton:2020/07/07 15:49:51>>play
+
+logIn:2020/07/07 16:12:31>>player logged in.
+
+click_menu_button:2020/07/07 16:12:32>>panel:Mage
+
+GoTo:2020/07/07 16:12:33>>MainMenu
+
+ClickButton:2020/07/07 16:12:35>>collection
+
+click_deck_button:2020/07/07 16:12:36>>hey11
+
+select_deck:2020/07/07 16:12:38>>hey11
+
+click_menu_button:2020/07/07 16:12:38>>panel:Mage
+
+mana_filter:2020/07/07 16:12:41>>mana:10
+
+click_menu_button:2020/07/07 16:12:43>>panel:Mage
+
+GoTo:2020/07/07 16:12:43>>MainMenu
+
+ClickButton:2020/07/07 16:12:44>>play
+
+logIn:2020/07/07 16:16:21>>player logged in.
+
+click_menu_button:2020/07/07 16:16:21>>panel:Mage
+
+GoTo:2020/07/07 16:16:22>>MainMenu
+
+ClickButton:2020/07/07 16:16:24>>collection
+
+mana_filter:2020/07/07 16:16:25>>mana:10
+
+click_menu_button:2020/07/07 16:16:28>>panel:Mage
+
+GoTo:2020/07/07 16:16:28>>MainMenu
+
+ClickButton:2020/07/07 16:16:48>>shop
+
+buy_card:2020/07/07 16:17:06>>Ashbringer
+
+click_menu_button:2020/07/07 16:17:08>>panel:Mage
+
+GoTo:2020/07/07 16:17:31>>MainMenu
+
+ClickButton:2020/07/07 16:17:33>>collection
+
+mana_filter:2020/07/07 16:17:40>>mana:10
+
+click_menu_button:2020/07/07 16:17:40>>panel:Rogue
+
+build_new_deck:2020/07/07 16:18:03>>name:example_hero:rogue
+
+click_menu_button:2020/07/07 16:18:04>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:18:06>>WickerflameBurnbristle
+
+click_menu_button:2020/07/07 16:18:07>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:18:09>>FriendlySmith
+
+click_menu_button:2020/07/07 16:18:10>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:18:12>>WickerflameBurnbristle
+
+click_menu_button:2020/07/07 16:18:13>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:18:14>>FriendlySmith
+
+click_menu_button:2020/07/07 16:18:15>>panel:Rogue
+
+mana_filter:2020/07/07 16:18:17>>mana:10
+
+click_menu_button:2020/07/07 16:18:17>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:18:22>>Ashbringer
+
+click_menu_button:2020/07/07 16:18:23>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:18:39>>Ashbringer
+
+click_menu_button:2020/07/07 16:18:40>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:18:48>>CurioCollector
+
+click_menu_button:2020/07/07 16:18:49>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:18:53>>SecurityRover
+
+click_menu_button:2020/07/07 16:18:54>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:18:56>>TombWarden
+
+click_menu_button:2020/07/07 16:18:58>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:19:00>>Sathrovarr
+
+click_menu_button:2020/07/07 16:19:01>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:19:08>>SecurityRover
+
+click_menu_button:2020/07/07 16:19:09>>panel:Neutral
+
+add_card_toDeck:2020/07/07 16:19:18>>Ashbringer
+
+click_menu_button:2020/07/07 16:19:19>>panel:Neutral
+
+mana_filter:2020/07/07 16:19:22>>mana:10
+
+click_menu_button:2020/07/07 16:19:22>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:19:23>>FriendlySmith
+
+click_menu_button:2020/07/07 16:19:24>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:19:26>>WickerflameBurnbristle
+
+click_menu_button:2020/07/07 16:19:27>>panel:Rogue
+
+add_card_toDeck:2020/07/07 16:19:30>>WickerflameBurnbristle
+
+click_menu_button:2020/07/07 16:19:32>>panel:Rogue
+
+select_deck:2020/07/07 16:19:34>>example
+
+click_menu_button:2020/07/07 16:19:35>>panel:Rogue
+
+mana_filter:2020/07/07 16:19:38>>mana:10
+
+GoTo:2020/07/07 16:19:38>>MainMenu
+
+ClickButton:2020/07/07 16:19:39>>play
+
+logIn:2020/07/07 16:27:08>>player logged in.
+
+click_menu_button:2020/07/07 16:27:08>>panel:Mage
+
+GoTo:2020/07/07 16:27:09>>MainMenu
+
+ClickButton:2020/07/07 16:27:11>>collection
+
+click_deck_button:2020/07/07 16:27:12>>example
+
+select_deck:2020/07/07 16:27:14>>example
+
+click_menu_button:2020/07/07 16:27:14>>panel:Mage
+
+select_deck:2020/07/07 16:27:17>>example
+
+click_menu_button:2020/07/07 16:27:17>>panel:Mage
+
+mana_filter:2020/07/07 16:27:18>>mana:10
+
+click_menu_button:2020/07/07 16:27:21>>panel:Mage
+
+GoTo:2020/07/07 16:27:21>>MainMenu
+
+ClickButton:2020/07/07 16:27:22>>play
+
+logIn:2020/07/07 16:32:57>>player logged in.
+
+click_menu_button:2020/07/07 16:32:57>>panel:Mage
+
+GoTo:2020/07/07 16:32:59>>MainMenu
+
+ClickButton:2020/07/07 16:33:01>>collection
+
+click_deck_button:2020/07/07 16:33:02>>example
+
+select_deck:2020/07/07 16:33:03>>example
+
+click_menu_button:2020/07/07 16:33:03>>panel:Mage
+
+mana_filter:2020/07/07 16:33:05>>mana:10
+
+click_menu_button:2020/07/07 16:33:07>>panel:Mage
+
+GoTo:2020/07/07 16:33:07>>MainMenu
+
+ClickButton:2020/07/07 16:33:09>>play
+
+logIn:2020/07/07 16:39:56>>player logged in.
+
+click_menu_button:2020/07/07 16:39:56>>panel:Mage
+
+GoTo:2020/07/07 16:39:58>>MainMenu
+
+ClickButton:2020/07/07 16:39:59>>collection
+
+click_deck_button:2020/07/07 16:40:00>>example
+
+select_deck:2020/07/07 16:40:01>>example
+
+click_menu_button:2020/07/07 16:40:01>>panel:Mage
+
+mana_filter:2020/07/07 16:40:03>>mana:10
+
+click_menu_button:2020/07/07 16:40:05>>panel:Mage
+
+GoTo:2020/07/07 16:40:05>>MainMenu
+
+ClickButton:2020/07/07 16:40:07>>play
+
+logIn:2020/07/07 16:41:48>>player logged in.
+
+click_menu_button:2020/07/07 16:41:49>>panel:Mage
+
+GoTo:2020/07/07 16:41:50>>MainMenu
+
+ClickButton:2020/07/07 16:41:51>>collection
+
+click_deck_button:2020/07/07 16:41:53>>example
+
+select_deck:2020/07/07 16:41:54>>example
+
+click_menu_button:2020/07/07 16:41:54>>panel:Mage
+
+mana_filter:2020/07/07 16:42:00>>mana:10
+
+click_menu_button:2020/07/07 16:42:03>>panel:Mage
+
+GoTo:2020/07/07 16:42:03>>MainMenu
+
+ClickButton:2020/07/07 16:42:06>>play
+
+logIn:2020/07/07 16:58:01>>player logged in.
+
+click_menu_button:2020/07/07 16:58:01>>panel:Mage
+
+GoTo:2020/07/07 16:58:03>>MainMenu
+
+ClickButton:2020/07/07 16:58:04>>collection
+
+click_deck_button:2020/07/07 16:58:10>>example
+
+select_deck:2020/07/07 16:58:10>>example
+
+click_menu_button:2020/07/07 16:58:10>>panel:Mage
+
+mana_filter:2020/07/07 16:58:13>>mana:10
+
+click_menu_button:2020/07/07 16:58:16>>panel:Mage
+
+GoTo:2020/07/07 16:58:16>>MainMenu
+
+ClickButton:2020/07/07 16:58:25>>collection
+
+mana_filter:2020/07/07 16:58:28>>mana:10
+
+GoTo:2020/07/07 16:58:28>>MainMenu
+
+ClickButton:2020/07/07 16:58:29>>play
+
+logIn:2020/07/07 17:00:31>>player logged in.
+
+click_menu_button:2020/07/07 17:00:31>>panel:Mage
+
+GoTo:2020/07/07 17:00:32>>MainMenu
+
+ClickButton:2020/07/07 17:00:33>>collection
+
+click_deck_button:2020/07/07 17:00:34>>example
+
+select_deck:2020/07/07 17:00:36>>example
+
+click_menu_button:2020/07/07 17:00:36>>panel:Mage
+
+mana_filter:2020/07/07 17:00:36>>mana:10
+
+click_menu_button:2020/07/07 17:00:39>>panel:Mage
+
+GoTo:2020/07/07 17:00:39>>MainMenu
+
+ClickButton:2020/07/07 17:00:40>>play
+
+logIn:2020/07/07 17:06:46>>player logged in.
+
+click_menu_button:2020/07/07 17:06:46>>panel:Mage
+
+GoTo:2020/07/07 17:06:48>>MainMenu
+
+ClickButton:2020/07/07 17:06:53>>collection
+
+click_deck_button:2020/07/07 17:06:54>>example
+
+select_deck:2020/07/07 17:06:55>>example
+
+click_menu_button:2020/07/07 17:06:55>>panel:Mage
+
+mana_filter:2020/07/07 17:07:02>>mana:10
+
+click_menu_button:2020/07/07 17:07:05>>panel:Mage
+
+GoTo:2020/07/07 17:07:05>>MainMenu
+
+ClickButton:2020/07/07 17:07:06>>play
+
+logIn:2020/07/07 17:14:48>>player logged in.
+
+click_menu_button:2020/07/07 17:14:48>>panel:Mage
+
+GoTo:2020/07/07 17:14:50>>MainMenu
+
+ClickButton:2020/07/07 17:14:51>>collection
+
+click_deck_button:2020/07/07 17:14:52>>example
+
+select_deck:2020/07/07 17:14:53>>example
+
+click_menu_button:2020/07/07 17:14:54>>panel:Mage
+
+mana_filter:2020/07/07 17:14:55>>mana:10
+
+click_menu_button:2020/07/07 17:14:57>>panel:Mage
+
+GoTo:2020/07/07 17:14:57>>MainMenu
+
+ClickButton:2020/07/07 17:14:58>>play
+
+logIn:2020/07/07 19:29:16>>player logged in.
+
+click_menu_button:2020/07/07 19:29:16>>panel:Mage
+
+GoTo:2020/07/07 19:29:17>>MainMenu
+
+ClickButton:2020/07/07 19:29:18>>collection
+
+click_deck_button:2020/07/07 19:29:20>>example
+
+select_deck:2020/07/07 19:29:21>>example
+
+click_menu_button:2020/07/07 19:29:21>>panel:Mage
+
+mana_filter:2020/07/07 19:29:22>>mana:10
+
+click_menu_button:2020/07/07 19:29:25>>panel:Mage
+
+GoTo:2020/07/07 19:29:25>>MainMenu
+
+ClickButton:2020/07/07 19:29:26>>play
+
+logIn:2020/07/07 19:32:43>>player logged in.
+
+click_menu_button:2020/07/07 19:32:43>>panel:Mage
+
+GoTo:2020/07/07 19:32:45>>MainMenu
+
+ClickButton:2020/07/07 19:32:46>>collection
+
+click_deck_button:2020/07/07 19:32:59>>example
+
+select_deck:2020/07/07 19:33:00>>example
+
+click_menu_button:2020/07/07 19:33:00>>panel:Mage
+
+mana_filter:2020/07/07 19:33:04>>mana:10
+
+click_menu_button:2020/07/07 19:33:06>>panel:Mage
+
+GoTo:2020/07/07 19:33:06>>MainMenu
+
+ClickButton:2020/07/07 19:33:08>>play
+
+logIn:2020/07/07 19:39:44>>player logged in.
+
+click_menu_button:2020/07/07 19:39:44>>panel:Mage
+
+GoTo:2020/07/07 19:39:46>>MainMenu
+
+ClickButton:2020/07/07 19:39:47>>collection
+
+click_deck_button:2020/07/07 19:39:49>>example
+
+select_deck:2020/07/07 19:39:50>>example
+
+click_menu_button:2020/07/07 19:39:50>>panel:Mage
+
+mana_filter:2020/07/07 19:39:52>>mana:10
+
+click_menu_button:2020/07/07 19:39:54>>panel:Mage
+
+GoTo:2020/07/07 19:39:54>>MainMenu
+
+ClickButton:2020/07/07 19:39:55>>play
+
+logIn:2020/07/07 19:45:31>>player logged in.
+
+click_menu_button:2020/07/07 19:45:32>>panel:Mage
+
+GoTo:2020/07/07 19:45:33>>MainMenu
+
+ClickButton:2020/07/07 19:45:34>>collection
+
+click_deck_button:2020/07/07 19:45:36>>example
+
+select_deck:2020/07/07 19:45:37>>example
+
+click_menu_button:2020/07/07 19:45:37>>panel:Mage
+
+mana_filter:2020/07/07 19:45:40>>mana:10
+
+click_menu_button:2020/07/07 19:45:43>>panel:Mage
+
+GoTo:2020/07/07 19:45:43>>MainMenu
+
+ClickButton:2020/07/07 19:45:44>>play
+
+logIn:2020/07/07 19:50:35>>player logged in.
+
+click_menu_button:2020/07/07 19:50:35>>panel:Mage
+
+GoTo:2020/07/07 19:50:36>>MainMenu
+
+ClickButton:2020/07/07 19:50:38>>collection
+
+click_deck_button:2020/07/07 19:50:39>>example
+
+select_deck:2020/07/07 19:50:40>>example
+
+click_menu_button:2020/07/07 19:50:40>>panel:Mage
+
+mana_filter:2020/07/07 19:50:44>>mana:10
+
+click_menu_button:2020/07/07 19:50:47>>panel:Mage
+
+GoTo:2020/07/07 19:50:47>>MainMenu
+
+ClickButton:2020/07/07 19:50:49>>play
+
+logIn:2020/07/07 19:55:46>>player logged in.
+
+click_menu_button:2020/07/07 19:55:46>>panel:Mage
+
+GoTo:2020/07/07 19:55:48>>MainMenu
+
+ClickButton:2020/07/07 19:55:49>>collection
+
+click_deck_button:2020/07/07 19:55:50>>example
+
+select_deck:2020/07/07 19:55:51>>example
+
+click_menu_button:2020/07/07 19:55:51>>panel:Mage
+
+mana_filter:2020/07/07 19:55:52>>mana:10
+
+click_menu_button:2020/07/07 19:55:55>>panel:Mage
+
+GoTo:2020/07/07 19:55:55>>MainMenu
+
+ClickButton:2020/07/07 19:55:56>>play
+
+logIn:2020/07/07 20:03:40>>player logged in.
+
+click_menu_button:2020/07/07 20:03:40>>panel:Mage
+
+GoTo:2020/07/07 20:03:41>>MainMenu
+
+ClickButton:2020/07/07 20:03:45>>collection
+
+click_deck_button:2020/07/07 20:03:49>>example
+
+select_deck:2020/07/07 20:03:51>>example
+
+click_menu_button:2020/07/07 20:03:51>>panel:Mage
+
+mana_filter:2020/07/07 20:03:53>>mana:10
+
+click_menu_button:2020/07/07 20:03:56>>panel:Mage
+
+GoTo:2020/07/07 20:03:56>>MainMenu
+
+ClickButton:2020/07/07 20:03:57>>play
+
+logIn:2020/07/07 20:14:32>>player logged in.
+
+click_menu_button:2020/07/07 20:14:32>>panel:Mage
+
+GoTo:2020/07/07 20:14:33>>MainMenu
+
+ClickButton:2020/07/07 20:14:35>>collection
+
+click_deck_button:2020/07/07 20:14:36>>example
+
+select_deck:2020/07/07 20:14:38>>example
+
+click_menu_button:2020/07/07 20:14:38>>panel:Mage
+
+mana_filter:2020/07/07 20:14:42>>mana:10
+
+click_menu_button:2020/07/07 20:14:44>>panel:Mage
+
+GoTo:2020/07/07 20:14:44>>MainMenu
+
+ClickButton:2020/07/07 20:14:46>>play
+
+logIn:2020/07/07 20:25:21>>player logged in.
+
+click_menu_button:2020/07/07 20:25:21>>panel:Mage
+
+GoTo:2020/07/07 20:25:23>>MainMenu
+
+ClickButton:2020/07/07 20:25:24>>collection
+
+click_deck_button:2020/07/07 20:25:25>>example
+
+select_deck:2020/07/07 20:25:26>>example
+
+click_menu_button:2020/07/07 20:25:26>>panel:Mage
+
+mana_filter:2020/07/07 20:25:28>>mana:10
+
+click_menu_button:2020/07/07 20:25:30>>panel:Mage
+
+GoTo:2020/07/07 20:25:30>>MainMenu
+
+ClickButton:2020/07/07 20:25:32>>play
+
+logIn:2020/07/07 20:38:37>>player logged in.
+
+click_menu_button:2020/07/07 20:38:38>>panel:Mage
+
+GoTo:2020/07/07 20:38:39>>MainMenu
+
+ClickButton:2020/07/07 20:38:40>>collection
+
+click_deck_button:2020/07/07 20:38:41>>example
+
+select_deck:2020/07/07 20:38:42>>example
+
+click_menu_button:2020/07/07 20:38:42>>panel:Mage
+
+mana_filter:2020/07/07 20:38:44>>mana:10
+
+click_menu_button:2020/07/07 20:38:47>>panel:Mage
+
+GoTo:2020/07/07 20:38:47>>MainMenu
+
+ClickButton:2020/07/07 20:38:48>>play
+
+logIn:2020/07/07 20:43:29>>player logged in.
+
+click_menu_button:2020/07/07 20:43:29>>panel:Mage
+
+GoTo:2020/07/07 20:43:30>>MainMenu
+
+ClickButton:2020/07/07 20:43:32>>collection
+
+click_deck_button:2020/07/07 20:43:34>>example
+
+select_deck:2020/07/07 20:43:35>>example
+
+click_menu_button:2020/07/07 20:43:36>>panel:Mage
+
+mana_filter:2020/07/07 20:43:37>>mana:10
+
+click_menu_button:2020/07/07 20:43:40>>panel:Mage
+
+GoTo:2020/07/07 20:43:40>>MainMenu
+
+ClickButton:2020/07/07 20:43:41>>play
+
+logIn:2020/07/07 20:49:37>>player logged in.
+
+click_menu_button:2020/07/07 20:49:37>>panel:Mage
+
+GoTo:2020/07/07 20:49:39>>MainMenu
+
+ClickButton:2020/07/07 20:49:40>>collection
+
+click_deck_button:2020/07/07 20:49:41>>example
+
+select_deck:2020/07/07 20:49:43>>example
+
+click_menu_button:2020/07/07 20:49:43>>panel:Mage
+
+mana_filter:2020/07/07 20:49:45>>mana:10
+
+click_menu_button:2020/07/07 20:49:47>>panel:Mage
+
+GoTo:2020/07/07 20:49:47>>MainMenu
+
+ClickButton:2020/07/07 20:49:49>>play
+
+logIn:2020/07/07 21:03:03>>player logged in.
+
+click_menu_button:2020/07/07 21:03:03>>panel:Mage
+
+GoTo:2020/07/07 21:03:05>>MainMenu
+
+ClickButton:2020/07/07 21:03:08>>collection
+
+click_deck_button:2020/07/07 21:03:10>>example
+
+select_deck:2020/07/07 21:03:11>>example
+
+click_menu_button:2020/07/07 21:03:11>>panel:Mage
+
+mana_filter:2020/07/07 21:03:14>>mana:10
+
+click_menu_button:2020/07/07 21:03:17>>panel:Mage
+
+GoTo:2020/07/07 21:03:17>>MainMenu
+
+ClickButton:2020/07/07 21:03:24>>play
+
+logIn:2020/07/07 21:21:40>>player logged in.
+
+click_menu_button:2020/07/07 21:21:40>>panel:Mage
+
+GoTo:2020/07/07 21:21:42>>MainMenu
+
+ClickButton:2020/07/07 21:21:46>>collection
+
+click_deck_button:2020/07/07 21:21:50>>example
+
+select_deck:2020/07/07 21:21:51>>example
+
+click_menu_button:2020/07/07 21:21:51>>panel:Mage
+
+mana_filter:2020/07/07 21:21:55>>mana:10
+
+click_menu_button:2020/07/07 21:21:58>>panel:Mage
+
+GoTo:2020/07/07 21:21:58>>MainMenu
+
+ClickButton:2020/07/07 21:22:01>>collection
+
+mana_filter:2020/07/07 21:22:03>>mana:10
+
+GoTo:2020/07/07 21:22:03>>MainMenu
+
+ClickButton:2020/07/07 21:22:04>>play
+
+logIn:2020/07/07 21:25:02>>player logged in.
+
+click_menu_button:2020/07/07 21:25:02>>panel:Mage
+
+GoTo:2020/07/07 21:25:03>>MainMenu
+
+ClickButton:2020/07/07 21:25:04>>collection
+
+click_deck_button:2020/07/07 21:25:06>>example
+
+select_deck:2020/07/07 21:25:07>>example
+
+click_menu_button:2020/07/07 21:25:07>>panel:Mage
+
+select_deck:2020/07/07 21:25:09>>example
+
+click_menu_button:2020/07/07 21:25:09>>panel:Mage
+
+mana_filter:2020/07/07 21:25:11>>mana:10
+
+click_menu_button:2020/07/07 21:25:14>>panel:Mage
+
+GoTo:2020/07/07 21:25:14>>MainMenu
+
+ClickButton:2020/07/07 21:25:15>>play
+
+logIn:2020/07/07 22:33:29>>player logged in.
+
+click_menu_button:2020/07/07 22:33:29>>panel:Mage
+
+GoTo:2020/07/07 22:33:30>>MainMenu
+
+ClickButton:2020/07/07 22:33:32>>collection
+
+click_deck_button:2020/07/07 22:33:34>>example
+
+select_deck:2020/07/07 22:33:36>>example
+
+click_menu_button:2020/07/07 22:33:36>>panel:Mage
+
+select_deck:2020/07/07 22:33:39>>example
+
+click_menu_button:2020/07/07 22:33:39>>panel:Mage
+
+mana_filter:2020/07/07 22:33:40>>mana:10
+
+click_menu_button:2020/07/07 22:33:43>>panel:Mage
+
+GoTo:2020/07/07 22:33:43>>MainMenu
+
+ClickButton:2020/07/07 22:33:44>>play
+
+logIn:2020/07/07 22:37:17>>player logged in.
+
+click_menu_button:2020/07/07 22:37:17>>panel:Mage
+
+GoTo:2020/07/07 22:37:19>>MainMenu
+
+ClickButton:2020/07/07 22:37:20>>collection
+
+click_deck_button:2020/07/07 22:37:22>>hey11
+
+select_deck:2020/07/07 22:37:23>>hey11
+
+click_menu_button:2020/07/07 22:37:23>>panel:Mage
+
+mana_filter:2020/07/07 22:37:25>>mana:10
+
+click_menu_button:2020/07/07 22:37:28>>panel:Mage
+
+GoTo:2020/07/07 22:37:28>>MainMenu
+
+ClickButton:2020/07/07 22:37:29>>collection
+
+change_Deck_name:2020/07/07 22:37:32>>hey11changed to hey11
+
+click_deck_button:2020/07/07 22:37:33>>example
+
+select_deck:2020/07/07 22:37:34>>example
+
+click_menu_button:2020/07/07 22:37:35>>panel:Mage
+
+mana_filter:2020/07/07 22:37:37>>mana:10
+
+GoTo:2020/07/07 22:37:37>>MainMenu
+
+ClickButton:2020/07/07 22:37:38>>play
+
+logIn:2020/07/07 22:41:14>>player logged in.
+
+click_menu_button:2020/07/07 22:41:14>>panel:Mage
+
+GoTo:2020/07/07 22:41:15>>MainMenu
+
+ClickButton:2020/07/07 22:41:18>>collection
+
+click_deck_button:2020/07/07 22:41:19>>example
+
+select_deck:2020/07/07 22:41:48>>example
+
+click_menu_button:2020/07/07 22:41:48>>panel:Mage
+
+mana_filter:2020/07/07 22:41:49>>mana:10
+
+click_menu_button:2020/07/07 22:41:52>>panel:Mage
+
+GoTo:2020/07/07 22:41:52>>MainMenu
+
+ClickButton:2020/07/07 22:41:53>>play
+
+logIn:2020/07/07 22:43:21>>player logged in.
+
+click_menu_button:2020/07/07 22:43:21>>panel:Mage
+
+GoTo:2020/07/07 22:43:22>>MainMenu
+
+ClickButton:2020/07/07 22:43:23>>collection
+
+click_deck_button:2020/07/07 22:43:25>>example
+
+select_deck:2020/07/07 22:43:26>>example
+
+click_menu_button:2020/07/07 22:43:26>>panel:Mage
+
+mana_filter:2020/07/07 22:43:27>>mana:10
+
+click_menu_button:2020/07/07 22:43:30>>panel:Mage
+
+GoTo:2020/07/07 22:43:30>>MainMenu
+
+ClickButton:2020/07/07 22:43:31>>play
+
+logIn:2020/07/07 22:44:54>>player logged in.
+
+click_menu_button:2020/07/07 22:44:54>>panel:Mage
+
+GoTo:2020/07/07 22:44:55>>MainMenu
+
+ClickButton:2020/07/07 22:44:59>>collection
+
+click_deck_button:2020/07/07 22:45:01>>example
+
+select_deck:2020/07/07 22:45:02>>example
+
+click_menu_button:2020/07/07 22:45:02>>panel:Mage
+
+mana_filter:2020/07/07 22:45:03>>mana:10
+
+click_menu_button:2020/07/07 22:45:06>>panel:Mage
+
+GoTo:2020/07/07 22:45:06>>MainMenu
+
+ClickButton:2020/07/07 22:45:07>>play
+
+logIn:2020/07/07 22:50:04>>player logged in.
+
+click_menu_button:2020/07/07 22:50:04>>panel:Mage
+
+GoTo:2020/07/07 22:50:05>>MainMenu
+
+ClickButton:2020/07/07 22:50:06>>collection
+
+click_deck_button:2020/07/07 22:50:08>>example
+
+select_deck:2020/07/07 22:50:09>>example
+
+click_menu_button:2020/07/07 22:50:09>>panel:Mage
+
+mana_filter:2020/07/07 22:50:10>>mana:10
+
+click_menu_button:2020/07/07 22:50:13>>panel:Mage
+
+GoTo:2020/07/07 22:50:13>>MainMenu
+
+ClickButton:2020/07/07 22:50:14>>play
+
+logIn:2020/07/07 22:56:55>>player logged in.
+
+click_menu_button:2020/07/07 22:56:55>>panel:Mage
+
+GoTo:2020/07/07 22:56:57>>MainMenu
+
+ClickButton:2020/07/07 22:56:58>>collection
+
+click_deck_button:2020/07/07 22:56:59>>example
+
+select_deck:2020/07/07 22:57:00>>example
+
+click_menu_button:2020/07/07 22:57:00>>panel:Mage
+
+mana_filter:2020/07/07 22:57:02>>mana:10
+
+click_menu_button:2020/07/07 22:57:05>>panel:Mage
+
+GoTo:2020/07/07 22:57:05>>MainMenu
+
+ClickButton:2020/07/07 22:57:06>>play
+
+logIn:2020/07/07 22:59:25>>player logged in.
+
+click_menu_button:2020/07/07 22:59:25>>panel:Mage
+
+GoTo:2020/07/07 22:59:26>>MainMenu
+
+ClickButton:2020/07/07 22:59:28>>collection
+
+click_deck_button:2020/07/07 22:59:29>>example
+
+select_deck:2020/07/07 22:59:31>>example
+
+click_menu_button:2020/07/07 22:59:31>>panel:Mage
+
+mana_filter:2020/07/07 22:59:33>>mana:10
+
+click_menu_button:2020/07/07 22:59:36>>panel:Mage
+
+GoTo:2020/07/07 22:59:36>>MainMenu
+
+ClickButton:2020/07/07 22:59:37>>play
+
+logIn:2020/07/07 23:03:40>>player logged in.
+
+click_menu_button:2020/07/07 23:03:41>>panel:Mage
+
+GoTo:2020/07/07 23:03:42>>MainMenu
+
+ClickButton:2020/07/07 23:03:43>>collection
+
+logIn:2020/07/07 23:07:23>>player logged in.
+
+click_menu_button:2020/07/07 23:07:23>>panel:Mage
+
+GoTo:2020/07/07 23:07:25>>MainMenu
+
+ClickButton:2020/07/07 23:07:26>>collection
+
+click_deck_button:2020/07/07 23:07:27>>example
+
+select_deck:2020/07/07 23:07:28>>example
+
+click_menu_button:2020/07/07 23:07:28>>panel:Mage
+
+mana_filter:2020/07/07 23:07:30>>mana:10
+
+click_menu_button:2020/07/07 23:07:33>>panel:Mage
+
+GoTo:2020/07/07 23:07:33>>MainMenu
+
+ClickButton:2020/07/07 23:07:35>>play
+
+logIn:2020/07/08 00:21:58>>player logged in.
+
+click_menu_button:2020/07/08 00:21:58>>panel:Mage
+
+GoTo:2020/07/08 00:22:00>>MainMenu
+
+ClickButton:2020/07/08 00:22:01>>collection
+
+click_deck_button:2020/07/08 00:22:03>>hey11
+
+select_deck:2020/07/08 00:22:05>>hey11
+
+click_menu_button:2020/07/08 00:22:05>>panel:Mage
+
+select_deck:2020/07/08 00:22:07>>hey11
+
+click_menu_button:2020/07/08 00:22:07>>panel:Mage
+
+change_Deck_name:2020/07/08 00:22:10>>hey11changed to hey11
+
+click_deck_button:2020/07/08 00:22:11>>example
+
+select_deck:2020/07/08 00:22:12>>example
+
+click_menu_button:2020/07/08 00:22:12>>panel:Mage
+
+mana_filter:2020/07/08 00:22:14>>mana:10
+
+click_menu_button:2020/07/08 00:22:17>>panel:Mage
+
+GoTo:2020/07/08 00:22:17>>MainMenu
+
+ClickButton:2020/07/08 00:22:18>>play
+
+logIn:2020/07/08 00:35:35>>player logged in.
+
+click_menu_button:2020/07/08 00:35:35>>panel:Mage
+
+GoTo:2020/07/08 00:35:37>>MainMenu
+
+ClickButton:2020/07/08 00:35:38>>collection
+
+click_deck_button:2020/07/08 00:35:39>>example
+
+select_deck:2020/07/08 00:35:40>>example
+
+click_menu_button:2020/07/08 00:35:40>>panel:Mage
+
+mana_filter:2020/07/08 00:35:42>>mana:10
+
+click_menu_button:2020/07/08 00:35:45>>panel:Mage
+
+GoTo:2020/07/08 00:35:45>>MainMenu
+
+ClickButton:2020/07/08 00:35:46>>play
+
+logIn:2020/07/08 00:37:17>>player logged in.
+
+click_menu_button:2020/07/08 00:37:18>>panel:Mage
+
+GoTo:2020/07/08 00:37:19>>MainMenu
+
+ClickButton:2020/07/08 00:37:21>>collection
+
+click_deck_button:2020/07/08 00:37:22>>example
+
+select_deck:2020/07/08 00:37:23>>example
+
+click_menu_button:2020/07/08 00:37:23>>panel:Mage
+
+mana_filter:2020/07/08 00:37:24>>mana:10
+
+click_menu_button:2020/07/08 00:37:27>>panel:Mage
+
+GoTo:2020/07/08 00:37:27>>MainMenu
+
+ClickButton:2020/07/08 00:37:28>>play
+
+logIn:2020/07/08 00:38:44>>player logged in.
+
+click_menu_button:2020/07/08 00:38:44>>panel:Mage
+
+GoTo:2020/07/08 00:38:46>>MainMenu
+
+ClickButton:2020/07/08 00:38:51>>collection
+
+click_deck_button:2020/07/08 00:38:52>>example
+
+select_deck:2020/07/08 00:38:54>>example
+
+click_menu_button:2020/07/08 00:38:54>>panel:Mage
+
+mana_filter:2020/07/08 00:38:55>>mana:10
+
+click_menu_button:2020/07/08 00:38:58>>panel:Mage
+
+GoTo:2020/07/08 00:38:58>>MainMenu
+
+ClickButton:2020/07/08 00:38:59>>play
+
+logIn:2020/07/08 00:51:25>>player logged in.
+
+click_menu_button:2020/07/08 00:51:26>>panel:Mage
+
+GoTo:2020/07/08 00:51:27>>MainMenu
+
+ClickButton:2020/07/08 00:51:30>>collection
+
+click_deck_button:2020/07/08 00:51:32>>example
+
+select_deck:2020/07/08 00:51:33>>example
+
+click_menu_button:2020/07/08 00:51:33>>panel:Mage
+
+mana_filter:2020/07/08 00:51:37>>mana:10
+
+click_menu_button:2020/07/08 00:51:39>>panel:Mage
+
+GoTo:2020/07/08 00:51:39>>MainMenu
+
+ClickButton:2020/07/08 00:51:41>>play
+
+logIn:2020/07/08 00:54:01>>player logged in.
+
+click_menu_button:2020/07/08 00:54:01>>panel:Mage
+
+GoTo:2020/07/08 00:54:02>>MainMenu
+
+ClickButton:2020/07/08 00:54:04>>collection
+
+click_deck_button:2020/07/08 00:54:06>>example
+
+select_deck:2020/07/08 00:54:07>>example
+
+click_menu_button:2020/07/08 00:54:07>>panel:Mage
+
+mana_filter:2020/07/08 00:54:08>>mana:10
+
+click_menu_button:2020/07/08 00:54:11>>panel:Mage
+
+GoTo:2020/07/08 00:54:11>>MainMenu
+
+ClickButton:2020/07/08 00:54:12>>play
+
+logIn:2020/07/08 01:32:12>>player logged in.
+
+click_menu_button:2020/07/08 01:32:13>>panel:Mage
+
+GoTo:2020/07/08 01:32:14>>MainMenu
+
+ClickButton:2020/07/08 01:32:16>>collection
+
+click_deck_button:2020/07/08 01:32:17>>deev3
+
+select_deck:2020/07/08 01:32:18>>deev3
+
+click_menu_button:2020/07/08 01:32:18>>panel:Mage
+
+mana_filter:2020/07/08 01:32:19>>mana:10
+
+click_menu_button:2020/07/08 01:32:22>>panel:Mage
+
+GoTo:2020/07/08 01:32:22>>MainMenu
+
+ClickButton:2020/07/08 01:32:24>>play
+
+logIn:2020/07/08 01:34:56>>player logged in.
+
+click_menu_button:2020/07/08 01:34:56>>panel:Mage
+
+GoTo:2020/07/08 01:34:58>>MainMenu
+
+ClickButton:2020/07/08 01:34:58>>collection
+
+click_deck_button:2020/07/08 01:34:59>>deev3
+
+select_deck:2020/07/08 01:35:00>>deev3
+
+click_menu_button:2020/07/08 01:35:00>>panel:Mage
+
+mana_filter:2020/07/08 01:35:02>>mana:10
+
+click_menu_button:2020/07/08 01:35:04>>panel:Mage
+
+GoTo:2020/07/08 01:35:04>>MainMenu
+
+ClickButton:2020/07/08 01:35:06>>play
+
+logIn:2020/07/08 01:36:55>>player logged in.
+
+click_menu_button:2020/07/08 01:36:55>>panel:Mage
+
+GoTo:2020/07/08 01:36:56>>MainMenu
+
+ClickButton:2020/07/08 01:36:57>>collection
+
+click_deck_button:2020/07/08 01:36:59>>hey11
+
+select_deck:2020/07/08 01:37:00>>hey11
+
+click_menu_button:2020/07/08 01:37:00>>panel:Mage
+
+mana_filter:2020/07/08 01:37:01>>mana:10
+
+click_menu_button:2020/07/08 01:37:04>>panel:Mage
+
+GoTo:2020/07/08 01:37:04>>MainMenu
+
+ClickButton:2020/07/08 01:37:05>>play
+
+logIn:2020/07/08 01:38:33>>player logged in.
+
+click_menu_button:2020/07/08 01:38:33>>panel:Mage
+
+GoTo:2020/07/08 01:38:34>>MainMenu
+
+ClickButton:2020/07/08 01:38:36>>collection
+
+click_deck_button:2020/07/08 01:38:37>>example
+
+select_deck:2020/07/08 01:38:38>>example
+
+click_menu_button:2020/07/08 01:38:38>>panel:Mage
+
+mana_filter:2020/07/08 01:38:39>>mana:10
+
+click_menu_button:2020/07/08 01:38:42>>panel:Mage
+
+GoTo:2020/07/08 01:38:42>>MainMenu
+
+ClickButton:2020/07/08 01:38:43>>play
+
+logIn:2020/07/08 01:39:58>>player logged in.
+
+click_menu_button:2020/07/08 01:39:58>>panel:Mage
+
+GoTo:2020/07/08 01:40:00>>MainMenu
+
+ClickButton:2020/07/08 01:40:01>>collection
+
+click_deck_button:2020/07/08 01:40:03>>example
+
+select_deck:2020/07/08 01:40:05>>example
+
+click_menu_button:2020/07/08 01:40:05>>panel:Mage
+
+mana_filter:2020/07/08 01:40:06>>mana:10
+
+click_menu_button:2020/07/08 01:40:09>>panel:Mage
+
+GoTo:2020/07/08 01:40:09>>MainMenu
+
+ClickButton:2020/07/08 01:40:10>>play
+
+logIn:2020/07/08 01:48:55>>player logged in.
+
+click_menu_button:2020/07/08 01:48:55>>panel:Mage
+
+GoTo:2020/07/08 01:48:57>>MainMenu
+
+ClickButton:2020/07/08 01:48:57>>collection
+
+click_deck_button:2020/07/08 01:48:59>>example
+
+select_deck:2020/07/08 01:49:00>>example
+
+click_menu_button:2020/07/08 01:49:00>>panel:Mage
+
+mana_filter:2020/07/08 01:49:02>>mana:10
+
+click_menu_button:2020/07/08 01:49:04>>panel:Mage
+
+GoTo:2020/07/08 01:49:04>>MainMenu
+
+ClickButton:2020/07/08 01:49:06>>play
+
+logIn:2020/07/08 02:09:17>>player logged in.
+
+click_menu_button:2020/07/08 02:09:17>>panel:Mage
+
+GoTo:2020/07/08 02:09:18>>MainMenu
+
+ClickButton:2020/07/08 02:09:19>>collection
+
+click_deck_button:2020/07/08 02:09:21>>example
+
+select_deck:2020/07/08 02:09:22>>example
+
+click_menu_button:2020/07/08 02:09:22>>panel:Mage
+
+mana_filter:2020/07/08 02:09:23>>mana:10
+
+click_menu_button:2020/07/08 02:09:26>>panel:Mage
+
+GoTo:2020/07/08 02:09:26>>MainMenu
+
+ClickButton:2020/07/08 02:09:27>>play
+
+logIn:2020/07/08 02:11:52>>player logged in.
+
+click_menu_button:2020/07/08 02:11:53>>panel:Mage
+
+GoTo:2020/07/08 02:11:54>>MainMenu
+
+ClickButton:2020/07/08 02:11:55>>collection
+
+click_deck_button:2020/07/08 02:11:57>>example
+
+select_deck:2020/07/08 02:11:58>>example
+
+click_menu_button:2020/07/08 02:11:58>>panel:Mage
+
+mana_filter:2020/07/08 02:12:05>>mana:10
+
+click_menu_button:2020/07/08 02:12:07>>panel:Mage
+
+GoTo:2020/07/08 02:12:08>>MainMenu
+
+ClickButton:2020/07/08 02:12:09>>play
+
+logIn:2020/07/08 02:14:20>>player logged in.
+
+click_menu_button:2020/07/08 02:14:20>>panel:Mage
+
+GoTo:2020/07/08 02:14:22>>MainMenu
+
+ClickButton:2020/07/08 02:14:23>>collection
+
+click_deck_button:2020/07/08 02:14:24>>example
+
+select_deck:2020/07/08 02:14:25>>example
+
+click_menu_button:2020/07/08 02:14:25>>panel:Mage
+
+mana_filter:2020/07/08 02:14:27>>mana:10
+
+click_menu_button:2020/07/08 02:14:30>>panel:Mage
+
+GoTo:2020/07/08 02:14:30>>MainMenu
+
+ClickButton:2020/07/08 02:14:31>>play
+
+logIn:2020/07/08 02:15:46>>player logged in.
+
+click_menu_button:2020/07/08 02:15:46>>panel:Mage
+
+GoTo:2020/07/08 02:15:47>>MainMenu
+
+ClickButton:2020/07/08 02:15:48>>collection
+
+click_deck_button:2020/07/08 02:15:50>>example
+
+select_deck:2020/07/08 02:15:51>>example
+
+click_menu_button:2020/07/08 02:15:51>>panel:Mage
+
+mana_filter:2020/07/08 02:15:53>>mana:10
+
+click_menu_button:2020/07/08 02:15:55>>panel:Mage
+
+GoTo:2020/07/08 02:15:55>>MainMenu
+
+ClickButton:2020/07/08 02:15:56>>play
+
+logIn:2020/07/08 02:16:42>>player logged in.
+
+click_menu_button:2020/07/08 02:16:43>>panel:Mage
+
+GoTo:2020/07/08 02:16:44>>MainMenu
+
+ClickButton:2020/07/08 02:16:46>>collection
+
+click_deck_button:2020/07/08 02:16:48>>example
+
+select_deck:2020/07/08 02:16:49>>example
+
+click_menu_button:2020/07/08 02:16:49>>panel:Mage
+
+mana_filter:2020/07/08 02:16:50>>mana:10
+
+click_menu_button:2020/07/08 02:16:53>>panel:Mage
+
+GoTo:2020/07/08 02:16:53>>MainMenu
+
+ClickButton:2020/07/08 02:16:54>>play
+
+logIn:2020/07/08 09:01:56>>player logged in.
+
+click_menu_button:2020/07/08 09:01:56>>panel:Mage
+
+GoTo:2020/07/08 09:01:58>>MainMenu
+
+ClickButton:2020/07/08 09:01:59>>collection
+
+click_deck_button:2020/07/08 09:02:01>>example
+
+select_deck:2020/07/08 09:02:02>>example
+
+click_menu_button:2020/07/08 09:02:02>>panel:Mage
+
+mana_filter:2020/07/08 09:02:03>>mana:10
+
+click_menu_button:2020/07/08 09:02:06>>panel:Mage
+
+GoTo:2020/07/08 09:02:06>>MainMenu
+
+ClickButton:2020/07/08 09:02:08>>play
+
+logIn:2020/07/08 09:02:38>>player logged in.
+
+click_menu_button:2020/07/08 09:02:38>>panel:Mage
+
+GoTo:2020/07/08 09:02:40>>MainMenu
+
+ClickButton:2020/07/08 09:02:42>>collection
+
+click_deck_button:2020/07/08 09:02:43>>example
+
+select_deck:2020/07/08 09:02:44>>example
+
+click_menu_button:2020/07/08 09:02:44>>panel:Mage
+
+mana_filter:2020/07/08 09:02:46>>mana:10
+
+click_menu_button:2020/07/08 09:02:48>>panel:Mage
+
+GoTo:2020/07/08 09:02:48>>MainMenu
+
+ClickButton:2020/07/08 09:02:50>>play
+
+logIn:2020/07/08 13:27:43>>player logged in.
+
+logIn:2020/07/08 13:29:03>>player logged in.
+
+click_menu_button:2020/07/08 13:29:03>>panel:Mage
+
+GoTo:2020/07/08 13:29:05>>MainMenu
+
+ClickButton:2020/07/08 13:29:06>>collection
+
+mana_filter:2020/07/08 13:29:08>>mana:10
+
+click_menu_button:2020/07/08 13:29:11>>panel:Mage
+
+GoTo:2020/07/08 13:29:11>>MainMenu
+
+ClickButton:2020/07/08 13:29:13>>shop
+
+GoTo:2020/07/08 13:29:28>>MainMenu
+
+ClickButton:2020/07/08 13:29:30>>collection
+
+click_deck_button:2020/07/08 13:29:31>>example
+
+select_deck:2020/07/08 13:29:32>>example
+
+click_menu_button:2020/07/08 13:29:34>>panel:Mage
+
+mana_filter:2020/07/08 13:29:35>>mana:10
+
+GoTo:2020/07/08 13:29:35>>MainMenu
+
+ClickButton:2020/07/08 13:29:36>>play
+
+add_card_toDeck:2020/07/08 13:30:31>>Ashbringer
+
+logIn:2020/07/08 13:48:52>>player logged in.
+
+logIn:2020/07/08 15:08:39>>player logged in.
+
+logIn:2020/07/08 15:09:21>>player logged in.
+
+logIn:2020/07/08 15:12:44>>player logged in.
+
+click_menu_button:2020/07/08 15:12:45>>panel:Mage
+
+GoTo:2020/07/08 15:12:46>>MainMenu
+
+ClickButton:2020/07/08 15:12:48>>collection
+
+click_deck_button:2020/07/08 15:12:49>>example
+
+select_deck:2020/07/08 15:12:50>>example
+
+click_menu_button:2020/07/08 15:12:50>>panel:Mage
+
+mana_filter:2020/07/08 15:12:51>>mana:10
+
+click_menu_button:2020/07/08 15:12:54>>panel:Mage
+
+GoTo:2020/07/08 15:12:54>>MainMenu
+
+ClickButton:2020/07/08 15:12:55>>play
+
+logIn:2020/07/08 15:19:21>>player logged in.
+
+click_menu_button:2020/07/08 15:19:22>>panel:Mage
+
+GoTo:2020/07/08 15:19:23>>MainMenu
+
+ClickButton:2020/07/08 15:19:24>>collection
+
+click_deck_button:2020/07/08 15:19:26>>example
+
+select_deck:2020/07/08 15:19:27>>example
+
+click_menu_button:2020/07/08 15:19:27>>panel:Mage
+
+mana_filter:2020/07/08 15:19:29>>mana:10
+
+click_menu_button:2020/07/08 15:19:31>>panel:Mage
+
+GoTo:2020/07/08 15:19:31>>MainMenu
+
+ClickButton:2020/07/08 15:19:32>>play
+
+logIn:2020/07/08 15:22:45>>player logged in.
+
+click_menu_button:2020/07/08 15:22:45>>panel:Mage
+
+GoTo:2020/07/08 15:22:47>>MainMenu
+
+ClickButton:2020/07/08 15:22:48>>collection
+
+click_deck_button:2020/07/08 15:22:49>>example
+
+select_deck:2020/07/08 15:22:51>>example
+
+click_menu_button:2020/07/08 15:22:51>>panel:Mage
+
+mana_filter:2020/07/08 15:22:52>>mana:10
+
+click_menu_button:2020/07/08 15:22:55>>panel:Mage
+
+GoTo:2020/07/08 15:22:55>>MainMenu
+
+ClickButton:2020/07/08 15:22:57>>play
+
+logIn:2020/07/08 15:29:51>>player logged in.
+
+click_menu_button:2020/07/08 15:29:51>>panel:Mage
+
+GoTo:2020/07/08 15:29:53>>MainMenu
+
+ClickButton:2020/07/08 15:29:55>>collection
+
+click_deck_button:2020/07/08 15:29:56>>example
+
+select_deck:2020/07/08 15:29:57>>example
+
+click_menu_button:2020/07/08 15:29:57>>panel:Mage
+
+mana_filter:2020/07/08 15:30:00>>mana:10
+
+click_menu_button:2020/07/08 15:30:03>>panel:Mage
+
+GoTo:2020/07/08 15:30:03>>MainMenu
+
+ClickButton:2020/07/08 15:30:05>>play
+
+logIn:2020/07/08 16:22:13>>player logged in.
+
+click_menu_button:2020/07/08 16:22:13>>panel:Mage
+
+GoTo:2020/07/08 16:22:15>>MainMenu
+
+ClickButton:2020/07/08 16:22:17>>collection
+
+click_deck_button:2020/07/08 16:22:18>>example
+
+select_deck:2020/07/08 16:22:20>>example
+
+click_menu_button:2020/07/08 16:22:20>>panel:Mage
+
+mana_filter:2020/07/08 16:22:21>>mana:10
+
+click_menu_button:2020/07/08 16:22:24>>panel:Mage
+
+GoTo:2020/07/08 16:22:24>>MainMenu
+
+ClickButton:2020/07/08 16:22:26>>play
+
+logIn:2020/07/08 16:28:21>>player logged in.
+
+click_menu_button:2020/07/08 16:28:22>>panel:Mage
+
+GoTo:2020/07/08 16:28:23>>MainMenu
+
+ClickButton:2020/07/08 16:28:25>>collection
+
+click_deck_button:2020/07/08 16:28:27>>example
+
+select_deck:2020/07/08 16:28:29>>example
+
+click_menu_button:2020/07/08 16:28:29>>panel:Mage
+
+mana_filter:2020/07/08 16:28:31>>mana:10
+
+click_menu_button:2020/07/08 16:28:33>>panel:Mage
+
+GoTo:2020/07/08 16:28:33>>MainMenu
+
+ClickButton:2020/07/08 16:28:35>>play
+
+logIn:2020/07/08 16:34:10>>player logged in.
+
+click_menu_button:2020/07/08 16:34:10>>panel:Mage
+
+GoTo:2020/07/08 16:34:12>>MainMenu
+
+ClickButton:2020/07/08 16:34:13>>collection
+
+click_deck_button:2020/07/08 16:34:15>>example
+
+select_deck:2020/07/08 16:34:16>>example
+
+click_menu_button:2020/07/08 16:34:16>>panel:Mage
+
+mana_filter:2020/07/08 16:34:21>>mana:10
+
+click_menu_button:2020/07/08 16:34:24>>panel:Mage
+
+GoTo:2020/07/08 16:34:24>>MainMenu
+
+ClickButton:2020/07/08 16:34:25>>play
+
+logIn:2020/07/08 16:40:18>>player logged in.
+
+click_menu_button:2020/07/08 16:40:18>>panel:Mage
+
+GoTo:2020/07/08 16:40:20>>MainMenu
+
+ClickButton:2020/07/08 16:40:21>>collection
+
+click_deck_button:2020/07/08 16:40:23>>example
+
+select_deck:2020/07/08 16:40:24>>example
+
+click_menu_button:2020/07/08 16:40:24>>panel:Mage
+
+mana_filter:2020/07/08 16:40:26>>mana:10
+
+click_menu_button:2020/07/08 16:40:28>>panel:Mage
+
+GoTo:2020/07/08 16:40:28>>MainMenu
+
+ClickButton:2020/07/08 16:40:29>>play
+
+logIn:2020/07/08 16:42:39>>player logged in.
+
+click_menu_button:2020/07/08 16:42:39>>panel:Mage
+
+GoTo:2020/07/08 16:42:41>>MainMenu
+
+ClickButton:2020/07/08 16:42:42>>collection
+
+click_deck_button:2020/07/08 16:42:43>>example
+
+select_deck:2020/07/08 16:42:44>>example
+
+click_menu_button:2020/07/08 16:42:44>>panel:Mage
+
+select_deck:2020/07/08 16:42:45>>example
+
+click_menu_button:2020/07/08 16:42:46>>panel:Mage
+
+mana_filter:2020/07/08 16:42:47>>mana:10
+
+click_menu_button:2020/07/08 16:42:49>>panel:Mage
+
+GoTo:2020/07/08 16:42:49>>MainMenu
+
+ClickButton:2020/07/08 16:42:51>>play
+
+logIn:2020/07/08 16:45:41>>player logged in.
+
+click_menu_button:2020/07/08 16:45:41>>panel:Mage
+
+GoTo:2020/07/08 16:45:42>>MainMenu
+
+ClickButton:2020/07/08 16:45:44>>collection
+
+click_deck_button:2020/07/08 16:45:45>>example
+
+select_deck:2020/07/08 16:45:46>>example
+
+click_menu_button:2020/07/08 16:45:46>>panel:Mage
+
+mana_filter:2020/07/08 16:45:48>>mana:10
+
+click_menu_button:2020/07/08 16:45:50>>panel:Mage
+
+GoTo:2020/07/08 16:45:50>>MainMenu
+
+ClickButton:2020/07/08 16:45:52>>play
+
+logIn:2020/07/08 16:57:05>>player logged in.
+
+click_menu_button:2020/07/08 16:57:05>>panel:Mage
+
+GoTo:2020/07/08 16:57:07>>MainMenu
+
+ClickButton:2020/07/08 16:57:08>>collection
+
+click_deck_button:2020/07/08 16:57:10>>example
+
+select_deck:2020/07/08 16:57:11>>example
+
+click_menu_button:2020/07/08 16:57:11>>panel:Mage
+
+mana_filter:2020/07/08 16:57:13>>mana:10
+
+click_menu_button:2020/07/08 16:57:16>>panel:Mage
+
+GoTo:2020/07/08 16:57:16>>MainMenu
+
+ClickButton:2020/07/08 16:57:17>>play
+
+logIn:2020/07/08 16:59:08>>player logged in.
+
+click_menu_button:2020/07/08 16:59:08>>panel:Mage
+
+GoTo:2020/07/08 16:59:10>>MainMenu
+
+ClickButton:2020/07/08 16:59:11>>collection
+
+click_deck_button:2020/07/08 16:59:13>>example
+
+select_deck:2020/07/08 16:59:14>>example
+
+click_menu_button:2020/07/08 16:59:14>>panel:Mage
+
+mana_filter:2020/07/08 16:59:16>>mana:10
+
+click_menu_button:2020/07/08 16:59:18>>panel:Mage
+
+GoTo:2020/07/08 16:59:18>>MainMenu
+
+ClickButton:2020/07/08 16:59:20>>play
+
+logIn:2020/07/09 14:20:20>>player logged in.
+
+click_menu_button:2020/07/09 14:20:20>>panel:Mage
+
+GoTo:2020/07/09 14:20:22>>MainMenu
+
+ClickButton:2020/07/09 14:20:24>>collection
+
+click_deck_button:2020/07/09 14:20:26>>example
+
+select_deck:2020/07/09 14:20:27>>example
+
+click_menu_button:2020/07/09 14:20:27>>panel:Mage
+
+mana_filter:2020/07/09 14:20:28>>mana:10
+
+click_menu_button:2020/07/09 14:20:31>>panel:Mage
+
+GoTo:2020/07/09 14:20:31>>MainMenu
+
+ClickButton:2020/07/09 14:20:33>>play

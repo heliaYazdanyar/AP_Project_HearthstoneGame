@@ -1,0 +1,1 @@
+{'name':'SecurityRover','type':'Minion','rarity':'Rare','className':'Neutral','manaCost':6,'HP':6,'attack':2,'finalHP':6,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'whenever this minion takes damage summon a 2/3 Mech with Taunt','price':20}

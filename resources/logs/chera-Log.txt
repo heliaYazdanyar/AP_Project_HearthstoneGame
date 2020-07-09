@@ -1,0 +1,5 @@
+USER:chera
+CREATED_ADD:2020/06/22 12:46:15
+PASSWORD:chera
+
+click_menu_button:2020/06/22 12:46:15>>panel:Mage

@@ -1,0 +1,1 @@
+{'name':'MarkedShot','type':'Spell','rarity':'Common','manaCost':4,'className':'Warlock','price':17,'drawCard':false,'manaBurn':false,'summon':false,'dealDamage':true,'discover':true,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'','discoverExp':'a spell','damageCnt':4,'damageCondition':'minion','changeMinionExp':''}

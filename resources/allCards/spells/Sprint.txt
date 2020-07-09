@@ -1,0 +1,1 @@
+{'name':'Sprint','type':'Spell','rarity':'','manaCost':7,'className':'Neutral','price':18,'drawCard':true,'manaBurn':false,'summon':false,'dealDamage':false,'discover':false,'changeMinion':false,'divineShield':false,'summonWhat':'','drawCardExp':'4 cards','discoverExp':'','damageCnt':0,'damageCondition':'','changeMinionExp':''}

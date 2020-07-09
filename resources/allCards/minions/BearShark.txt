@@ -1,0 +1,1 @@
+{'name':'BearShark','type':'Minion','rarity':'Common','className':'Mage','manaCost':3,'HP':3,'attack':4,'finalHP':3,'taunt':false,'battlecry':false,'lifeSteal':false,'rush':false,'permanentCause':true,'battlecryExplain':'','permanentCauseExplain':'cant be targeted by spells','price':13}
