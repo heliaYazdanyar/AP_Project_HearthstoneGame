@@ -34,7 +34,7 @@ public class Hero implements MyCharacter {
         Gson gson= new Gson();
         Hero hero=gson.fromJson(t.get(0),Hero.class);
         this.name=hero.getName();
-        this.heroPower=hero.getHeroPower();
+        this.heroPower=hero.getHeroPowerName();
         this.hp=hero.getHP();
     }
 
@@ -68,7 +68,25 @@ public class Hero implements MyCharacter {
         this.hp=hp;
     }
 
-    public String getHeroPower(){ return heroPower; }
+    public String getHeroPowerName(){
+        return heroPower;
+    }
+    public HeroPower getHeroPower(){
+        switch (HeroPower.valueOf(heroPower)){
+            case Lifetab:
+                return HeroPower.Lifetab;
+            case Heal:
+                return HeroPower.Heal;
+            case Caltropes:
+                return HeroPower.Caltropes;
+            case StealMaster:
+                return HeroPower.StealMaster;
+            case FireBlast:
+                return HeroPower.FireBlast;
+            default:
+                return HeroPower.FireBlast;
+        }
+    }
     public int getHeroPowerCost(){
         switch (heroPower){
             case"FrireBlast":

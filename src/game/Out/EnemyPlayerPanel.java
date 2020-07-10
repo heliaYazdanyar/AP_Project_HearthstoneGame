@@ -51,18 +51,15 @@ public class EnemyPlayerPanel extends JPanel{
         deckLabel.setForeground(Color.darkGray);
         deckLabel.setOpaque(true);
 
-        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(hero.getHeroPower(),"jpeg",200,300));
+        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(hero.getHeroPowerName(),"jpeg",200,300));
         heroPowerLabel.addMouseListener(new MouseAdapter() {
-            TextPopUp textPopUp=new TextPopUp(EnemyPlayerPanel.this.hero.getName());
             @Override
             public void mouseEntered(MouseEvent e) {
-                EnemyPlayerPanel.this.add(textPopUp);
-                textPopUp.setLocation(e.getX(),e.getY());
+
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                EnemyPlayerPanel.this.remove(textPopUp);
             }
         });
 
@@ -105,16 +102,13 @@ public class EnemyPlayerPanel extends JPanel{
             this.weapon=weapon;
             weaponLabel=new JLabel(ImageLoader.getInstance().loadIcon(weapon.getName(),"jpeg",200,300));
             weaponLabel.addMouseListener(new MouseAdapter() {
-                TextPopUp textPopUp=new TextPopUp(EnemyPlayerPanel.this.weapon);
                 @Override
                 public void mouseEntered(MouseEvent e) {
-                    textPopUp.setLocation(e.getX(),e.getY());
-                    EnemyPlayerPanel.this.add(textPopUp);
+
                 }
 
                 @Override
                 public void mouseExited(MouseEvent e) {
-                    EnemyPlayerPanel.this.remove(textPopUp);
                 }
             });
 

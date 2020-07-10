@@ -3,11 +3,12 @@ package game.Out;
 import Out.MainFrame;
 import Util.ImageLoader;
 import gamePlayers.Player;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+
+import static Util.Logger.logger;
 
 public class StartGamePanel extends JPanel {
 
@@ -20,7 +21,7 @@ public class StartGamePanel extends JPanel {
     private JButton playWithBoth;
     private JButton online;
 
-    public int width=1100;
+    public int width=1400;
     public int height=850;
     private PanelHandler panelHandler;
 
@@ -50,43 +51,40 @@ public class StartGamePanel extends JPanel {
     }
 
     private void initListeners(){
-        withDeckReader.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                panelHandler.addPracticeWithDeckReader(player);
-                panelHandler.setPanel("Game View");
-            }
+        withDeckReader.addActionListener(e -> {
+            logger(player.getUsername(),"Started game:","with deck reader");
+
+            panelHandler.addPracticeWithDeckReader(player);
+            panelHandler.setPanel("Passives");
         });
 
-        withRandomEnemyDeck.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        withRandomEnemyDeck.addActionListener(e -> {
+            if(player.ifDeckSelected){
+                logger(player.getUsername(),"Started game:","with random deck");
+
                 panelHandler.addPracticeWithRandomEnemy(player);
                 panelHandler.setPanel("Passives");
             }
-        });
-
-        playWithBoth.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                panelHandler.addPracticeWithBot(player);
-                panelHandler.setPanel("Passives");
+            else{
+                JOptionPane.showMessageDialog(MainFrame.getInstance(),"You should select a deck first",
+                        "ERROR",JOptionPane.ERROR_MESSAGE);
             }
+
         });
 
-        online.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        playWithBoth.addActionListener(e -> {
+            logger(player.getUsername(),"Started game:","with bot");
 
-            }
+            panelHandler.addPracticeWithBot(player);
+            panelHandler.setPanel("Passives");
         });
 
-        backToMenu.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                MainFrame.getInstance().setPanel("MainMenu");
-            }
+        online.addActionListener(e -> {
+            logger(player.getUsername(),"Started game:","online game");
+
         });
+
+        backToMenu.addActionListener(e -> MainFrame.getInstance().setPanel("MainMenu"));
 
     }
 

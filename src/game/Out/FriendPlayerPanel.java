@@ -33,26 +33,6 @@ public class FriendPlayerPanel extends JPanel {
     int width=1100;
     int height=140;
 
-    private TextPopUp errorPopup=new TextPopUp("CANT HAPPEN",true);
-    private Thread errors=new Thread(){
-        @Override
-        public void run() {
-            while (true){
-                try {
-                    Thread.sleep(1000);
-                    FriendPlayerPanel.this.remove(errorPopup);
-                } catch (InterruptedException e) { e.printStackTrace(); }
-                if(Administer.getInstance().cantHappen()){
-                    FriendPlayerPanel.this.add(errorPopup);
-                    FriendPlayerPanel.this.update();
-                }
-                else{
-
-                }
-            }
-        }
-    };
-
 
     FriendPlayerPanel(PracticePlayer player,GameView gameView){
         this.setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
@@ -62,8 +42,6 @@ public class FriendPlayerPanel extends JPanel {
         hpAndManaPanel=new JPanel();
         hpAndManaPanel.setLayout(new BoxLayout(hpAndManaPanel,BoxLayout.Y_AXIS));
         update();
-
-        errors.start();
     }
 
     class HandCards extends JPanel{
@@ -79,11 +57,11 @@ public class FriendPlayerPanel extends JPanel {
                 while (true){
                     try {
                         Thread.sleep(2000);
+                        hpLabel.setText(""+player.getHero().getHP());
                         if(player.isMyTurn() && player.needsUpdate()) {
                             HandCards.this.update();
                             player.changeNeedsUpdate(false);
                             manaLabel.setText(""+player.getMana());
-                            hpLabel.setText(""+player.getHero().getHP());
                             deckLabel.setText(player.getdeckCnt()+"");
                             FriendPlayerPanel.this.repaint();
                         }
@@ -223,20 +201,22 @@ public class FriendPlayerPanel extends JPanel {
         }
     }
     public void initHeroPower(){
-        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(player.getHero().getHeroPower(),
+        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(player.getHero().getHeroPowerName(),
                 "jpeg",120,140));
         heroPowerLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(player.isMyTurn()) {
-                Administer.getInstance().callHeroPower(player);
-                Administer.getInstance().setInformation("HeroPower chosen");
+                    if(Administer.getInstance().canCallHeroPower(player)) {
+                        Administer.getInstance().callHeroPower(player);
+                        Administer.getInstance().setInformation("HeroPower chosen");
+                    }
                 }
             }
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                gameView.infoGiver.initHeroPowerInfo(player.getHero().getHeroPower());
+                gameView.infoGiver.initHeroPowerInfo(player.getHero().getHeroPowerName());
             }
 
         });

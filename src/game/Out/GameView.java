@@ -2,6 +2,7 @@ package game.Out;
 
 import Models.*;
 import Out.MainFrame;
+import Util.DeckReader;
 import Util.ImageLoader;
 import Util.SoundPlayer;
 import gamePlayers.InGamePlayer;
@@ -28,7 +29,7 @@ public class GameView extends JPanel {
 
     public int turn=0;
 
-    GameView.PlayGround playGround;
+    public GameView.PlayGround playGround;
     public GameView.Events events;
     private GameView.Tools tools;
     public InfoGiver infoGiver;
@@ -39,6 +40,7 @@ public class GameView extends JPanel {
     private FriendPlayerPanel myPanel;
     private FriendPlayerPanel enemyPanel;
 
+    private Card cardPopUp;
     private JPanel container=new JPanel();
 
     private boolean cardIsMoving;
@@ -134,7 +136,7 @@ public class GameView extends JPanel {
         public void initQusetAndReward(QuestAndReward qar){
         }
         public void initHeroPowerInfo(String name){
-            String st="hero power is being used";
+            String st="";
             if(name.equalsIgnoreCase("Caltropes")){
                 st="<html>*"+name+"*<br>"+
                         "$MANA:"+2+"$"+
@@ -146,7 +148,9 @@ public class GameView extends JPanel {
                         "<br>"+"deal 1 damage"+"</html>";
             }
             else if(name.equalsIgnoreCase("StealMaster")){
-
+                st="<html>*"+name+"*<br>"+
+                        "$MANA:"+3+"$"+
+                        "<br>"+"Passive"+"</html>";
             }
             else if(name.equalsIgnoreCase("Heal")){
 
@@ -173,7 +177,7 @@ public class GameView extends JPanel {
             g.drawImage(background,0,0,null);
         }
     }
-    class PlayGround extends JPanel{
+    public class PlayGround extends JPanel{
 
         private int width=1100;
         private int height=600;
@@ -187,7 +191,6 @@ public class GameView extends JPanel {
         List<JLabel> enemyMinions=new ArrayList<>();
 
         private boolean isCardPopUp=false;
-        private Card cardPopUp;
         private int xPopUp=120, yPopUp=240;
 
         private Thread grounRender= new Thread(() -> {
@@ -295,6 +298,7 @@ public class GameView extends JPanel {
                         }
                         @Override
                         public void mouseEntered(MouseEvent e) {
+                            System.out.println("entered");
                             infoGiver.initCardInfo(Administer.getInstance().enemy_CardsOnGround.get(t));
                         }
 
@@ -319,7 +323,7 @@ public class GameView extends JPanel {
 
         }
 
-        void update(){
+        public void update(){
             PlayGround.this.removeAll();
             initEnemyCards();
             initFriendCard();
@@ -634,7 +638,23 @@ public class GameView extends JPanel {
     public GameView(PracticePlayer friendPlayer,PracticePlayer enemyPlayer){
         this.friendPlayer=friendPlayer;
         this.enemyPlayer=enemyPlayer;
-        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this);
+        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,false);
+
+
+        initPanels();
+        addPanels();
+        animatingCards.start();
+    }
+
+    public GameView(PracticePlayer friendPlayer,PracticePlayer enemyPlayer,boolean deckReader){
+        this.friendPlayer=friendPlayer;
+        this.enemyPlayer=enemyPlayer;
+
+
+
+
+        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,true);
+
 
 
         initPanels();
@@ -646,7 +666,7 @@ public class GameView extends JPanel {
 
     }
 
-    public void initPanels(){
+    private void initPanels(){
         this.playGround=new GameView.PlayGround();
         playGround.setSize(playGround.width,playGround.height);
 
@@ -667,7 +687,7 @@ public class GameView extends JPanel {
 
     }
 
-    public void addPanels(){
+    private void addPanels(){
         this.setLayout(new BorderLayout());
         playGround.setSize(playGround.width,playGround.height);
         container.add(playGround,BorderLayout.CENTER);
@@ -681,6 +701,10 @@ public class GameView extends JPanel {
         this.add(infoGiver,BorderLayout.WEST);
         this.add(container,BorderLayout.CENTER);
 
+    }
+
+    private void initFromDeckReader(){
+        DeckReader dr=DeckReader.getDeckReader();
     }
 
     public void setMovingCad(Card card){

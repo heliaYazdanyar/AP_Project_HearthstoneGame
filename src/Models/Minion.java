@@ -52,6 +52,9 @@ public class Minion extends Card implements MyCharacter{
         if(hp>finalHP) this.HP=finalHP;
         else this.HP=hp;
     }
+    public int getFinalHP(){
+        return finalHP;
+    }
 
     public String getBattlecryExplain(){
         return battlecryExplain;
@@ -80,6 +83,7 @@ public class Minion extends Card implements MyCharacter{
     public boolean isRush() {
         return rush;
     }
+
 
     public void summon(){
         if(battlecry){

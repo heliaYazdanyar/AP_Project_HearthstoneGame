@@ -24,8 +24,8 @@ public class ChooseCard extends JPanel{
     List<Card> cards=new ArrayList<>();
     boolean[] isChanged=new boolean[3];
 
-    int width=1100;
-    int height=850;
+    int width=1400;
+    int height=800;
     private boolean added=false;
 
     private JPanel BGcontaner=new JPanel(){
@@ -33,7 +33,7 @@ public class ChooseCard extends JPanel{
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             BufferedImage background= ImageLoader.getInstance().loadImage("gameBG","jpg",width,height);
-            g.drawImage(background,0,0,700,850,null);
+            g.drawImage(background,0,0,1200,850,null);
         }
     };
     private JPanel menu=new JPanel();
@@ -46,7 +46,7 @@ public class ChooseCard extends JPanel{
         this.player=player;
         this.frienemy=frienemy;
 
-        BGcontaner.setPreferredSize(new Dimension(850,850));
+        BGcontaner.setPreferredSize(new Dimension(1200,850));
         name.setText(frienemy);
         name.setHorizontalTextPosition(JLabel.CENTER);
         name.setVerticalTextPosition(JLabel.CENTER);
@@ -122,8 +122,8 @@ public class ChooseCard extends JPanel{
     }
     private Card getRandomCard(){
         Random r=new Random();
-        int size=player.getCurrentDeck().getDeckCards().size();
-        return player.getCurrentDeck().getDeckCards().get(r.nextInt(size));
+        int size=player.getdeckCnt();
+        return player.getDeckCards().get(r.nextInt(size));
     }
 
     private void initChooseCardPanel(){

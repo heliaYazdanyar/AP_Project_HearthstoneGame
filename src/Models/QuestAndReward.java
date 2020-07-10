@@ -34,4 +34,12 @@ public class QuestAndReward extends Card{
         return price;
     }
 
+
+    public Card getReward(){
+        return Card.getCard(reward);
+    }
+    public void setReward(String reward){
+        this.reward=reward;
+    }
+
 }

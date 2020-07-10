@@ -1,9 +1,6 @@
 package gamePlayers;
 
-import Models.Card;
-import Models.Deck;
-import Models.Hero;
-import Models.Weapon;
+import Models.*;
 
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class PlayerBot implements InGamePlayer{
     public boolean isMyTurn() {
         return false;
     }
-    public void setTurn(boolean trun, boolean manaBurn, boolean manaJump) {
+    public void setTurn(boolean trun, boolean manaBurn) {
 
     }
     public List<Card> getDeckCards() {
@@ -51,6 +48,11 @@ public class PlayerBot implements InGamePlayer{
 
     }
 
+    @Override
+    public void removeFromDeck(Card card) {
+
+    }
+
     public void removeFromHand(Card card) {
 
     }
@@ -63,6 +65,22 @@ public class PlayerBot implements InGamePlayer{
 
     @Override
     public void removeFromGround(Card card) {
+
+    }
+
+    @Override
+    public void setPassive(Passive passive) {
+
+    }
+    public Passive getPassive() {
+        return null;
+    }
+
+    @Override
+    public int getMana() {
+        return 0;
+    }
+    public void setMana(int t) {
 
     }
 }

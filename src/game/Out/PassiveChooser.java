@@ -1,8 +1,8 @@
 package game.Out;
 
+import Models.Passive;
 import Util.ImageLoader;
 import gamePlayers.PracticePlayer;
-import logic.Passive;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Random;
 
 public class PassiveChooser extends JPanel {
-    public int width=1100;
-    public int height=850;
+    public int width=1400;
+    public int height=800;
 
     private PanelHandler panelHandler;
     PracticePlayer player;
@@ -32,7 +32,7 @@ public class PassiveChooser extends JPanel {
         passives.add("FREEPOWER");
         passives.add("WARRIORS");
         passives.add("MANAJUMP");
-        passives.add("ZOMBIE");
+        passives.add("NURSE");
 
         initPassives();
     }
@@ -45,7 +45,6 @@ public class PassiveChooser extends JPanel {
             labels[cnt].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    System.out.println("inja");
                     Passive.valueOf(p).apply(player);
                     panelHandler.setPanel("ChooseCardEnemy");
                 }

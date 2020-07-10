@@ -16,7 +16,6 @@ public class MainFrame extends JFrame {
     private MainMenu mainMenu=new MainMenu();
     private Store store;
     private Collections collections;
-    private Game game;
     private Status status;
     private String currentPanel;
     private Container contentPane= getContentPane();
@@ -75,20 +74,6 @@ public class MainFrame extends JFrame {
                 this.add(panel);
                 this.setSize(store.width,store.height);
                 break;
-            case "Play":
-                if(player.ifDeckSelected) {
-                    game=new Game(player,player.getCurrentDeck());
-                    if (panel != null) this.remove(panel);
-                    this.panel = game;
-                    this.add(panel);
-                    this.setSize(game.width, game.height);
-                    break;
-                }
-                else{
-                    JOptionPane.showMessageDialog(MainFrame.getInstance(),"You should Select a Deck first!",
-                            "ERROR",JOptionPane.ERROR_MESSAGE);
-                    break;
-                }
             case "Status":
                 if(panel!=null) this.remove(panel);
                 this.panel=status;

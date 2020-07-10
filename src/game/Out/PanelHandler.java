@@ -1,18 +1,17 @@
 package game.Out;
 
+import Util.DeckReader;
 import gamePlayers.Player;
 import gamePlayers.PracticePlayer;
-import logic.DeckReader;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class PanelHandler extends JPanel {
-    private Player player;
     private PracticePlayer friendPlayer;
     private PracticePlayer enemyPlayer;
 
-    private CardLayout cardLayout=new CardLayout();
+    private final CardLayout cardLayout=new CardLayout();
 
     private GameView gameView;
     private StartGamePanel startGamePanel;
@@ -24,7 +23,6 @@ public class PanelHandler extends JPanel {
     public int height=800;
 
     public PanelHandler(Player player){
-        this.player=player;
         this.setLayout(cardLayout);
 
         startGamePanel=new StartGamePanel(player,this);
@@ -38,9 +36,9 @@ public class PanelHandler extends JPanel {
     }
 
     public void addPracticeWithDeckReader(Player player){
-        DeckReader deckReader=new DeckReader();
+        DeckReader deckReader=DeckReader.getDeckReader();
 
-        this.friendPlayer=new PracticePlayer(player.getUsername(),0);
+        this.friendPlayer=new PracticePlayer(player.getUsername(),false,deckReader);
         this.enemyPlayer=new PracticePlayer("kingTogwaggle",true,deckReader);
 
         chooseCardFriend=new ChooseCard(friendPlayer,this,"friend");
@@ -48,7 +46,7 @@ public class PanelHandler extends JPanel {
         chooseCardEnemy=new ChooseCard(enemyPlayer,this,"Enemy");
         this.add("ChooseCardEnemy",chooseCardEnemy);
 
-        gameView=new GameView(friendPlayer,enemyPlayer);
+        gameView=new GameView(friendPlayer,enemyPlayer,true);
         this.add("GameView",gameView);
         initPassivePanel();
     }
@@ -72,7 +70,9 @@ public class PanelHandler extends JPanel {
 
 
     public void setPanel(String panelName){
-        if(panelName.equalsIgnoreCase("GameView")) this.setPreferredSize(new Dimension(width,height));
+        if(panelName.equalsIgnoreCase("GameView")) {
+            this.setPreferredSize(new Dimension(width,height));
+        }
         else this.setPreferredSize(new Dimension(900,850));
         cardLayout.show(this,panelName);
     }

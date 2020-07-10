@@ -1,9 +1,8 @@
 package gamePlayers;
 
 import Models.*;
+import Util.DeckReader;
 import logic.Administer;
-import logic.DeckReader;
-import logic.Passive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,18 +17,14 @@ public class PracticePlayer implements InGamePlayer {
     private List<Card> handCards;
     private List<Card> deckCards;
     private List<Card> groundCards;
-    private Card usingCard;
-    private boolean cardIsBeingUsed=false;
 
     private boolean isMyTurn=false;
     private boolean carPicked=true;
     private boolean needsUpdate=false;
-    private int hpNumber;
     private int currentMana;
     private Weapon weapon;
 
     private int level=0;
-
 
 
     private Thread pickCardThread=new Thread(){
@@ -39,7 +34,7 @@ public class PracticePlayer implements InGamePlayer {
                 try {
                     Thread.sleep(3000);
                     if(isMyTurn && !carPicked){
-                        Administer.getInstance().drawCard(PracticePlayer.this);
+                        Administer.getInstance().drawCard(PracticePlayer.this,true);
                     }
                 } catch (InterruptedException e) { e.printStackTrace(); }
             }
@@ -76,8 +71,6 @@ public class PracticePlayer implements InGamePlayer {
         handCards=new ArrayList<>();
         groundCards=new ArrayList<>();
 
-        handCards=new ArrayList<>();
-
         currentMana=0;
         level=0;
         pickCardThread.start();
@@ -85,11 +78,19 @@ public class PracticePlayer implements InGamePlayer {
     }
     public PracticePlayer(String user, boolean enemy, DeckReader deckReader){
         this.username=user;
+        this.hero=Hero.getHero("Mage");
+        this.heroName="Mage";
         if(enemy){
+            deckCards=deckReader.getEnemyDeck();
 
         }else {
-
+            deckCards=deckReader.getFriendDeck();
         }
+
+        handCards=new ArrayList<>();
+        groundCards=new ArrayList<>();
+        currentMana=0;
+        level=0;
         pickCardThread.start();
     }
 
@@ -97,9 +98,7 @@ public class PracticePlayer implements InGamePlayer {
     public String getUsername() {
         return username;
     }
-    public Decks getCurrentDeck() {
-        return deck;
-    }
+
     public String getHeroName() {
         return heroName;
     }
@@ -107,10 +106,19 @@ public class PracticePlayer implements InGamePlayer {
         return hero;
     }
 
-    private boolean addCardPossible(Card card){
-        if (handCards.size()==12) return false;
-        return true;
+    public Decks getCurrentDeck() {
+        return deck;
     }
+    public void addToDeck(Card card){
+        deckCards.add(card);
+    }
+    public List<Card> getDeckCards() {
+        return deckCards;
+    }
+    public void removeFromDeck(Card card){
+        deckCards.remove(card);
+    }
+
     public Card getRandomCard(){
         Random r=new Random();
         int i=r.nextInt(deckCards.size());
@@ -118,17 +126,12 @@ public class PracticePlayer implements InGamePlayer {
     }
     public void addToHand(Card card){
         handCards.add(card);
-        deckCards.remove(card);
+//        deckCards.remove(card);
         carPicked=true;
         needsUpdate=true;
-        update();
-    }
-    public void addToDeck(Card card){
-        deckCards.add(card);
     }
 
     public void playCard(Card card){
-        usingCard=card;
         if(card.getType().equalsIgnoreCase("Minion")){
             if(Administer.getInstance().canSummonMinion(this,(Minion)card)) {
                 Administer.getInstance().summonMinion(this, (Minion) card);
@@ -142,7 +145,8 @@ public class PracticePlayer implements InGamePlayer {
         else if(card.getType().equalsIgnoreCase("Spell")){
             Administer.getInstance().useSpell(this,(Spell)card);
             Administer.getInstance().removeFromHand(this,card);
-            setMana(getMana() - card.getManaCost());
+            if(this.getHero().getName().equalsIgnoreCase("Mage")) setMana(getMana() - (card.getManaCost()-2));
+            else setMana(getMana() - card.getManaCost());
         }
         else if(card.getType().equalsIgnoreCase("Weapon")){
             Administer.getInstance().addWeapon((Weapon) card,this);
@@ -160,18 +164,8 @@ public class PracticePlayer implements InGamePlayer {
     public List<Card> getHandCards(){
         return handCards;
     }
-
     public int getdeckCnt(){
         return deckCards.size();
-    }
-
-    public boolean canUseHeroPower(){
-
-
-        return true;
-    }
-    public void useHeroPower(){
-
     }
 
     public int getMana(){
@@ -190,15 +184,21 @@ public class PracticePlayer implements InGamePlayer {
         this.weapon=weapon;
     }
 
-    public int getHpNumber(){
-        return hpNumber;
+    public void removeFromGround(Card card) {
+        groundCards.remove(card);
+    }
+    public List<Card> getGroundCards(){
+        return groundCards;
+    }
+    public void addToGroundCards(Card card){
+        groundCards.add(card);
     }
 
     @Override
     public boolean isMyTurn(){
         return isMyTurn;
     }
-    public void setTurn(boolean turn,boolean manaBurn,boolean manaJump){
+    public void setTurn(boolean turn,boolean manaBurn){
         if (!isMyTurn && turn){
             level++;
             if(level<10 && manaBurn) {
@@ -214,11 +214,14 @@ public class PracticePlayer implements InGamePlayer {
         }
         this.isMyTurn=turn;
     }
-    public List<Card> getDeckCards() {
-        return deckCards;
+
+    @Override
+    public void setPassive(Passive passive) {
+        this.passive=passive;
+        if(passive==Passive.MANAJUMP) level++;
     }
-    public void removeFromGround(Card card) {
-        groundCards.remove(card);
+    public Passive getPassive(){
+        return this.passive;
     }
 
     public boolean needsUpdate(){
@@ -226,29 +229,6 @@ public class PracticePlayer implements InGamePlayer {
     }
     public void changeNeedsUpdate(boolean b){
         this.needsUpdate=b;
-    }
-
-    public boolean isCardIsBeingUsed(){
-        return cardIsBeingUsed;
-    }
-    public void setCardIsBeingUsed(boolean b){
-        this.cardIsBeingUsed=b;
-    }
-    public Card getUsingCard(){
-        return usingCard;
-    }
-
-    public List<Card> getGroundCards(){
-        return groundCards;
-    }
-    public void addToGroundCards(Card card){
-        groundCards.add(card);
-    }
-
-
-
-    public void update(){
-
     }
 
 
