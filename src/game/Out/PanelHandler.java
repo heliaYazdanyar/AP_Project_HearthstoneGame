@@ -1,6 +1,7 @@
 package game.Out;
 
 import Util.DeckReader;
+import client.GameClient;
 import gamePlayers.Player;
 import gamePlayers.PracticePlayer;
 
@@ -8,6 +9,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelHandler extends JPanel {
+    private GameClient client;
+
+
     private PracticePlayer friendPlayer;
     private PracticePlayer enemyPlayer;
 
@@ -18,14 +22,20 @@ public class PanelHandler extends JPanel {
     private PassiveChooser passiveChooser;
     private ChooseCard chooseCardFriend;
     private ChooseCard chooseCardEnemy;
+    private Waiting waitingPanel;
 
-    public int width=1400;
-    public int height=800;
+    public int width= (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();;
+    public int height=(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();;
 
-    public PanelHandler(Player player){
+    public PanelHandler(GameClient client){
         this.setLayout(cardLayout);
 
-        startGamePanel=new StartGamePanel(player,this);
+        this.client=client;
+
+        waitingPanel=new Waiting(client,this);
+        this.add("waiting",waitingPanel);
+
+        startGamePanel=new StartGamePanel(client,this);
         this.add("startGame",startGamePanel);
         cardLayout.show(this,"startGame");
     }
@@ -68,6 +78,14 @@ public class PanelHandler extends JPanel {
         initPassivePanel();
     }
 
+
+    public void addPracticeOnline(){
+        gameView=new GameView(this.client,this.client.getEnemy(),"");
+        client.setGameView(gameView);
+
+        this.add("GameView",gameView);
+        cardLayout.show(this,"GameView");
+    }
 
     public void setPanel(String panelName){
         if(panelName.equalsIgnoreCase("GameView")) {

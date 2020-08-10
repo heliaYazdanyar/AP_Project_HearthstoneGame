@@ -1,1 +1,0 @@
-{name:'deck1',heroName:'mage',wins:0,numberOfAllGames:0,cards:['','','','','','','','','','','','','','',''],cardsCnt:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}

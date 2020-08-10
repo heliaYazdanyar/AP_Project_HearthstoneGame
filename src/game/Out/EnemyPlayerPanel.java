@@ -1,129 +1,134 @@
 package game.Out;
 
-import Models.Hero;
-import Models.Weapon;
 import Util.ImageLoader;
+import gamePlayers.InGamePlayer;
+
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
-public class EnemyPlayerPanel extends JPanel{
-    private Hero hero;
-    private int deckCnt;
-    private int currentMana;
+public class EnemyPlayerPanel extends JPanel implements PlayerPanel{
+    private InGamePlayer player;
+    private GameView gameView;
 
-    private boolean hasWeapon;
-    private Weapon weapon;
 
+    private JLabel hpLabel;
+    private JLabel manaLabel;
     private JLabel weaponLabel;
-    private JLabel heroPowerLabel;
-    private JLabel heroFaceLabel;
-    private JPanel manaPanel;
-    private JLabel HPLabel;
     private JLabel deckLabel;
-//    private JLabel handCntLabel;
-    private JLabel skinCards;
+    private JLabel heroPowerLabel;
 
+    private JPanel handPanel;
+    private JPanel hpAndManaPanel;
 
-    private GridBagConstraints gbc=new GridBagConstraints();
+    int width=1100;
+    int height=140;
 
-    public EnemyPlayerPanel(int deckCnt, Hero hero){
-        this.setLayout(new GridBagLayout());
-        this.hero=hero;
-        this.deckCnt=deckCnt;
+    public EnemyPlayerPanel(InGamePlayer player,GameView gameView){
+        this.setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
+        this.player=player;
+        this.gameView=gameView;
 
-        initLabels();
+        this.setPreferredSize(new Dimension(width,height));
+
+        hpAndManaPanel=new JPanel();
+        hpAndManaPanel.setLayout(new BoxLayout(hpAndManaPanel,BoxLayout.Y_AXIS));
+        update();
     }
 
-    private void initLabels(){
-        heroFaceLabel=new JLabel(ImageLoader.getInstance().loadIcon(hero.getName(),"jpeg",250,350));
 
-        skinCards=new JLabel(ImageLoader.getInstance().loadIcon("skinCards","png",300,100));
-
-        deckLabel=new JLabel(ImageLoader.getInstance().loadIcon("deck","png",90,190));
-        deckLabel.setText(deckCnt+"");
-        deckLabel.setHorizontalTextPosition(JLabel.CENTER);
-        deckLabel.setVerticalTextPosition(JLabel.CENTER);
-        deckLabel.setFont(new Font("Courier New", Font.ITALIC, 18));
-        deckLabel.setForeground(Color.darkGray);
+    private void initDeckLabel(){
+        deckLabel=new JLabel(ImageLoader.getInstance().loadIcon("deck","png",50,140));
         deckLabel.setOpaque(true);
-
-        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(hero.getHeroPowerName(),"jpeg",200,300));
-        heroPowerLabel.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-            }
-        });
-
-        manaPanel=new JPanel();
-        Border b1 = new LineBorder(Color.blue, 5);
-        manaPanel.setBorder(b1);
-        manaPanel.setLayout(new GridLayout(10,1));
-        manaPanel.setBackground(Color.lightGray);
-        setMane(1);
-
-
-//        HPLabel=new JLabel(ImageLoader.getInstance().loadIcon());
-
-
     }
+    private void initHandCards(){
+        handPanel=new JPanel();
+        handPanel.setLayout(new BorderLayout());
 
-    private void setMane(int cnt){
-        currentMana=cnt;
-        manaPanel.removeAll();
-        ImageIcon manaIcon= ImageLoader.getInstance().loadIcon("Mana","png",20,20);
-        if(cnt<10){
-            for (int i=0;i<cnt;i++) {
-                manaPanel.add(new JLabel(manaIcon));
-            }
-            for(int i=cnt;i<10;i++){
-                manaPanel.add(new JLabel(""));
-            }
-        }
-        else{
-            for(int i=0;i<10;i++){
-                manaPanel.add(new JLabel(manaIcon));
-            }
-        }
+        JLabel label=new JLabel(ImageLoader.getInstance().loadIcon("skinCards","png",500,140));
+        label.setBackground(Color.darkGray);
 
+        handPanel.add(label,BorderLayout.CENTER);
     }
-
-    public void update(int mana,boolean hasWeapon,Weapon weapon,int deckCnt){
-        if(hasWeapon){
-            this.hasWeapon=true;
-            this.weapon=weapon;
-            weaponLabel=new JLabel(ImageLoader.getInstance().loadIcon(weapon.getName(),"jpeg",200,300));
+    private void initManaPanel(){
+        manaLabel=new JLabel(ImageLoader.getInstance().loadIcon("mana","png",65,65),SwingUtilities.CENTER);
+        manaLabel.setText(player.getMana()+"");
+        manaLabel.setHorizontalTextPosition(JLabel.CENTER);
+        manaLabel.setVerticalTextPosition(JLabel.CENTER);
+        manaLabel.setFont(new Font("Courier New", Font.BOLD, 30));
+        manaLabel.setForeground(Color.BLUE);
+        manaLabel.setOpaque(true);
+    }
+    private void initWeapon(){
+        if(player.getAdminister().hasWeapon(player)){
+            weaponLabel=new JLabel(ImageLoader.getInstance().loadIcon(player.getWeapon().getName(),"jpeg",120,140));
             weaponLabel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
-
-                }
-
-                @Override
-                public void mouseExited(MouseEvent e) {
+                    gameView.infoGiver.initWeaponInfo(player.getWeapon());
                 }
             });
 
-            //inja addesh kon
-        }else{
-            hasWeapon=false;
-            this.remove(weaponLabel);
         }
+        else{
+            weaponLabel=new JLabel(ImageLoader.getInstance().loadIcon("emptyWeapon","jpg",120,140));
+            weaponLabel.setBackground(Color.getHSBColor(106, 114, 124 ));
+        }
+    }
+    private void initHeroPower(){
+        heroPowerLabel=new JLabel(ImageLoader.getInstance().loadIcon(player.getHero().getHeroPowerName(),
+                "jpeg",120,140));
+        heroPowerLabel.addMouseListener(new MouseAdapter() {
 
-        setMane(mana);
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                gameView.infoGiver.initHeroPowerInfo(player.getHero().getHeroPowerName());
+            }
 
-        this.deckCnt=deckCnt;
-
+        });
+    }
+    private void initHpPanel(){
+        hpLabel=new JLabel(ImageLoader.getInstance().loadIcon("hpIcon","png",65,65),SwingUtilities.CENTER);
+        hpLabel.setText(player.getHero().getHP()+"");
+        hpLabel.setHorizontalTextPosition(JLabel.CENTER);
+        hpLabel.setVerticalTextPosition(JLabel.CENTER);
+        hpLabel.setForeground(Color.BLACK);
+        hpLabel.setFont(new Font("Courier New", Font.BOLD, 30));
+        hpLabel.setOpaque(true);
     }
 
+    private void addComponents(){
+        this.removeAll();
+        this.add(weaponLabel);
+        this.add(handPanel);
+        this.add(deckLabel);
 
+        hpAndManaPanel.removeAll();
+        hpAndManaPanel.add(manaLabel);
+        hpAndManaPanel.add(hpLabel);
+        this.add(hpAndManaPanel);
+        this.add(heroPowerLabel);
+    }
 
+    public void update(){
+        initDeckLabel();
+        initManaPanel();
+        initHandCards();
+        initWeapon();
+        initHeroPower();
+        initHpPanel();
+
+        addComponents();
+    }
+
+    @Override
+    public void paintComponents(Graphics g) {
+        super.paintComponent(g);
+        BufferedImage background= ImageLoader.getInstance().loadImage("mainMenuBackground","jpg",
+                width,height);
+        g.drawImage(background,0,0,null);
+
+    }
 }

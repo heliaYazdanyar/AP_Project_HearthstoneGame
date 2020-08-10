@@ -1,6 +1,7 @@
 package gamePlayers;
 
 import Models.*;
+import logic.Administer;
 
 import java.util.List;
 
@@ -12,6 +13,17 @@ public class PlayerBot implements InGamePlayer{
     public String getUsername() {
         return user;
     }
+
+    @Override
+    public void setAdminister(Administer administer) {
+
+    }
+
+    @Override
+    public Administer getAdminister() {
+        return null;
+    }
+
     public Deck getCurrentDeck() {
         return null;
     }
@@ -61,6 +73,11 @@ public class PlayerBot implements InGamePlayer{
     }
     public void addWeapon(Weapon weapon) {
 
+    }
+
+    @Override
+    public Weapon getWeapon() {
+        return null;
     }
 
     @Override

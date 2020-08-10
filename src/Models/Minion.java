@@ -48,6 +48,17 @@ public class Minion extends Card implements MyCharacter{
     public int getPrice(){
         return price;
     }
+
+    @Override
+    public String getThisCardsJson() {
+        String json="{'name':'"+name+"','type':'Minion','rarity':'"+rarity+"','className':'"+className+
+                "','manaCost':"+manaCost+",'HP':"+HP+",'attack':"+attack+",'finalHP':"+finalHP+
+                ",'taunt':"+taunt+",'battlecry':"+battlecry+",'lifeSteal':"+lifeSteal+
+                ",'rush':"+rush+",'permanentCause':"+permanentCause+",'battlecryExplain':'"+battlecryExplain+
+                "','permanentCauseExplain':'"+permanentCauseExplain+"','price':"+price+"}";
+        return json;
+    }
+
     public void setHP(int hp){
         if(hp>finalHP) this.HP=finalHP;
         else this.HP=hp;

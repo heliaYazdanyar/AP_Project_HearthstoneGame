@@ -5,7 +5,9 @@ import Out.MainFrame;
 import Util.DeckReader;
 import Util.ImageLoader;
 import Util.SoundPlayer;
+import client.GameClient;
 import gamePlayers.InGamePlayer;
+import gamePlayers.OnlineEnemy;
 import gamePlayers.PlayerBot;
 import gamePlayers.PracticePlayer;
 import logic.Administer;
@@ -28,6 +30,10 @@ public class GameView extends JPanel {
     private SoundPlayer soundPlayer;
 
     public int turn=0;
+    boolean online;
+    boolean myTurn;
+
+    private Administer administer;
 
     public GameView.PlayGround playGround;
     public GameView.Events events;
@@ -38,7 +44,7 @@ public class GameView extends JPanel {
     private InGamePlayer enemyPlayer;
 
     private FriendPlayerPanel myPanel;
-    private FriendPlayerPanel enemyPanel;
+    public PlayerPanel enemyPanel;
 
     private Card cardPopUp;
     private JPanel container=new JPanel();
@@ -213,12 +219,12 @@ public class GameView extends JPanel {
         public void initFriendCard(){
             if(friendPlayer.getGroundCards()!=null) {
                 friendMinions.removeAll(friendMinions);
-                for (int i=0;i<Administer.getInstance().friend_CardsOnGround.size();i++) {
+                for (int i=0;i<administer.friend_CardsOnGround.size();i++) {
                     final int t=i;
                     JLabel label = new JLabel(ImageLoader.getInstance().loadIcon(
-                            Administer.getInstance().friend_CardsOnGround.get(i).getName(), "jpeg", 140, 140));
+                            administer.friend_CardsOnGround.get(i).getName(), "jpeg", 140, 140));
                     //taunt notice
-                    if((Administer.getInstance().friend_CardsOnGround.get(i)).isTaunt()) {
+                    if((administer.friend_CardsOnGround.get(i)).isTaunt()) {
                         Border b = new LineBorder(Color.RED, 10);
                         label.setBorder(b);
                         label.setOpaque(true);
@@ -228,29 +234,29 @@ public class GameView extends JPanel {
                         @Override
                         public void mouseClicked(MouseEvent e) {
                             isCardPopUp=false;
-                            if(Administer.getInstance().isAttackerChosen() && turn%2==1){
-                                Administer.getInstance().setInformation("victim chosen");
+                            if(administer.isAttackerChosen() && turn%2==1){
+                                administer.setInformation("victim chosen",false);
                                 victim=label;
 
-                                Administer.getInstance().setVictimOwner(friendPlayer);
-                                Administer.getInstance().setVictim(Administer.getInstance().friend_CardsOnGround.get(t));
+                                administer.setVictimOwner(friendPlayer);
+                                administer.setVictim(administer.friend_CardsOnGround.get(t));
                                 x2=e.getXOnScreen();
 
                                 playGround.update();
                             }
                             else if(turn%2==0){
-                                Administer.getInstance().setAttackerIsWeapon(false);
-                                Administer.getInstance().setAttackerOwner(friendPlayer);
-                                Administer.getInstance().setAttacker(Administer.getInstance().friend_CardsOnGround.get(t));
+                                administer.setAttackerIsWeapon(false);
+                                administer.setAttackerOwner(friendPlayer);
+                                administer.setAttacker(administer.friend_CardsOnGround.get(t));
                                 x1=e.getXOnScreen();
 
-                                Administer.getInstance().setInformation("Attacker chosen");
+                                administer.setInformation("Attacker chosen",false);
                             }
                         }
 
                         @Override
                         public void mouseEntered(MouseEvent e) {
-                            infoGiver.initCardInfo(Administer.getInstance().friend_CardsOnGround.get(t));
+                            infoGiver.initCardInfo(administer.friend_CardsOnGround.get(t));
                         }
 
                     });
@@ -263,12 +269,12 @@ public class GameView extends JPanel {
 
             if(enemyPlayer.getGroundCards()!=null){
             enemyMinions.removeAll(enemyMinions);
-            for (int i=0;i<Administer.getInstance().enemy_CardsOnGround.size();i++){
+            for (int i=0;i<administer.enemy_CardsOnGround.size();i++){
                 final int t=i;
                     JLabel label = new JLabel(ImageLoader.getInstance().loadIcon(
-                            Administer.getInstance().enemy_CardsOnGround.get(i).getName(), "jpeg", 140, 140));
+                            administer.enemy_CardsOnGround.get(i).getName(), "jpeg", 140, 140));
                     //taunt notice
-                   if(Administer.getInstance().enemy_CardsOnGround.get(i).isTaunt()) {
+                   if(administer.enemy_CardsOnGround.get(i).isTaunt()) {
                        Border b = new LineBorder(Color.RED, 10);
                        label.setBorder(b);
                        label.setOpaque(true);
@@ -278,28 +284,28 @@ public class GameView extends JPanel {
                         @Override
                         public void mouseClicked(MouseEvent e) {
                             isCardPopUp=false;
-                            if(Administer.getInstance().isAttackerChosen() && turn%2==0){
-                                Administer.getInstance().setInformation("Victim Chosen");
+                            if(administer.isAttackerChosen() && turn%2==0){
+                                administer.setInformation("Victim Chosen",false);
                                 victim=label;
 
-                                Administer.getInstance().setVictimOwner(enemyPlayer);
-                                Administer.getInstance().setVictim(Administer.getInstance().enemy_CardsOnGround.get(t));
+                                administer.setVictimOwner(enemyPlayer);
+                                administer.setVictim(administer.enemy_CardsOnGround.get(t));
                                 x2=e.getXOnScreen();
                                 playGround.update();
                             }
                             else if(turn%2==1){
-                                Administer.getInstance().setAttackerIsWeapon(false);
-                                Administer.getInstance().setAttackerOwner(enemyPlayer);
-                                Administer.getInstance().setAttacker(Administer.getInstance().enemy_CardsOnGround.get(t));
+                                administer.setAttackerIsWeapon(false);
+                                administer.setAttackerOwner(enemyPlayer);
+                                administer.setAttacker(administer.enemy_CardsOnGround.get(t));
                                 x1=e.getXOnScreen();
-                                Administer.getInstance().setInformation("Attacker Chosen");
+                                administer.setInformation("Attacker Chosen",false);
                                 attacker=label;
                             }
                         }
                         @Override
                         public void mouseEntered(MouseEvent e) {
                             System.out.println("entered");
-                            infoGiver.initCardInfo(Administer.getInstance().enemy_CardsOnGround.get(t));
+                            infoGiver.initCardInfo(administer.enemy_CardsOnGround.get(t));
                         }
 
 
@@ -341,13 +347,13 @@ public class GameView extends JPanel {
             if(cardIsMoving) {
                 g.drawImage(movingCard,xMove,yMove,null);
             }
-            if(Administer.getInstance().isHPloss()){
+            if(administer.isHPloss()){
                 g.setColor(Color.RED);
                 g.setFont(new Font("Arial", Font.BOLD, 20));
                 g.drawString("-HP", x1, y1);
                 g.drawString("-HP",x2,y2);
 
-                Administer.getInstance().setHPloss(false);
+                administer.setHPloss(false);
             }
 
             if(isCardPopUp){
@@ -360,7 +366,7 @@ public class GameView extends JPanel {
         }
 
     }
-    class Events extends JPanel{
+    public class Events extends JPanel{
         private String path;
         private java.util.List<JLabel> eventLabels=new ArrayList<>();
         private int eventCnt=0;
@@ -476,13 +482,13 @@ public class GameView extends JPanel {
                     }
                     if (cntTime <= 0) {
                         turn = (turn + 1) % 2;
-                        Administer.getInstance().newTurn(turn);
+                        administer.newTurn(turn);
                         cntTime = 60;
                     }
                     if (cntTime <= 40) countDown.setText("!!!!  " + cntTime + "  !!!!");
                     else countDown.setText("     " + cntTime + "     ");
                     cntTime--;
-                    information.setText(Administer.getInstance().getInformation());
+                    information.setText(administer.getInformation());
                 }
             }
         };
@@ -518,33 +524,22 @@ public class GameView extends JPanel {
             information.setOpaque(true);
 
 
-            endTurn.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    turn=(turn+1)%2;
-                    Administer.getInstance().newTurn(turn);
+            endTurn.addActionListener(e -> {
+                turn=(turn+1)%2;
+                administer.newTurn(turn);
 
-                    cntTime=60;
-                }
+                cntTime=60;
             });
             endTurn.setFont(new Font("Courier New", Font.ITALIC, 18));
             endTurn.setForeground(Color.PINK);
             endTurn.setOpaque(true);
 
-            mainMenu.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    MainFrame.getInstance().setPanel("MainMenu");
-                }
-            });
+            mainMenu.addActionListener(e -> MainFrame.getInstance().setPanel("MainMenu"));
             mainMenu.setForeground(Color.DARK_GRAY);
             mainMenu.setOpaque(true);
 
-            quitGame.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
+            quitGame.addActionListener(e -> {
 
-                }
             });
             quitGame.setForeground(Color.DARK_GRAY);
             quitGame.setOpaque(true);
@@ -553,23 +548,26 @@ public class GameView extends JPanel {
             friendHero=new JLabel(ImageLoader.getInstance().loadIcon(friendPlayer.getHeroName(),"jpeg",200,200));
             enemyHero=new JLabel(ImageLoader.getInstance().loadIcon(enemyPlayer.getHeroName(),"jpeg",200,200));
 
+            friendHero=new JLabel();
+            enemyHero=new JLabel();
+
             friendHero.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     if(turn%2==1){
-                        if(Administer.getInstance().isAttackerChosen()){
-                            Administer.getInstance().setInformation("Target chosen");
-                            Administer.getInstance().setVictimOwner(friendPlayer);
-                            Administer.getInstance().setVictim(friendPlayer.getHero());
+                        if(administer.isAttackerChosen()){
+                            administer.setInformation("Target chosen",false);
+                            administer.setVictimOwner(friendPlayer);
+                            administer.setVictim(friendPlayer.getHero());
                         }
                         else{
-                            Administer.getInstance().setInformation("choose attacker");
+                            administer.setInformation("choose attacker",false);
                         }
 
                     }
                     else{
-                        if(Administer.getInstance().isAttackerChosen()){
-                            Administer.getInstance().setInformation("choose target");
+                        if(administer.isAttackerChosen()){
+                            administer.setInformation("choose target",false);
                         }
                     }
                 }
@@ -578,25 +576,25 @@ public class GameView extends JPanel {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     if(turn%2==0){
-                        if(Administer.getInstance().isAttackerChosen()){
-                            Administer.getInstance().setInformation("Target chosen");
-                            Administer.getInstance().setVictimOwner(enemyPlayer);
-                            Administer.getInstance().setVictim(enemyPlayer.getHero());
+                        if(administer.isAttackerChosen()){
+                            administer.setInformation("Target chosen",false);
+                            administer.setVictimOwner(enemyPlayer);
+                            administer.setVictim(enemyPlayer.getHero());
                         }
                         else{
-                            Administer.getInstance().setInformation("choose attacker");
+                            administer.setInformation("choose attacker",false);
                         }
 
                     }
                     else{
-                        if(Administer.getInstance().isAttackerChosen()){
-                            Administer.getInstance().setInformation("choose target");
+                        if(administer.isAttackerChosen()){
+                            administer.setInformation("choose target",false);
                         }
                     }
                 }
             });
 
-            Administer.getInstance().newTurn(0);
+            administer.newTurn(0);
             cntTime=60;
             timer.start();
 
@@ -635,38 +633,87 @@ public class GameView extends JPanel {
     }
 
 
+    //practice with yourself
     public GameView(PracticePlayer friendPlayer,PracticePlayer enemyPlayer){
         this.friendPlayer=friendPlayer;
         this.enemyPlayer=enemyPlayer;
-        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,false);
 
+        administer=new Administer(this.friendPlayer,this.enemyPlayer,this,false);
+//        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,false);
+        friendPlayer.setAdminister(administer);
+        enemyPlayer.setAdminister(administer);
 
-        initPanels();
+        initMainPanels();
+        initOfflineGamePanels();
         addPanels();
         animatingCards.start();
+        this.online=false;
     }
 
+    //with deckReader
     public GameView(PracticePlayer friendPlayer,PracticePlayer enemyPlayer,boolean deckReader){
         this.friendPlayer=friendPlayer;
         this.enemyPlayer=enemyPlayer;
 
+        administer=new Administer(this.friendPlayer,this.enemyPlayer,this,true);
+//        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,true);
 
-
-
-        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,true);
-
-
-
-        initPanels();
+        initMainPanels();
+        initOfflineGamePanels();
         addPanels();
         animatingCards.start();
+
+        this.online=false;
     }
 
+    //with bot
     public GameView(PracticePlayer friendPlayer, PlayerBot playerBot){
 
     }
 
-    private void initPanels(){
+
+    //online
+    public GameView(GameClient friendClient, OnlineEnemy enemyPlayer, String online){
+        this.enemyPlayer=enemyPlayer;
+        this.friendPlayer=friendClient.getPracticePlayer();
+
+        administer=new Administer(friendClient,enemyPlayer,this,"");
+        friendPlayer.setAdminister(administer);
+        enemyPlayer.setAdminister(administer);
+
+
+
+        initMainPanels();
+        initOnlineGamePanels();
+        addPanels();
+        animatingCards.start();
+
+        this.online=true;
+    }
+
+
+    public Administer getAdminister(){
+        return administer;
+    }
+    public void setMyTurn(boolean t){
+        myTurn=t;
+    }
+
+    private void initOnlineGamePanels(){
+       this.myPanel=new FriendPlayerPanel(friendPlayer,this);
+
+       this.enemyPanel=new EnemyPlayerPanel(enemyPlayer,this);
+    }
+
+    private void initOfflineGamePanels(){
+        this.myPanel=new FriendPlayerPanel(friendPlayer,this);
+        myPanel.setSize(myPanel.width,myPanel.height);
+
+        this.enemyPanel=new FriendPlayerPanel((PracticePlayer)enemyPlayer,this);
+//        enemyPanel.setSize(enemyPanel.width,enemyPanel.height);
+    }
+
+    private void initMainPanels(){
         this.playGround=new GameView.PlayGround();
         playGround.setSize(playGround.width,playGround.height);
 
@@ -677,14 +724,6 @@ public class GameView extends JPanel {
         infoGiver.setPreferredSize(new Dimension(infoGiver.width,infoGiver.height));
 
         tools=new Tools();
-//        tools.setSize(tools.width,tools.height);
-
-        this.myPanel=new FriendPlayerPanel(friendPlayer,this);
-        myPanel.setSize(myPanel.width,myPanel.height);
-
-        this.enemyPanel=new FriendPlayerPanel((PracticePlayer)enemyPlayer,this);
-        enemyPanel.setSize(enemyPanel.width,enemyPanel.height);
-
     }
 
     private void addPanels(){
@@ -692,7 +731,7 @@ public class GameView extends JPanel {
         playGround.setSize(playGround.width,playGround.height);
         container.add(playGround,BorderLayout.CENTER);
         container.add(myPanel,BorderLayout.SOUTH);
-        container.add(enemyPanel,BorderLayout.NORTH);
+        container.add((JPanel)enemyPanel,BorderLayout.NORTH);
 
         tools.setPreferredSize(new Dimension(tools.width,tools.height));
         container.add(events,BorderLayout.WEST);

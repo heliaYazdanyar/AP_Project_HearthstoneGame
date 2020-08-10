@@ -2,6 +2,7 @@ package game.Out;
 
 import Out.MainFrame;
 import Util.ImageLoader;
+import client.GameClient;
 import gamePlayers.Player;
 
 import javax.swing.*;
@@ -25,11 +26,13 @@ public class StartGamePanel extends JPanel {
     public int height=850;
     private PanelHandler panelHandler;
 
+    private GameClient client;
     private Player player;
 
-    public StartGamePanel(Player player,PanelHandler panelHandler){
+    public StartGamePanel(GameClient client, PanelHandler panelHandler){
         this.panelHandler=panelHandler;
-        this.player=player;
+        this.client=client;
+        this.player=client.getPlayer();
         backToMenu=new JButton("MainMenu");
 
         label=new JLabel("Play with:",SwingConstants.CENTER);
@@ -80,7 +83,15 @@ public class StartGamePanel extends JPanel {
         });
 
         online.addActionListener(e -> {
-            logger(player.getUsername(),"Started game:","online game");
+            logger(player.getUsername(),"Requested game:","online game");
+            if(player.ifDeckSelected) {
+                client.requestForGame();
+                panelHandler.setPanel("waiting");
+            }
+            else{
+                JOptionPane.showMessageDialog(MainFrame.getInstance(),"You should select a deck first",
+                        "ERROR",JOptionPane.ERROR_MESSAGE);
+            }
 
         });
 

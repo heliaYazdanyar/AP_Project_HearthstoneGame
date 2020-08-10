@@ -1,2 +1,0 @@
-player: kingTogwaggle->BearShark was played.
-player: hey12->CurioCollector was played.

@@ -1,7 +1,0 @@
-player: hey12->WickerflameBurnbristle was played.
-player: hey12->Ashbringer was played.
-player: kingTogwaggle->BearShark was played.
-player: kingTogwaggle->Polymorph was played.
-player: hey12->CurioCollector was played.
-player: kingTogwaggle->Polymorph was played.
-player: hey12->WickerflameBurnbristle was played.

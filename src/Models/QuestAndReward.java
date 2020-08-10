@@ -34,6 +34,15 @@ public class QuestAndReward extends Card{
         return price;
     }
 
+    @Override
+    public String getThisCardsJson() {
+        String json="{'name':'"+name+"','type':'QuestAndReward','rarity':'"+rarity+
+                "','manaCost':"+manaCost+",'className':'"+className+"','price':"+price+
+                ",'quest':'"+quest+"','questSpendMana':"+questSpendMana+",'manaSpend':"+manaSpend+
+                ",'reward':'"+reward+"'}";
+        return json;
+    }
+
 
     public Card getReward(){
         return Card.getCard(reward);

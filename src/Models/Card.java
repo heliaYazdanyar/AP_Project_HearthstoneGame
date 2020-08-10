@@ -24,6 +24,8 @@ public abstract class Card {
     public abstract int getManaCost();
     public abstract int getPrice();
 
+    public abstract String getThisCardsJson();
+
 
     public static List<String> getList(String nameOfList){
         if(nameOfList.equalsIgnoreCase("spells")) return spells;
@@ -92,6 +94,28 @@ public abstract class Card {
         }
         return null;
 
+    }
+
+    public static Card getCardFromJson(String type,String json){
+        Gson gson= new Gson();
+        Card card;
+        if(type.equalsIgnoreCase("Spell")) {
+            card = gson.fromJson(json, Spell.class);
+            return card;
+        }
+        if(type.equalsIgnoreCase("Minion")){
+            card=gson.fromJson(json,Minion.class);
+            return card;
+        }
+        if(type.equalsIgnoreCase("Weapon")) {
+            card=gson.fromJson(json,Weapon.class);
+            return card;
+        }
+        if(type.equalsIgnoreCase("questAndRewards")) {
+            card=gson.fromJson(json,QuestAndReward.class);
+            return card;
+        }
+        return null;
     }
 
 }

@@ -1,1 +1,0 @@
-{'diamonds':50,'nameOfHandCard':'','winsOfAllGames':0,'wins':0,'loses':0,'gamesWithThisHand':0,'heroName':'','allGames':0}

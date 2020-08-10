@@ -45,6 +45,17 @@ public class Spell extends Card {
         return price;
     }
 
+    @Override
+    public String getThisCardsJson() {
+        String json="{'name':'"+name+"','type':'Spell','rarity':'"+rarity+"','manaCost':"+manaCost+",'className':'"+
+                className+"','price':"+price+",'drawCard':"+drawCard+",'manaBurn':"+manaBurn+",'summon':"+summon+
+                ",'dealDamage':"+dealDamage+",'discover':"+discover+",'changeMinion':"+changeMinion+
+                ",'divineShield':"+divineShield+",'summonWhat':'"+summonWhat+"','drawCardExp':'"+drawCardExp+
+                "','discoverExp':'"+discoverExp+"','damageCnt':"+damageCnt+",'damageCondition':'"+damageCondition
+                +"','changeMinionExp':'"+changeMinionExp+"'}";
+        return json;
+    }
+
 
     public boolean isDrawCard(){ return drawCard;}
     public boolean isManaBurn(){ return manaBurn;}

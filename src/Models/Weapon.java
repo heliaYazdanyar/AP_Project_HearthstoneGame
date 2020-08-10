@@ -32,6 +32,14 @@ public class Weapon extends Card{
         return price;
     }
 
+    @Override
+    public String getThisCardsJson() {
+        String json="{'name':'"+name+"','type':'Weapon','rarity':'"+rarity+
+                "','manaCost':"+manaCost+",'className':'"+className+"','attack':"+attack+",'shield':"+shield+
+                ",'price':"+price+"}";
+        return json;
+    }
+
     public int getAttack(){
         return attack;
     }

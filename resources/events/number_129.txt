@@ -1,4 +1,0 @@
-player: kingTogwaggle->KabalTalonpriest was played.
-player: hey12->Ashbringer was played.
-player: kingTogwaggle->CurioCollector was played.
-player: hey12->SecurityRover was played.

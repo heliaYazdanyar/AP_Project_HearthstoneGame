@@ -63,6 +63,7 @@ public class Player {
 
 
     public static class Information{
+        private int cups;
         private int diamonds;
         private String currentDeck;
         private double winsOfAllGames;
@@ -89,6 +90,16 @@ public class Player {
             saveInfo(user);
         }
 
+        public int getCups(){
+            return cups;
+        }
+        public void addCup(){
+            cups++;
+        }
+        public void loseCup(){
+            cups--;
+        }
+
         public void win(String user){
             this.wins++;
             saveInfo(user);
@@ -107,7 +118,7 @@ public class Player {
         }
 
         public void saveInfo(String user){
-            String result="{'diamonds':"+diamonds+",'nameOfHandCard':'"+currentDeck+"','winsOfAllGames':"+wins+",'loses':"+loses
+            String result="{"+"'cups':"+cups+",'diamonds':"+diamonds+",'nameOfHandCard':'"+currentDeck+"','winsOfAllGames':"+wins+",'loses':"+loses
                     +",'gamesWithThisHand':"+gamesWithThisHand+",'heroName':'"+heroName+"','allGames':"+allGames+"}";
             try{
                 Files.write(getPath(user),result.getBytes());
@@ -304,7 +315,7 @@ public class Player {
                             username+File.separator+"myCards.txt"), StandardCopyOption.REPLACE_EXISTING);
 
             //Information Json
-            String info="{'diamonds':50,'nameOfHandCard':'','winsOfAllGames':0,'wins':0,'loses':0,'gamesWithThisHand':0,'heroName':'','allGames':0}";
+            String info="{'cups':0,'diamonds':50,'nameOfHandCard':'','winsOfAllGames':0,'wins':0,'loses':0,'gamesWithThisHand':0,'heroName':'','allGames':0}";
             p=Paths.get(cwd+File.separator+"resources"+File.separator+"users"+File.separator+
                     username+File.separator+"Information.txt");
             Files.createFile(p);

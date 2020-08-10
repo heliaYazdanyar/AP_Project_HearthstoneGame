@@ -1,3 +1,0 @@
-player: kingTogwaggle->RockpoolHunter was played.
-player: hey12->FriendlySmith was played.
-player: hey12->WickerflameBurnbristle was played.

@@ -2,17 +2,19 @@ package logic;
 
 import Models.*;
 import Out.MainFrame;
+import client.GameClient;
 import game.Out.GameView;
 import gamePlayers.InGamePlayer;
+import gamePlayers.OnlineEnemy;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Administer {
+public class Administer{
 
-    private static Administer instance;
+    private GameClient client;
     private GameView gameView;
 
     private boolean deckReader=false;
@@ -66,6 +68,8 @@ public class Administer {
     private String information="";
     private boolean HPloss=false;
 
+    private boolean online;
+
 
 
     public Administer(InGamePlayer friend, InGamePlayer enemy, GameView gameView,boolean deckReader){
@@ -74,10 +78,24 @@ public class Administer {
         this.gameView=gameView;
         this.deckReader=deckReader;
 
+        this.online=false;
         initAll();
 
         friend_deck.addAll(friend.getDeckCards());
         enemy_deck.addAll(enemy.getDeckCards());
+    }
+
+    public Administer(GameClient client, OnlineEnemy enemy, GameView gameView,String online){
+        this.client=client;
+        this.gameView=gameView;
+        this.enemy=enemy;
+
+        this.online=true;
+
+        this.friend=client.getPracticePlayer();
+        initAll();
+        friend_deck.addAll(friend.getDeckCards());
+
     }
 
     public void initAll(){
@@ -105,14 +123,9 @@ public class Administer {
 
     }
 
-    //singleton
-    public static void newGameAdminister(InGamePlayer p1, InGamePlayer p2, GameView gameView,boolean deckReader){
-        instance=new Administer(p1,p2,gameView,deckReader);
+    public GameClient getClient(){
+        return client;
     }
-    public static Administer getInstance(){
-        return instance;
-    }
-
 
     //information about states
     public boolean cantHappen(){
@@ -122,7 +135,14 @@ public class Administer {
         this.cantHappen=b;
     }
 
-    public void setInformation(String info){
+    public void setInformation(String info,boolean sendEnemy){
+        if(online && sendEnemy){
+            if(info.equals("It's Your Turn"))
+                client.sendGameMessage("gameViewInfo","Enemy's Turn");
+            else if(info.equals("Enemy's Turn"))
+                client.sendGameMessage("gameViewInfo","Your Turn");
+        }
+
         this.information=info;
     }
     public String getInformation(){ return this.information; }
@@ -150,7 +170,7 @@ public class Administer {
         onceUsed.removeAll(onceUsed);
 
         if(friend_handCard.size()==0 && friend.getDeckCards().size()==0) lost(friend);
-        if(enemy_handCard.size()==0 && enemy.getDeckCards().size()==0) lost(enemy);
+//        if(enemy_handCard.size()==0 && enemy.getDeckCards().size()==0) lost(enemy);
 
 
         for (Card card:
@@ -158,7 +178,7 @@ public class Administer {
             if(card.getName().equalsIgnoreCase("ForestGuide")){
                 friend.addToHand(friend.getRandomCard());
                 enemy.addToHand(enemy.getRandomCard());
-                gameView.infoGiver.logAction("Forest Guide was  active:","added 1 card to each","players hand");
+                gameView.infoGiver.logAction("ForestGuide activated:","added 1 card to each","players hand");
 
             }
 
@@ -167,8 +187,7 @@ public class Administer {
                 for (Minion minion:
                      enemy_CardsOnGround) {
                     dealDamageToMinion(1,enemy,minion,"");
-                    gameView.infoGiver.logAction("DredScale active:","deal 1 damage to each","enemy minion");
-
+                    gameView.infoGiver.logAction("DredScale activated:","deal 1 damage to each","enemy minion");
                 }
             }
         }
@@ -193,6 +212,7 @@ public class Administer {
         }
 
         if(turn==0){
+            gameView.setMyTurn(true);
             //applying passives
             if(friend.getPassive()==Passive.TWICEDRAW){
                 gameView.infoGiver.logAction("draw 2 Cards","because of passive-TwiceDraw","");
@@ -209,12 +229,14 @@ public class Administer {
             drawCard(friend,true);
             friend.setTurn(true,friend_manaBurn);
             enemy.setTurn(false,enemy_manaBurn);
-            information="It's Your Turn";
+            this.setInformation("It's Your Turn",false);
+
 
             friend_manaBurn=false;
             enemy_manaBurn=false;
         }
         else{
+            gameView.setMyTurn(false);
             //applying passives
             if(enemy.getPassive()==Passive.TWICEDRAW){
                 gameView.infoGiver.logAction("draw 2 Cards","because of passive-TwiceDraw","");
@@ -231,7 +253,7 @@ public class Administer {
             drawCard(enemy,true);
             enemy.setTurn(true,enemy_manaBurn);
             friend.setTurn(false,friend_manaBurn);
-            information="Enemy's Turn";
+            setInformation("Enemy's Turn",false);
 
             friend_manaBurn=false;
             enemy_manaBurn=false;
@@ -239,17 +261,17 @@ public class Administer {
     }
 
     //card handling
-    public void drawCard(InGamePlayer player,boolean fromdeck){
+    public void drawCard(InGamePlayer player,boolean fromDeck){
         Random r=new Random();
         if(player.getUsername().equalsIgnoreCase(friend.getUsername())){
-            if(fromdeck && friend.getDeckCards().size()<=0){
+            if(fromDeck && friend.getDeckCards().size()<=0){
                 gameView.infoGiver.logAction("No Card in","your deck","");
                 if(friend_handCard.size()<=0) lost(friend);
             }
             else {
                 //tartib
                 int t = 0;
-                if (deckReader && fromdeck) t = 0;
+                if (deckReader && fromDeck) t = 0;
                 else t = r.nextInt(friend_deck.size());
 
                 if (friend_handCard.size() < 12) {
@@ -263,22 +285,22 @@ public class Administer {
 
                     }
 
-                    addToHand(friend, friend_deck.get(t), fromdeck);
+                    addToHand(friend, friend_deck.get(t), fromDeck);
                 } else {
                     gameView.infoGiver.logAction("Hand is Full", "", "");
-                    if (fromdeck) removeFromDeck(friend, friend_deck.get(t));
+                    if (fromDeck) removeFromDeck(friend, friend_deck.get(t));
                 }
             }
         }
         else {
-            if (fromdeck && enemy.getDeckCards().size() <= 0) {
-                gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
+            if (fromDeck && enemy.getDeckCards().size() <= 0) {
+                if(!online) gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
                 if(enemy_handCard.size()<=0) lost(enemy);
             }
             else {
                 //tartib
                 int t = 0;
-                if (deckReader && fromdeck) t = 0;
+                if (deckReader && fromDeck) t = 0;
                 else t = r.nextInt(friend_deck.size());
 
                 if (enemy_handCard.size() < 12) {
@@ -292,11 +314,11 @@ public class Administer {
 
                     }
 
-                    addToHand(enemy, enemy_deck.get(t), fromdeck);
+                    addToHand(enemy, enemy_deck.get(t), fromDeck);
 
                 } else {
-                    gameView.infoGiver.logAction("Hand is Full", "", "");
-                    if (fromdeck) removeFromDeck(enemy, enemy_deck.get(t));
+                   if(!online) gameView.infoGiver.logAction("Hand is Full", "", "");
+                    if (fromDeck) removeFromDeck(enemy, enemy_deck.get(t));
                 }
 
             }
@@ -411,7 +433,7 @@ public class Administer {
         //-B is attacking
         else {
             int t=r.nextInt(enemy_CardsOnGround.size()+1);
-            if(t==enemy_CardsOnGround.size()) dealDamageToHero(damage,friend);
+            if(t==enemy_CardsOnGround.size()) dealDamageToHero(damage,enemy);
             else dealDamageToMinion(damage,enemy,enemy_CardsOnGround.get(t),"");
         }
     }
@@ -471,13 +493,11 @@ public class Administer {
     public boolean canAttack(){
         if(attackerIsWeapon){
             if(attackerOwner.getUsername().equalsIgnoreCase(friend.getUsername())){
-                for (Minion minion:
-                     enemy_CardsOnGround) {
-                    if (enemy_tauntMinions.size() >= 1 && !enemy_tauntMinions.contains(victim)) {
-                        this.information = "Taunt Way!";
-                        return false;
-                    }
+                if (enemy_tauntMinions.size() >= 1 && !enemy_tauntMinions.contains(victim)) {
+                    this.information = "Taunt In Way!";
+                    return false;
                 }
+
             }
             else {
                 if (victim.getType().equalsIgnoreCase("Minion")) {
@@ -492,22 +512,36 @@ public class Administer {
         }
 
         else if(attackerIsHeroPower){
-            if(attackerOwner.getUsername().equalsIgnoreCase(friend.getUsername())){
-                if(friend.getPassive()==Passive.FREEPOWER){
-                    if(numberUseOfHeroPower>=2){
-                        gameView.infoGiver.logAction("heropower has been","used twice","");
+            if(attackerOwner.getUsername().equalsIgnoreCase(friend.getUsername())) {
+                if (friend.getPassive() == Passive.FREEPOWER) {
+                    if (numberUseOfHeroPower >= 2) {
+                        gameView.infoGiver.logAction("heropower has been", "used twice", "");
+                        return false;
+                    } else if (numberUseOfHeroPower >= 1) {
+                        gameView.infoGiver.logAction("heropower has been", "used once", "");
                         return false;
                     }
-                    else if(numberUseOfHeroPower>=1) {
-                        gameView.infoGiver.logAction("heropower has been","used once","");
+                } else {
+                    if (numberUseOfHeroPower >= 1) {
+                        gameView.infoGiver.logAction("heropower has been", "used once", "");
                         return false;
                     }
                 }
             }
             else{
-                if(numberUseOfHeroPower>=1) {
-                    gameView.infoGiver.logAction("heropower has been","used once","");
-                    return false;
+                if (enemy.getPassive() == Passive.FREEPOWER) {
+                    if (numberUseOfHeroPower >= 2) {
+                        gameView.infoGiver.logAction("heropower has been", "used twice", "");
+                        return false;
+                    } else if (numberUseOfHeroPower >= 1) {
+                        gameView.infoGiver.logAction("heropower has been", "used once", "");
+                        return false;
+                    }
+                } else {
+                    if (numberUseOfHeroPower >= 1) {
+                        gameView.infoGiver.logAction("heropower has been", "used once", "");
+                        return false;
+                    }
                 }
             }
 
@@ -526,7 +560,7 @@ public class Administer {
         }
         else if(attacker.getType().equalsIgnoreCase("spell") &&
                 victim.getName().equalsIgnoreCase("BearShark")){
-            setInformation("cant damage BearShark with spells");
+            setInformation("cant damage BearShark with spells",false);
             return false;
         }
 
@@ -534,7 +568,7 @@ public class Administer {
             if (attackerOwner.getUsername().equalsIgnoreCase(friend.getUsername())) {
                 if (attacker.getType().equalsIgnoreCase("Minion")) {
                     if (!friend_RushCards.contains(attacker)) {
-                        setInformation("Not Rush");
+                        setInformation("Not Rush",false);
                         return false;
                     }
 
@@ -610,7 +644,6 @@ public class Administer {
         Random r=new Random();
         if(forWho.getUsername().equalsIgnoreCase(friend.getUsername())){
             if(caller.getType().equalsIgnoreCase("Spell")){
-
                 if(caller.getName().equalsIgnoreCase("FriendlySmith")){
                     List<String> list=Card.getList("weapons");
                     Weapon weapon=(Weapon) Card.getCard(list.get(r.nextInt(3)));
@@ -620,17 +653,29 @@ public class Administer {
                 }
 
                 if(caller.getName().equalsIgnoreCase("MarkedShot")){
-                    List<String> list=Card.getList("weapons");
+                    List<String> list=Card.getList("spells");
                     Spell spell=(Spell) Card.getCard(list.get(r.nextInt(14)));
                     addToDeck(friend,spell);
                 }
-
-
             }
 
 
         }else{
+            if(caller.getType().equalsIgnoreCase("Spell")){
+                if(caller.getName().equalsIgnoreCase("FriendlySmith")){
+                    List<String> list=Card.getList("weapons");
+                    Weapon weapon=(Weapon) Card.getCard(list.get(r.nextInt(3)));
+                    weapon.setShield(weapon.getShield()+2);
+                    weapon.setAttack(weapon.getAttack()+2);
+                    addToDeck(enemy,weapon);
+                }
 
+                if(caller.getName().equalsIgnoreCase("MarkedShot")){
+                    List<String> list=Card.getList("spells");
+                    Spell spell=(Spell) Card.getCard(list.get(r.nextInt(14)));
+                    addToDeck(enemy,spell);
+                }
+            }
         }
     }
 
@@ -692,7 +737,7 @@ public class Administer {
                 attackerIsHeroPower=true;
                 isAttackerChosen=true;
                 attackerOwner=friend;
-                setInformation("Choose target");
+                setInformation("Choose target",false);
             }
             else if(friend_hero.getName().equalsIgnoreCase("rogue")){
                 if(!(friend.getPassive()== Passive.FREEPOWER))
@@ -709,7 +754,7 @@ public class Administer {
 
                 }
                 else
-                    setInformation("Nothind to steal");
+                    setInformation("Nothind to steal",false);
 
             }
             else if(friend_hero.getName().equalsIgnoreCase("warlock")){
@@ -734,7 +779,7 @@ public class Administer {
                         addToHand(friend,enemy_CardsOnGround.get(t),false);
                         removeKilledMinion(enemy,enemy_CardsOnGround.get(t),friend_hero);
                     }
-                    else setInformation("No minion to lifetab");
+                    else setInformation("No minion to lifetab",false);
 
                 }
             }
@@ -759,7 +804,7 @@ public class Administer {
                 attackerIsHeroPower=true;
                 isAttackerChosen=true;
                 attackerOwner=enemy;
-                setInformation("Choose target");
+                setInformation("Choose target",false);
             }
             else if(enemy_hero.getName().equalsIgnoreCase("rogue")){
                 friend.setMana(friend.getMana()-3);
@@ -773,7 +818,7 @@ public class Administer {
 
                 }
                 else
-                    setInformation("Nothind to steal");
+                    setInformation("Nothind to steal",false);
             }
             else if(enemy_hero.getName().equalsIgnoreCase("warlock")){
                 friend.setMana(friend.getMana()-2);
@@ -796,7 +841,7 @@ public class Administer {
                         addToHand(enemy,friend_CardsOnGround.get(t),false);
                         removeKilledMinion(friend,friend_CardsOnGround.get(t),enemy_hero);
                     }
-                    else setInformation("No minion to lifetab");
+                    else setInformation("No minion to lifetab",false);
 
                 }
             }
@@ -1246,7 +1291,7 @@ public class Administer {
                     attackerIsSpell=true;
                     attackerOwner=friend;
                     attackerSpell=spell;
-                    setInformation("Choose Target");
+                    setInformation("Choose Target",false);
                 }
 
             }
@@ -1365,7 +1410,7 @@ public class Administer {
                     attackerIsSpell=true;
                     attackerOwner=enemy;
                     attackerSpell=spell;
-                    setInformation("Choose Target");
+                    setInformation("Choose Target",false);
                 }
 
             }
@@ -1491,12 +1536,17 @@ public class Administer {
         if(loser.getUsername().equalsIgnoreCase(friend.getUsername())) {
             JOptionPane.showMessageDialog(MainFrame.getInstance(), "Game Ove-You Lost",
                     "ERROR", JOptionPane.ERROR_MESSAGE);
-            MainFrame.getInstance().setPanel("MainMenu");
+            if(online)
+                client.sendGameMessage("youWin","");
 
+            MainFrame.getInstance().setPanel("MainMenu");
         }
         else {
             JOptionPane.showMessageDialog(MainFrame.getInstance(),"You Won,Congrats!",
                     "ERROR",JOptionPane.ERROR_MESSAGE);
+            if (online)
+                client.sendGameMessage("youLost","");
+
             MainFrame.getInstance().setPanel("MainMenu");
         }
     }

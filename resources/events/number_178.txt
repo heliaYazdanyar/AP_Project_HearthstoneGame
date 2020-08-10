@@ -1,3 +1,0 @@
-player: hey12->FriendlySmith was played.
-player: kingTogwaggle->CurioCollector was played.
-player: hey12->Ashbringer was played.

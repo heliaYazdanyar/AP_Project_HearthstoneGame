@@ -2,6 +2,7 @@ package gamePlayers;
 
 import Models.*;
 import Util.DeckReader;
+import com.google.gson.Gson;
 import logic.Administer;
 
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import java.util.List;
 import java.util.Random;
 
 public class PracticePlayer implements InGamePlayer {
+    public Administer administer;
+
     private String username;
     private String heroName;
     private Hero hero;
@@ -19,10 +22,12 @@ public class PracticePlayer implements InGamePlayer {
     private List<Card> groundCards;
 
     private boolean isMyTurn=false;
-    private boolean carPicked=true;
+    private boolean cardPicked=true;
     private boolean needsUpdate=false;
     private int currentMana;
     private Weapon weapon;
+    private Passive passive;
+
 
     private int level=0;
 
@@ -33,15 +38,14 @@ public class PracticePlayer implements InGamePlayer {
             while (true){
                 try {
                     Thread.sleep(3000);
-                    if(isMyTurn && !carPicked){
-                        Administer.getInstance().drawCard(PracticePlayer.this,true);
+                    if(isMyTurn && !cardPicked){
+                        administer.drawCard(PracticePlayer.this,true);
                     }
                 } catch (InterruptedException e) { e.printStackTrace(); }
             }
         }
     };
 
-    private Passive passive;
 
     public PracticePlayer(Player player){
         this.username=player.getUsername();
@@ -56,9 +60,6 @@ public class PracticePlayer implements InGamePlayer {
 
         level=0;
         currentMana=0;
-        pickCardThread.start();
-
-
     }
     public PracticePlayer(String user,int random){
         this.username=user;
@@ -73,10 +74,9 @@ public class PracticePlayer implements InGamePlayer {
 
         currentMana=0;
         level=0;
-        pickCardThread.start();
 
     }
-    public PracticePlayer(String user, boolean enemy, DeckReader deckReader){
+    public PracticePlayer(String user, boolean enemy,DeckReader deckReader){
         this.username=user;
         this.hero=Hero.getHero("Mage");
         this.heroName="Mage";
@@ -91,7 +91,14 @@ public class PracticePlayer implements InGamePlayer {
         groundCards=new ArrayList<>();
         currentMana=0;
         level=0;
+    }
+
+    public void setAdminister(Administer administer){
+        this.administer=administer;
         pickCardThread.start();
+    }
+    public Administer getAdminister(){
+        return administer;
     }
 
     @Override
@@ -127,30 +134,30 @@ public class PracticePlayer implements InGamePlayer {
     public void addToHand(Card card){
         handCards.add(card);
 //        deckCards.remove(card);
-        carPicked=true;
+        cardPicked=true;
         needsUpdate=true;
     }
 
     public void playCard(Card card){
         if(card.getType().equalsIgnoreCase("Minion")){
-            if(Administer.getInstance().canSummonMinion(this,(Minion)card)) {
-                Administer.getInstance().summonMinion(this, (Minion) card);
-                Administer.getInstance().removeFromHand(this,card);
+            if(administer.canSummonMinion(this,(Minion)card)) {
+                administer.summonMinion(this, (Minion) card);
+                administer.removeFromHand(this,card);
                 setMana(getMana() - card.getManaCost());
             }
             else{
-                Administer.getInstance().setCantHappen(true);
+                administer.setCantHappen(true);
             }
         }
         else if(card.getType().equalsIgnoreCase("Spell")){
-            Administer.getInstance().useSpell(this,(Spell)card);
-            Administer.getInstance().removeFromHand(this,card);
+            administer.useSpell(this,(Spell)card);
+            administer.removeFromHand(this,card);
             if(this.getHero().getName().equalsIgnoreCase("Mage")) setMana(getMana() - (card.getManaCost()-2));
             else setMana(getMana() - card.getManaCost());
         }
         else if(card.getType().equalsIgnoreCase("Weapon")){
-            Administer.getInstance().addWeapon((Weapon) card,this);
-            Administer.getInstance().removeFromHand(this,card);
+            administer.addWeapon((Weapon) card,this);
+            administer.removeFromHand(this,card);
             setMana(getMana() - card.getManaCost());
         }
         else {
@@ -229,6 +236,15 @@ public class PracticePlayer implements InGamePlayer {
     }
     public void changeNeedsUpdate(boolean b){
         this.needsUpdate=b;
+    }
+
+
+    public String convertToJson(){
+        return null;
+    }
+    public static PracticePlayer getFromJson(String json){
+        Gson gson=new Gson();
+        return gson.fromJson(json,PracticePlayer.class);
     }
 
 

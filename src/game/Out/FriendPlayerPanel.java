@@ -5,7 +5,6 @@ import Out.MainFrame;
 import Util.ImageLoader;
 import Util.SoundPlayer;
 import gamePlayers.PracticePlayer;
-import logic.Administer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,9 +14,10 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FriendPlayerPanel extends JPanel {
+public class FriendPlayerPanel extends JPanel implements PlayerPanel{
 
     private SoundPlayer soundPlayer;
+
     private PracticePlayer player;
     private GameView gameView;
 
@@ -34,10 +34,12 @@ public class FriendPlayerPanel extends JPanel {
     int height=140;
 
 
-    FriendPlayerPanel(PracticePlayer player,GameView gameView){
+    public FriendPlayerPanel(PracticePlayer player,GameView gameView){
         this.setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
         this.player=player;
         this.gameView=gameView;
+
+        this.setPreferredSize(new Dimension(width,height));
 
         hpAndManaPanel=new JPanel();
         hpAndManaPanel.setLayout(new BoxLayout(hpAndManaPanel,BoxLayout.Y_AXIS));
@@ -47,7 +49,7 @@ public class FriendPlayerPanel extends JPanel {
     class HandCards extends JPanel{
 
         private int width=500;
-        private int height=180;
+        private int height=140;
         private List<JLabel> cardLabels;
         private List<Card> handCards;
 
@@ -103,6 +105,8 @@ public class FriendPlayerPanel extends JPanel {
                                 removeCard(card);
                                 player.playCard(card);
                                 if(card.getType().equalsIgnoreCase("Weapon")) FriendPlayerPanel.this.update();
+                                //sending enemy new move
+                                gameView.getAdminister().getClient().sendPlayCard(card);
                             }else{
                                 JOptionPane.showMessageDialog(MainFrame.getInstance(),"you dont have enough MANA:(",
                                         "ERROR",JOptionPane.ERROR_MESSAGE);
@@ -169,21 +173,21 @@ public class FriendPlayerPanel extends JPanel {
         manaLabel.setForeground(Color.BLUE);
         manaLabel.setOpaque(true);
     }
-    public void initWeapon(){
-        if(Administer.getInstance().hasWeapon(player)){
+    private void initWeapon(){
+        if(player.getAdminister().hasWeapon(player)){
             weaponLabel=new JLabel(ImageLoader.getInstance().loadIcon(player.getWeapon().getName(),"jpeg",120,140));
             weaponLabel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     if(player.isMyTurn()){
-                        if(Administer.getInstance().isAttackerChosen()){
-                            Administer.getInstance().setInformation("Choose target");
+                        if(player.getAdminister().isAttackerChosen()){
+                            player.getAdminister().setInformation("Choose target",false);
                         }
                         else {
-                            Administer.getInstance().setInformation("Weapon chosen");
-                            Administer.getInstance().setIsAttackerChosen(true);
-                            Administer.getInstance().setAttackerIsWeapon(true);
-                            Administer.getInstance().setAttackerOwner(player);
+                            player.getAdminister().setInformation("Weapon chosen",false);
+                            player.getAdminister().setIsAttackerChosen(true);
+                            player.getAdminister().setAttackerIsWeapon(true);
+                            player.getAdminister().setAttackerOwner(player);
                         }
                     }
                 }
@@ -207,9 +211,9 @@ public class FriendPlayerPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(player.isMyTurn()) {
-                    if(Administer.getInstance().canCallHeroPower(player)) {
-                        Administer.getInstance().callHeroPower(player);
-                        Administer.getInstance().setInformation("HeroPower chosen");
+                    if(player.getAdminister().canCallHeroPower(player)) {
+                        player.getAdminister().callHeroPower(player);
+                        player.getAdminister().setInformation("HeroPower chosen",false);
                     }
                 }
             }

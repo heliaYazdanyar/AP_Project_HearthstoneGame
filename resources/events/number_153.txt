@@ -1,4 +1,0 @@
-player: kingTogwaggle->BearShark was played.
-player: hey12->FriendlySmith was played.
-player: hey12->WickerflameBurnbristle was played.
-player: hey12->SecurityRover was played.

@@ -1,5 +1,6 @@
 package Out;
 
+import client.GameClient;
 import game.Out.PanelHandler;
 import gamePlayers.Player;
 
@@ -12,6 +13,10 @@ import static Util.Logger.logger;
 public class MainFrame extends JFrame {
     private static MainFrame instance;
     static Player player;
+    private GameClient client;
+
+
+
     private HashMap<String,JPanel> panels=new HashMap<>();
     private MainMenu mainMenu=new MainMenu();
     private Store store;
@@ -31,9 +36,14 @@ public class MainFrame extends JFrame {
         this.panel=new MainMenu();
     }
 
-    public MainFrame(String username){
-        player=new Player(username);
+    public MainFrame(String username, GameClient client){
+        this.client=client;
+
+//        player=new Player(username);
+
+        player=client.getPlayer();
         instance=this;
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(width,height);
         setTitle("HearthStone");
@@ -44,11 +54,15 @@ public class MainFrame extends JFrame {
         status=new Status(player);
 
         setPanel("MainMenu");
+        client.start();
     }
-
 
     public static MainFrame getInstance(){
         return instance;
+    }
+
+    public PanelHandler getPanelHandler(){
+        return panelHandler;
     }
 
     public void setPanel(String panelName){
@@ -81,7 +95,7 @@ public class MainFrame extends JFrame {
                 this.setSize(status.width,status.height);
                 break;
             case "PanelHandler":
-                panelHandler=new PanelHandler(player);
+                panelHandler=new PanelHandler(client);
                 if(panel!=null) this.remove(panel);
                 this.panel=panelHandler;
                 this.add(panel);
