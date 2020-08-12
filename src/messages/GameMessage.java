@@ -32,7 +32,7 @@ public class GameMessage {
 
 
     public String getJson(){
-        String result="{'authToken':"+this.authToken+",'subject':'"+this.subject+"','explanation':'"+explanation+"'}";
+        String result="{'authToken':"+this.authToken+",'subject':'"+this.subject+"','gameName':'"+gameName+"','explanation':'"+explanation+"'}";
         return result;
     }
     public static GameMessage getFromJson(String json){

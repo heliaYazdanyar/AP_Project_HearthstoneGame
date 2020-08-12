@@ -2,3 +2,5 @@
 server server
 
 client2 22
+
+server1 server1

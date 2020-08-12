@@ -1,7 +1,7 @@
 package Out;
 
-import Util.Config;
-import Util.SoundPlayer;
+import util.Config;
+import util.SoundPlayer;
 import client.GameClient;
 import gamePlayers.Player;
 import javax.swing.*;

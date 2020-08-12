@@ -1,9 +1,9 @@
 package gamePlayers;
 
-import Models.*;
-import Util.DeckReader;
+import util.DeckReader;
 import com.google.gson.Gson;
 import logic.Administer;
+import models.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -247,5 +247,28 @@ public class PracticePlayer implements InGamePlayer {
         return gson.fromJson(json,PracticePlayer.class);
     }
 
+    private List<String> getDeckCardsNames(){
+        List<String> names=new ArrayList<>();
+        for (Card card:
+             deckCards) {
+            names.add(card.getName());
+        }
+        return names;
+    }
+    private List<String> getHandCardsNames(){
+        List<String> names=new ArrayList<>();
+        for (Card card:
+                handCards) {
+            names.add(card.getName());
+        }
+        return names;
+    }
+
+
+    //online methods
+    public void sendListsToServer(){
+        administer.getClient().sendList("enemyDeck",getDeckCardsNames());
+        administer.getClient().sendList("handCards",getHandCardsNames());
+    }
 
 }

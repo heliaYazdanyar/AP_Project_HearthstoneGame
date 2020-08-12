@@ -1,9 +1,6 @@
 package server;
 
-import messages.Attack;
-import messages.GameMessage;
-import messages.InfoGiverMsg;
-import messages.Request;
+import messages.*;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -16,6 +13,8 @@ public class ClientHandler extends Thread {
 
     private String clientUsername;
     private int authToken;
+    private String gameName="";
+    private boolean deckReader=false;
 
     private PrintStream printer;
 
@@ -77,23 +76,26 @@ public class ClientHandler extends Thread {
                 else if(message.startsWith("Request:")){
                     String json=message.substring(8);
                     Request request=Request.getFromJson(json);
-                    System.out.println(this.authToken+"my authtoken");
-                    System.out.println(request.getAuthToken());
+
                     if(request.getAuthToken()==this.authToken){
                         if(request.getRequest().startsWith("heroIs:")){
                             setHero(request.getRequest().substring(7));
                         }
                         else if(request.getRequest().equals("gameRequest")){
-                            gameServer.getGameRequest(this);
-                            System.out.println("heyyy");
+                            gameServer.getGameRequest(this,false);
+                        }
+                        else if(request.getRequest().equals("gameWithDeckReader")){
+                            deckReader=true;
+                            gameServer.getGameRequest(this,true);
                         }
                         else if(request.getRequest().equals("cancelGameRequest")){
                             gameServer.cancelGameRequest(this);
                         }
                     }
-                    else{
+
+                    else
                         gameServer.wrongToken(this);
-                    }
+
                 }
 
                 else if(message.startsWith("GameMessage:")){
@@ -111,6 +113,9 @@ public class ClientHandler extends Thread {
                             gameServer.sendMsgToOpponent(this,gameMessage.getGameName(),message);
                             gameServer.endGame(gameMessage.getGameName());
                         }
+                        else if(gameMessage.getSubject().equals("endTurn")){
+                            gameServer.sendMsgToOpponent(this,gameMessage.getGameName(),message);
+                        }
                         //code--here
 
 
@@ -118,20 +123,51 @@ public class ClientHandler extends Thread {
                     else gameServer.wrongToken(this);
 
                 }
+
                 else if(message.startsWith("Attack:")){
                     String json=message.substring(7);
                     Attack attack=Attack.getFromJson(json);
-                    if(attack.getAuthToken()==this.authToken){
-
-
-                    }
-                    else gameServer.wrongToken(this);
+                    if(attack.getAuthToken()==this.authToken)
+                        gameServer.sendMsgToOpponent(this,attack.getGameName(),message);
+                    else
+                        gameServer.wrongToken(this);
                 }
+
                 else if(message.startsWith("InfoGiver:")){
                     String json=message.substring(10);
                     InfoGiverMsg infoGiverMsg=InfoGiverMsg.getFromJson(json);
                     if(infoGiverMsg.getAuthToken()==this.authToken){
                         //code-here
+                    }
+                    else gameServer.wrongToken(this);
+                }
+
+                else if(message.startsWith("PlayCard:")){
+                    gameServer.sendMsgToOpponent(this,gameName,message);
+                }
+                else if(message.startsWith("ListMessage:")){
+                    String json=message.substring(12);
+                    ListMessage listMessage=ListMessage.getFromJson(json);
+                    if(listMessage.getAuthToken()==authToken){
+                        gameServer.sendMsgToOpponent(this,listMessage.getGameName(),message);
+
+                        if(!gameName.equals(listMessage.getGameName())) gameName=listMessage.getGameName();
+                    }
+                    else gameServer.wrongToken(this);
+                }
+                else if(message.startsWith("SendingVictim:")){
+                    String json=message.substring(14);
+                    SendingVictim sendingVictim=SendingVictim.getFromJson(json);
+                    if(sendingVictim.getAuthToken()==authToken){
+                        gameServer.sendMsgToOpponent(this,sendingVictim.getGameName(),message);
+                    }
+                    else gameServer.wrongToken(this);
+                }
+                else if(message.startsWith("GameChatMessage:")){
+                    String json=message.substring(16);
+                    GameChatMessage gameChatMessage=GameChatMessage.getFromJson(json);
+                    if(gameChatMessage.getAuthToken()==authToken){
+                        gameServer.sendMsgToOpponent(this,gameChatMessage.getGameName(),message);
                     }
                     else gameServer.wrongToken(this);
                 }
@@ -148,11 +184,8 @@ public class ClientHandler extends Thread {
 
     //in game methods
 
-    public void setPlayer(){
-
-    }
-    public String getPlayer(){
-        return null;
+    public boolean isDeckReader() {
+        return deckReader;
     }
 
     private void setHero(String heroName){
@@ -170,10 +203,6 @@ public class ClientHandler extends Thread {
     }
 
     public void gameViewInformation(String information){
-
-    }
-
-    public void methods(){
 
     }
 

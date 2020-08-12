@@ -72,47 +72,53 @@ public class GameServer extends Thread{
     }
 
     //matching players for game
-    public void getGameRequest(ClientHandler clientHandler){
+    public void getGameRequest(ClientHandler clientHandler,boolean deckReader){
         System.out.println("got game request from: "+clientHandler.getUsername());
+        if(deckReader){
+            boolean flag=false;
+            if(waitingList.size()>0){
+                for(int i=0;i<waitingList.size();i++){
+                    if(waitingList.get(i).isDeckReader()){
+                        startNewGame(clientHandler, waitingList.get(i),true);
+                        waitingList.remove(i);
+                        flag=true;
+                    }
+                }
+                if(!flag) waitingList.add(clientHandler);
+            }else waitingList.add(clientHandler);
 
-        if(waitingList.size()>0){
-            System.out.println("game starts");
-            startNewGame(clientHandler,waitingList.get(0));
-            waitingList.remove(0);
         }
-        else waitingList.add(clientHandler);
+        else {
+            if (waitingList.size() > 0) {
+                startNewGame(clientHandler, waitingList.get(0),false);
+                waitingList.remove(0);
+            } else waitingList.add(clientHandler);
+        }
     }
 
     public void cancelGameRequest(ClientHandler clientHandler){
         waitingList.remove(clientHandler);
     }
 
-    public void startNewGame(ClientHandler A,ClientHandler B){
+    public void startNewGame(ClientHandler A,ClientHandler B,boolean deckReader){
         System.out.println("in start method");
         SecureRandom r=new SecureRandom();
         String gameName="game"+r.nextInt()+"*";
         APlayers.put(gameName,A);
         BPlayers.put(gameName,B);
-//        runningGames.put(gameName,new OnlineAdminister(A,B,gameName));
 
-        NewGame forA=new NewGame(gameName,B.getUsername(),B.getHeroName());
-        A.send("NewGame:"+forA.getJson());
-        NewGame forB=new NewGame(gameName,A.getUsername(),A.getHeroName());
-        B.send("NewGame:"+forB.getJson());
-
-    }
-
-    public String getPlayerA(String gameName){
-        return APlayers.get(gameName).getPlayer();
-    }
-    public String getPlayerB(String gameName){
-        return BPlayers.get(gameName).getPlayer();
-    }
-
-    public void AUseMethod(String gameName){
-
-    }
-    public void BUseMethod(String gameName){
+        if(A.isDeckReader()) {
+            NewGame forA = new NewGame(gameName, B.getUsername(), B.getHeroName(), 0,true);
+            A.send("NewGame:" + forA.getJson());
+            NewGame forB = new NewGame(gameName, A.getUsername(), A.getHeroName(), 1,true);
+            B.send("NewGame:" + forB.getJson());
+        }
+        else{
+            NewGame forA = new NewGame(gameName, B.getUsername(), B.getHeroName(), 0,false);
+            A.send("NewGame:" + forA.getJson());
+            NewGame forB = new NewGame(gameName, A.getUsername(), A.getHeroName(), 1,false);
+            B.send("NewGame:" + forB.getJson());
+        }
 
     }
 
@@ -121,8 +127,10 @@ public class GameServer extends Thread{
         BPlayers.remove(gamName);
     }
 
+
     public void sendMsgToOpponent(ClientHandler from,String gameName,String msg){
-        if(APlayers.get(gameName).getUsername()==from.getUsername()){
+        System.out.println("sending to opponent:" + msg);
+        if(APlayers.get(gameName)==from){
             BPlayers.get(gameName).send(msg);
         }
         else {

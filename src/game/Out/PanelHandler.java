@@ -1,6 +1,6 @@
 package game.Out;
 
-import Util.DeckReader;
+import util.DeckReader;
 import client.GameClient;
 import gamePlayers.Player;
 import gamePlayers.PracticePlayer;
@@ -40,8 +40,8 @@ public class PanelHandler extends JPanel {
         cardLayout.show(this,"startGame");
     }
 
-    public void initPassivePanel(){
-        passiveChooser=new PassiveChooser(friendPlayer,this);
+    public void initPassivePanel(boolean online){
+        passiveChooser=new PassiveChooser(friendPlayer,this,online);
         this.add("Passives",passiveChooser);
     }
 
@@ -58,11 +58,11 @@ public class PanelHandler extends JPanel {
 
         gameView=new GameView(friendPlayer,enemyPlayer,true);
         this.add("GameView",gameView);
-        initPassivePanel();
+        initPassivePanel(false);
     }
     public void addPracticeWithBot(Player player){
 
-        initPassivePanel();
+        initPassivePanel(false);
     }
     public void addPracticeWithRandomEnemy(Player player){
         this.friendPlayer=new PracticePlayer(player);
@@ -75,16 +75,38 @@ public class PanelHandler extends JPanel {
 
         gameView=new GameView( friendPlayer,enemyPlayer);
         this.add("GameView",gameView);
-        initPassivePanel();
+        initPassivePanel(false);
     }
 
-
     public void addPracticeOnline(){
+        this.friendPlayer=client.getPracticePlayer();
+
+        chooseCardFriend=new ChooseCard(friendPlayer,this,"friend");
+        this.add("ChooseCardFriend",chooseCardFriend);
+
+        initPassivePanel(true);
+
         gameView=new GameView(this.client,this.client.getEnemy(),"");
         client.setGameView(gameView);
 
         this.add("GameView",gameView);
-        cardLayout.show(this,"GameView");
+        cardLayout.show(this,"Passives");
+
+    }
+    public void addPracticeWithDeckReader_Online(){
+        this.friendPlayer=client.getPracticePlayer();
+
+        chooseCardFriend=new ChooseCard(friendPlayer,this,"friend");
+        this.add("ChooseCardFriend",chooseCardFriend);
+
+        initPassivePanel(true);
+
+        gameView=new GameView(this.client,this.client.getEnemy(),"");
+        client.setGameView(gameView);
+
+        this.add("GameView",gameView);
+        cardLayout.show(this,"Passives");
+
     }
 
     public void setPanel(String panelName){

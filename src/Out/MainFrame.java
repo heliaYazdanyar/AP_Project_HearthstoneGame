@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 
-import static Util.Logger.logger;
+import static util.Logger.logger;
 
 public class MainFrame extends JFrame {
     private static MainFrame instance;
@@ -22,6 +22,7 @@ public class MainFrame extends JFrame {
     private Store store;
     private Collections collections;
     private Status status;
+    private Rank rank;
     private String currentPanel;
     private Container contentPane= getContentPane();
 
@@ -52,6 +53,7 @@ public class MainFrame extends JFrame {
         collections=new Collections(player);
         store=new Store(player);
         status=new Status(player);
+        rank=new Rank(client);
 
         setPanel("MainMenu");
         client.start();
@@ -100,6 +102,12 @@ public class MainFrame extends JFrame {
                 this.panel=panelHandler;
                 this.add(panel);
                 this.setSize(panelHandler.width,panelHandler.height);
+                break;
+            case "Rank":
+                if(panel!=null) this.remove(panel);
+                this.panel=rank;
+                this.add(panel);
+                this.setSize(rank.width,rank.height);
                 break;
         }
 

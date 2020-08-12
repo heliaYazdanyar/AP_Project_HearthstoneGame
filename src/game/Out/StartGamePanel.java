@@ -1,7 +1,7 @@
 package game.Out;
 
 import Out.MainFrame;
-import Util.ImageLoader;
+import util.ImageLoader;
 import client.GameClient;
 import gamePlayers.Player;
 
@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import static Util.Logger.logger;
+import static util.Logger.logger;
 
 public class StartGamePanel extends JPanel {
 
@@ -21,6 +21,7 @@ public class StartGamePanel extends JPanel {
     private JButton withRandomEnemyDeck;
     private JButton playWithBoth;
     private JButton online;
+    private JButton onlineWithDeckReader;
 
     public int width=1400;
     public int height=850;
@@ -41,13 +42,15 @@ public class StartGamePanel extends JPanel {
         label.setFont(new Font("Courier New", Font.ITALIC, 20));
         label.setOpaque(true);
 
-        withDeckReader=new JButton("Both Players(with deck reader)");
+        withDeckReader=new JButton("Both Players-DeckReader)");
 
-        withRandomEnemyDeck=new JButton("Both PLayers(random deck)");
+        withRandomEnemyDeck=new JButton("Both PLayers-Random enemy deck)");
 
         playWithBoth=new JButton("Bot");
 
         online=new JButton("online");
+
+        onlineWithDeckReader=new JButton("Online-DeckReader");
 
         initListeners();
         initPanel();
@@ -95,6 +98,12 @@ public class StartGamePanel extends JPanel {
 
         });
 
+        onlineWithDeckReader.addActionListener(e->{
+            logger(player.getUsername(),"Requested game:","online game-deck reader");
+            client.requestForDeckReaderGame();
+            panelHandler.setPanel("waiting");
+        });
+
         backToMenu.addActionListener(e -> MainFrame.getInstance().setPanel("MainMenu"));
 
     }
@@ -114,6 +123,8 @@ public class StartGamePanel extends JPanel {
         gbc.gridy=9;
         this.add(online,gbc);
         gbc.gridy=10;
+        this.add(onlineWithDeckReader,gbc);
+        gbc.gridy=11;
         this.add(backToMenu,gbc);
     }
 

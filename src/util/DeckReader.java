@@ -1,7 +1,7 @@
-package Util;
+package util;
 
-import Models.Card;
-import Models.QuestAndReward;
+import models.Card;
+import models.QuestAndReward;
 import com.google.gson.Gson;
 
 import java.io.File;

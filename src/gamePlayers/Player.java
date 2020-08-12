@@ -1,8 +1,8 @@
 package gamePlayers;
 
-import Models.Card;
-import Models.Deck;
-import Models.Hero;
+import models.Card;
+import models.Deck;
+import models.Hero;
 import Out.MainFrame;
 import Out.Status;
 import Out.Store;
@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
-import static Util.Logger.createNewLog;
-import static Util.Logger.logger;
+import static util.Logger.createNewLog;
+import static util.Logger.logger;
 
 public class Player {
     private String username;

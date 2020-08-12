@@ -1,7 +1,7 @@
 package game.Out;
 
-import Models.Passive;
-import Util.ImageLoader;
+import models.Passive;
+import util.ImageLoader;
 import gamePlayers.PracticePlayer;
 
 import javax.swing.*;
@@ -18,13 +18,16 @@ public class PassiveChooser extends JPanel {
     public int height=800;
 
     private PanelHandler panelHandler;
-    PracticePlayer player;
-    List<String> passives=new ArrayList<>();
-    JLabel[] labels=new JLabel[3];
+    private PracticePlayer player;
+    private List<String> passives=new ArrayList<>();
+    private JLabel[] labels=new JLabel[3];
+    private boolean online;
 
-    PassiveChooser(PracticePlayer player,PanelHandler panelHandler){
+
+    PassiveChooser(PracticePlayer player,PanelHandler panelHandler,boolean online){
         this.panelHandler=panelHandler;
         this.player=player;
+        this.online=online;
 
         this.setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
 
@@ -33,6 +36,7 @@ public class PassiveChooser extends JPanel {
         passives.add("WARRIORS");
         passives.add("MANAJUMP");
         passives.add("NURSE");
+
 
         initPassives();
     }
@@ -46,7 +50,8 @@ public class PassiveChooser extends JPanel {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     Passive.valueOf(p).apply(player);
-                    panelHandler.setPanel("ChooseCardEnemy");
+                    if(online) panelHandler.setPanel("ChooseCardFriend");
+                    else panelHandler.setPanel("ChooseCardEnemy");
                 }
             });
             this.add(labels[cnt]);

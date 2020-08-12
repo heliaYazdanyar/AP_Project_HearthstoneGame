@@ -1,11 +1,13 @@
 package logic;
 
-import Models.*;
 import Out.MainFrame;
 import client.GameClient;
 import game.Out.GameView;
 import gamePlayers.InGamePlayer;
 import gamePlayers.OnlineEnemy;
+import gamePlayers.Player;
+import gamePlayers.PracticePlayer;
+import models.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -62,15 +64,14 @@ public class Administer{
     private boolean attackerIsSpell=false;
     private boolean attackerIsHeroPower=false;
     private Spell attackerSpell;
-
+    private int attackerIndex;
 
     private boolean cantHappen=false;
     private String information="";
     private boolean HPloss=false;
 
-    private boolean online;
-
-
+    public boolean online;
+    private int turnNumber;
 
     public Administer(InGamePlayer friend, InGamePlayer enemy, GameView gameView,boolean deckReader){
         this.friend=friend;
@@ -83,18 +84,23 @@ public class Administer{
 
         friend_deck.addAll(friend.getDeckCards());
         enemy_deck.addAll(enemy.getDeckCards());
+
+        turnNumber=0;
     }
 
-    public Administer(GameClient client, OnlineEnemy enemy, GameView gameView,String online){
+    public Administer(GameClient client, OnlineEnemy enemy, GameView gameView,String online,int turnNumber,boolean deckReader){
         this.client=client;
         this.gameView=gameView;
         this.enemy=enemy;
+        this.deckReader=deckReader;
 
         this.online=true;
 
         this.friend=client.getPracticePlayer();
         initAll();
         friend_deck.addAll(friend.getDeckCards());
+        this.turnNumber=turnNumber;
+
 
     }
 
@@ -157,7 +163,11 @@ public class Administer{
     //turn
     public void newTurn(int turn){
         //refresh
+        checkGroundMinions();
+
         if(friend.getPassive()==Passive.MANAJUMP) friend_manaJump=true;
+
+        if(online) ((PracticePlayer)friend).sendListsToServer();
 
         friend_RushCards.removeAll(friend_RushCards);
         friend_RushCards.addAll(friend_CardsOnGround);
@@ -170,7 +180,8 @@ public class Administer{
         onceUsed.removeAll(onceUsed);
 
         if(friend_handCard.size()==0 && friend.getDeckCards().size()==0) lost(friend);
-//        if(enemy_handCard.size()==0 && enemy.getDeckCards().size()==0) lost(enemy);
+        if(!online)
+            if(enemy_handCard.size()==0 && enemy.getDeckCards().size()==0) lost(enemy);
 
 
         for (Card card:
@@ -211,7 +222,7 @@ public class Administer{
             }
         }
 
-        if(turn==0){
+        if(turn==turnNumber){
             gameView.setMyTurn(true);
             //applying passives
             if(friend.getPassive()==Passive.TWICEDRAW){
@@ -246,8 +257,10 @@ public class Administer{
                 gameView.infoGiver.logAction("passive Nurse","applied","");
 
                 Random r=new Random();
-                int t=r.nextInt(friend_CardsOnGround.size());
-                friend_CardsOnGround.get(t).setHP(friend_CardsOnGround.get(t).getFinalHP());
+                if(friend_CardsOnGround.size()>0) {
+                    int t = r.nextInt(friend_CardsOnGround.size());
+                    friend_CardsOnGround.get(t).setHP(friend_CardsOnGround.get(t).getFinalHP());
+                }
             }
 
             drawCard(enemy,true);
@@ -257,6 +270,20 @@ public class Administer{
 
             friend_manaBurn=false;
             enemy_manaBurn=false;
+        }
+    }
+    public void updateEnemyDeckList(List<String> deck){
+        enemy_deck.removeAll(enemy_deck);
+        for (String name:
+             deck) {
+            enemy_deck.add(Card.getCard(name));
+        }
+    }
+    public void updateEnemyHand(List<String> handCards){
+        enemy_handCard.removeAll(enemy_handCard);
+        for (String name:
+                handCards) {
+            enemy_handCard.add(Card.getCard(name));
         }
     }
 
@@ -292,37 +319,37 @@ public class Administer{
                 }
             }
         }
-        else {
-            if (fromDeck && enemy.getDeckCards().size() <= 0) {
-                if(!online) gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
-                if(enemy_handCard.size()<=0) lost(enemy);
-            }
-            else {
-                //tartib
-                int t = 0;
-                if (deckReader && fromDeck) t = 0;
-                else t = r.nextInt(friend_deck.size());
-
-                if (enemy_handCard.size() < 12) {
-                    //applying curiocollector
-                    for (Minion card :
-                            enemy_CardsOnGround) {
-                        if (card.getName().equalsIgnoreCase("CurioCollector")) {
-                            card.setHP(card.getHP() + 1);
-                            card.setAttack(card.getAttack() + 1);
-                        }
-
-                    }
-
-                    addToHand(enemy, enemy_deck.get(t), fromDeck);
-
-                } else {
-                   if(!online) gameView.infoGiver.logAction("Hand is Full", "", "");
-                    if (fromDeck) removeFromDeck(enemy, enemy_deck.get(t));
-                }
-
-            }
-        }
+//        else {
+//            if (fromDeck && enemy.getDeckCards().size() <= 0) {
+//                if(!online) gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
+//                if(enemy_handCard.size()<=0) lost(enemy);
+//            }
+//            else {
+//                //tartib
+//                int t = 0;
+//                if (deckReader && fromDeck) t = 0;
+//                else t = r.nextInt(friend_deck.size());
+//
+//                if (enemy_handCard.size() < 12) {
+//                    //applying curiocollector
+//                    for (Minion card :
+//                            enemy_CardsOnGround) {
+//                        if (card.getName().equalsIgnoreCase("CurioCollector")) {
+//                            card.setHP(card.getHP() + 1);
+//                            card.setAttack(card.getAttack() + 1);
+//                        }
+//
+//                    }
+//
+//                    addToHand(enemy, enemy_deck.get(t), fromDeck);
+//
+//                } else {
+//                   if(!online) gameView.infoGiver.logAction("Hand is Full", "", "");
+//                    if (fromDeck) removeFromDeck(enemy, enemy_deck.get(t));
+//                }
+//
+//            }
+//        }
     }
     public void addToHand(InGamePlayer forWho,Card card,boolean fromDeck){
         if(forWho.getUsername().equalsIgnoreCase(friend.getUsername())){
@@ -387,10 +414,9 @@ public class Administer{
 
         isAttackerChosen=false;
         isVictimChosen=false;
-        attackerIsSpell=false;
+        setAttackerIsSpell(false);
         attackerIsWeapon=false;
         attackerIsHeroPower=false;
-
     }
     public void setIsVictimChosen(boolean b){
         isVictimChosen=b;
@@ -403,6 +429,12 @@ public class Administer{
         this.attackerIsWeapon=b;
     }
 
+    public void setAttackerIsSpell(boolean b){
+        attackerIsSpell=b;
+    }
+    public boolean isAttackerIsSpell() {
+        return attackerIsSpell;
+    }
 
     public void setAttackerOwner(InGamePlayer attackerOwner){
         this.attackerOwner=attackerOwner;
@@ -421,6 +453,19 @@ public class Administer{
         this.isAttackerChosen=b;
     }
 
+    public MyCharacter getVictim(){
+        return victim;
+    }
+    public MyCharacter getAttacker() {
+        return attacker;
+    }
+    public int getAttackerIndex(){
+        return attackerIndex;
+    }
+
+    public void setAttackerIndex(int attackerIndex) {
+        this.attackerIndex = attackerIndex;
+    }
 
     //deal damage methods
     public void dealDamageRandom(InGamePlayer damageTo,int damage){
@@ -470,12 +515,15 @@ public class Administer{
 
                 summonMinion(friend,(Minion)Card.getCard("Mech"));
             }
-        }else{
+        }
+        else{
             gameView.infoGiver.logAction("you deal "+damage,"damage to enemy minion:",minion.getName());
 
             minion.setHP(minion.getHP()-damage);
             setHPloss(true);
+            System.out.println("minion hp:" +minion.getHP());
             if(minion.getHP()<=0){
+                System.out.println("removing");
                 removeKilledMinion(enemy,minion,attacker);
                 if(condition.equalsIgnoreCase("HolyWater")) addToHand(enemy,minion,true);
             }
@@ -601,7 +649,6 @@ public class Administer{
         return true;
     }
     public void attack(){
-
         if(attackerIsWeapon){
             handleWeaponAttack();
             setHPloss(true);
@@ -633,8 +680,6 @@ public class Administer{
             handleMinionsAttack();
             setHPloss(true);
         }
-
-
 
     }
 
@@ -1178,6 +1223,33 @@ public class Administer{
         gameView.playGround.update();
 
     }
+    public void checkGroundMinions(){
+        List<Minion> junk=new ArrayList<>();
+        for (Minion minion :
+                friend_CardsOnGround) {
+            if(minion.getHP()<=0){
+                if(minion.isPermanentCause()) friend_permanentCause.remove(minion);
+                if(minion.isTaunt()) friend_tauntMinions.remove(minion);
+                if(friend_RushCards.contains(minion)) friend_RushCards.remove(minion);
+                friend.removeFromGround(minion);
+                junk.add(minion);
+            }
+        }
+        friend_CardsOnGround.removeAll(junk);
+        junk.removeAll(junk);
+        for (Minion minion :
+                enemy_CardsOnGround) {
+            if(minion.getHP()<=0) {
+                if (minion.isPermanentCause()) enemy_permanentCause.remove(minion);
+                if (minion.isTaunt()) enemy_tauntMinions.remove(minion);
+                if (enemy_RushCards.contains(minion)) enemy_RushCards.remove(minion);
+                enemy.removeFromGround(minion);
+                junk.add(minion);
+            }
+        }
+
+        enemy_CardsOnGround.removeAll(junk);
+    }
 
 
     //weapon methods
@@ -1254,6 +1326,8 @@ public class Administer{
 
     //spell methods
     public void useSpell(InGamePlayer player,Spell spell) {
+        System.out.println("in administer-useSpell methos:"+ spell.getName());
+
         if(player.getUsername().equals(friend.getUsername())){
             if(spell.dealsDamage()){
                 if(spell.getName().equalsIgnoreCase("HolyWater")){
@@ -1288,7 +1362,7 @@ public class Administer{
                     gameView.infoGiver.logAction("Attacking with Polymorph ","","");
 
                     isAttackerChosen=true;
-                    attackerIsSpell=true;
+                    setAttackerIsSpell(true);
                     attackerOwner=friend;
                     attackerSpell=spell;
                     setInformation("Choose Target",false);
@@ -1407,7 +1481,7 @@ public class Administer{
                     gameView.infoGiver.logAction("Attacking with Polymorph ","","");
 
                     isAttackerChosen=true;
-                    attackerIsSpell=true;
+                    setAttackerIsSpell(true);
                     attackerOwner=enemy;
                     attackerSpell=spell;
                     setInformation("Choose Target",false);
@@ -1510,7 +1584,7 @@ public class Administer{
                 }
             }
 
-            attackerIsSpell=false;
+            setAttackerIsSpell(false);
         }
         else{
             if (spell.getName().equalsIgnoreCase("Polymorph")){
@@ -1527,7 +1601,7 @@ public class Administer{
                 }
             }
 
-            attackerIsSpell=false;
+            setAttackerIsSpell(false);
         }
 
     }
@@ -1536,16 +1610,28 @@ public class Administer{
         if(loser.getUsername().equalsIgnoreCase(friend.getUsername())) {
             JOptionPane.showMessageDialog(MainFrame.getInstance(), "Game Ove-You Lost",
                     "ERROR", JOptionPane.ERROR_MESSAGE);
-            if(online)
-                client.sendGameMessage("youWin","");
+            if(online) {
+                client.sendGameMessage("youWin", "");
+                client.getPlayer().getPlayersInfo().loseCup();
+            }
+            else{
+                new Player(friend.getUsername()).getPlayersInfo().lose(friend.getUsername());
+                new Player(enemy.getUsername()).getPlayersInfo().win(enemy.getUsername());
+            }
 
             MainFrame.getInstance().setPanel("MainMenu");
         }
         else {
             JOptionPane.showMessageDialog(MainFrame.getInstance(),"You Won,Congrats!",
                     "ERROR",JOptionPane.ERROR_MESSAGE);
-            if (online)
+            if (online){
                 client.sendGameMessage("youLost","");
+                client.getPlayer().getPlayersInfo().addCup();
+            }
+            else{
+                new Player(friend.getUsername()).getPlayersInfo().win(friend.getUsername());
+                new Player(enemy.getUsername()).getPlayersInfo().lose(enemy.getUsername());
+            }
 
             MainFrame.getInstance().setPanel("MainMenu");
         }

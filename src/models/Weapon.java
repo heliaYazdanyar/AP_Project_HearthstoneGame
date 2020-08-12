@@ -1,18 +1,16 @@
-package Models;
+package models;
 
-public class QuestAndReward extends Card{
+public class Weapon extends Card{
 
     private String name;
     private String type;
     private String rarity;
     private int manaCost;
     private String className;
+    private int attack;
+    private int shield;
     private int price;
 
-    private String quest;
-    private boolean questSpendMana;
-    private int manaSpend;
-    private String reward;
 
     @Override
     public String getName(){
@@ -36,19 +34,26 @@ public class QuestAndReward extends Card{
 
     @Override
     public String getThisCardsJson() {
-        String json="{'name':'"+name+"','type':'QuestAndReward','rarity':'"+rarity+
-                "','manaCost':"+manaCost+",'className':'"+className+"','price':"+price+
-                ",'quest':'"+quest+"','questSpendMana':"+questSpendMana+",'manaSpend':"+manaSpend+
-                ",'reward':'"+reward+"'}";
+        String json="{'name':'"+name+"','type':'Weapon','rarity':'"+rarity+
+                "','manaCost':"+manaCost+",'className':'"+className+"','attack':"+attack+",'shield':"+shield+
+                ",'price':"+price+"}";
         return json;
     }
 
+    public int getAttack(){
+        return attack;
+    }
+    public int getShield(){
+        return shield;
+    }
+    public void setShield(int shield){this.shield=shield;}
+    public void setAttack(int a){
+        this.attack=a;
+    }
+    public void lessenShield(){
+        this.shield--;
+    }
 
-    public Card getReward(){
-        return Card.getCard(reward);
-    }
-    public void setReward(String reward){
-        this.reward=reward;
-    }
+
 
 }

@@ -1,6 +1,6 @@
 package client;
 
-import messages.GameMessage;
+import messages.*;
 
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -39,7 +39,8 @@ public class Transmitter extends Thread{
 
             else if(message.startsWith("NewGame:")){
                 String gameJson=message.substring(8);
-                gameClient.startGame(gameJson);
+                NewGame newGame=NewGame.getFromJson(gameJson);
+                gameClient.startGame(gameJson,newGame.isDeckReader());
             }
 
             else if(message.startsWith("GameMessage:")){
@@ -58,6 +59,53 @@ public class Transmitter extends Thread{
                     //gameview show losng
 
                 }
+                else if(gameMessage.getSubject().equals("endTurn")){
+                    System.out.println("new turn n transmitter");
+                    gameClient.gameView.newTurn();
+                }
+            }
+
+            else if(message.startsWith("Attack:")){
+                String json=message.substring(7);
+                Attack attack=Attack.getFromJson(json);
+                gameClient.gameView.arrangeAttack(attack);
+            }
+
+            else if(message.startsWith("PlayCard:")){
+                String json=message.substring(9);
+                int index=json.indexOf('-');
+                String type=json.substring(0,index);
+
+                System.out.println("type: "+type);
+                System.out.println("Json: "+json.substring(index+1));
+
+                gameClient.enemyPlayCard(type,json.substring(index+1));
+            }
+
+            else if(message.startsWith("ListMessage:")) {
+                String json=message.substring(12);
+                ListMessage listMessage=ListMessage.getFromJson(json);
+                if(listMessage.getTitle().equals("enemyDeck")){
+                    gameClient.administer.updateEnemyDeckList(listMessage.getList());
+                }
+                else if(listMessage.getTitle().equals("handCards")){
+                    gameClient.administer.updateEnemyHand(listMessage.getList());
+                }
+            }
+            else if(message.startsWith("SendingVictim:")) {
+                String json = message.substring(14);
+                SendingVictim sendingVictim=SendingVictim.getFromJson(json);
+                gameClient.administer.setVictimOwner(gameClient.getPracticePlayer());
+                if(sendingVictim.getVictimType().equals("Minion"))
+                    gameClient.administer.setVictim(gameClient.administer.friend_CardsOnGround.get(sendingVictim.getIndexOfMinionVictim()));
+                else
+                    gameClient.administer.setVictim(gameClient.getPracticePlayer().getHero());
+
+            }
+            else if(message.startsWith("GameChatMessage:")){
+                String json=message.substring(16);
+                GameChatMessage gameChatMessage=GameChatMessage.getFromJson(json);
+                gameClient.receiveGameChatMsg(gameChatMessage.getMessage());
             }
 
 

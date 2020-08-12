@@ -1,10 +1,11 @@
 package game.Out;
 
-import Models.Card;
 import Out.MainFrame;
-import Util.ImageLoader;
-import Util.SoundPlayer;
+import util.ImageLoader;
+import util.SoundPlayer;
 import gamePlayers.PracticePlayer;
+import models.Card;
+import models.Spell;
 
 import javax.swing.*;
 import java.awt.*;
@@ -106,7 +107,16 @@ public class FriendPlayerPanel extends JPanel implements PlayerPanel{
                                 player.playCard(card);
                                 if(card.getType().equalsIgnoreCase("Weapon")) FriendPlayerPanel.this.update();
                                 //sending enemy new move
-                                gameView.getAdminister().getClient().sendPlayCard(card);
+                                if(gameView.online) {
+                                    gameView.getAdminister().getClient().sendPlayCard(card);
+                                    if(card.getType().equals("Spell"))
+                                        if(((Spell)card).dealsDamage()) {
+                                            gameView.getAdminister().setAttackerIsWeapon(false);
+                                            gameView.getAdminister().setAttackerOwner(player);
+                                            gameView.getAdminister().setAttackerIsSpell(true);
+                                        }
+
+                                }
                             }else{
                                 JOptionPane.showMessageDialog(MainFrame.getInstance(),"you dont have enough MANA:(",
                                         "ERROR",JOptionPane.ERROR_MESSAGE);
@@ -134,6 +144,7 @@ public class FriendPlayerPanel extends JPanel implements PlayerPanel{
             handCards.remove(card);
             update();
         }
+
 
         private void update(){
             initPanel();
@@ -269,4 +280,6 @@ public class FriendPlayerPanel extends JPanel implements PlayerPanel{
 
 
     }
+
+
 }

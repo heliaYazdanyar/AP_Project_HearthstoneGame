@@ -1,8 +1,8 @@
 package game.Out;
 
-import Models.Card;
+import models.Card;
 import Out.MainFrame;
-import Util.ImageLoader;
+import util.ImageLoader;
 import gamePlayers.PracticePlayer;
 
 import javax.swing.*;

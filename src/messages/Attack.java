@@ -4,50 +4,66 @@ import com.google.gson.Gson;
 
 public class Attack {
     private int authToken;
+    private String gameName;
 
-    private boolean hero;
-    private boolean dead;
+    //attacker
+    private String kindOfAttacker;
+    private int indexOfAttackerMinion;
     private int damage;
-    private String gameViewInfo;
-    private int indexOfMinion;
-    private String nameOfMinion;
+
+
+    //target
+    private String kindOfTarget;
+    private int indexOfTargetMinion;
 
 
 
-    public Attack(int authToken,boolean hero,boolean dead,int damage,String gameViewInfo,String nameOfMinion,int indexOfMinion){
+
+    public Attack(int authToken,String gameName,String kindOfAttacker,int indexOfAttackerMinion
+            ,int damage,String kindOfTarget,int indexOfTargetMinion){
         this.authToken=authToken;
-        this.hero=hero;
-        this.dead=dead;
-        this.gameViewInfo=gameViewInfo;
-        this.indexOfMinion=indexOfMinion;
-        this.nameOfMinion=nameOfMinion;
+        this.gameName=gameName;
+
+        this.kindOfAttacker=kindOfAttacker;
+        this.indexOfAttackerMinion=indexOfAttackerMinion;
+        this.damage=damage;
+
+        this.kindOfTarget=kindOfTarget;
+        this.indexOfTargetMinion=indexOfTargetMinion;
+
 
     }
 
     public int getAuthToken() {
         return authToken;
     }
-    public boolean isHero() {
-        return hero;
+    public String getGameName(){
+        return gameName;
     }
-    public boolean isDead() {
-        return dead;
-    }
+
     public int getDamage() {
         return damage;
     }
-    public int getIndexOfMinion() {
-        return indexOfMinion;
+
+    public String getKindOfAttacker(){
+        return kindOfAttacker;
     }
-    public String getGameViewInfo() {
-        return gameViewInfo;
+    public int getIndexOfAttackerMinion() {
+        return indexOfAttackerMinion;
     }
-    public String getNameOfMinion() {
-        return nameOfMinion;
+
+    public String getKindOfTarget() {
+        return kindOfTarget;
+    }
+
+    public int getIndexOfTargetMinion() {
+        return indexOfTargetMinion;
     }
 
     public String getJson(){
-        String result="{}";
+        String result="{'authToken':"+this.authToken+",'gameName':'"+gameName+"','kindOfAttacker':'"+kindOfAttacker+"','indexOfAttackerMinion':"+indexOfAttackerMinion+
+                ",'damage':"+damage+",'kindOfTarget':'"+kindOfTarget+"','indexOfTargetMinion':"+indexOfTargetMinion
+                +"}";
         return result;
     }
     public static Attack getFromJson(String json){

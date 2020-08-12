@@ -1,6 +1,6 @@
 package Out;
 
-import Models.Deck;
+import models.Deck;
 import gamePlayers.Player;
 
 import javax.swing.*;

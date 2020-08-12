@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import Out.Collections;
 import Out.MainFrame;
@@ -18,7 +18,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Util.Logger.logger;
+import static util.Logger.logger;
 
 public class Deck extends JPanel implements ActionListener,Decks{
 

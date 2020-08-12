@@ -1,6 +1,6 @@
 package game.Out;
 
-import Util.ImageLoader;
+import util.ImageLoader;
 import gamePlayers.InGamePlayer;
 
 import javax.swing.*;

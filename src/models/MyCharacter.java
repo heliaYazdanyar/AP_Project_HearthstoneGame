@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 public interface MyCharacter {
 
@@ -7,7 +7,6 @@ public interface MyCharacter {
     public String getName();
     public String getType();
     public int getAttack();
-
 
 
 

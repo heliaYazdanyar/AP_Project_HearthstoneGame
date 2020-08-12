@@ -1,9 +1,9 @@
 package Out;
 
-import Models.Card;
-import Models.Deck;
-import Util.ImageLoader;
-import Util.SoundPlayer;
+import models.Card;
+import models.Deck;
+import util.ImageLoader;
+import util.SoundPlayer;
 import gamePlayers.Player;
 
 import javax.swing.*;
@@ -17,7 +17,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Util.Logger.logger;
+import static util.Logger.logger;
 
 public class Collections extends JPanel implements ActionListener {
     private static Collections instance;

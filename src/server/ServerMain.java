@@ -1,6 +1,6 @@
 package server;
 
-import Util.Config;
+import util.Config;
 import java.io.IOException;
 
 public class ServerMain {

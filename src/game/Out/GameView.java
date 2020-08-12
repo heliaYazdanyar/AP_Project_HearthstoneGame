@@ -1,16 +1,17 @@
 package game.Out;
 
-import Models.*;
+import models.*;
 import Out.MainFrame;
-import Util.DeckReader;
-import Util.ImageLoader;
-import Util.SoundPlayer;
+import util.DeckReader;
+import util.ImageLoader;
+import util.SoundPlayer;
 import client.GameClient;
 import gamePlayers.InGamePlayer;
 import gamePlayers.OnlineEnemy;
 import gamePlayers.PlayerBot;
 import gamePlayers.PracticePlayer;
 import logic.Administer;
+import messages.Attack;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -29,11 +30,15 @@ import java.util.List;
 public class GameView extends JPanel {
     private SoundPlayer soundPlayer;
 
+    private boolean watcher;
+
     public int turn=0;
     boolean online;
     boolean myTurn;
 
     private Administer administer;
+
+    public ChatRoom chatRoom;
 
     public GameView.PlayGround playGround;
     public GameView.Events events;
@@ -92,6 +97,9 @@ public class GameView extends JPanel {
             infoGiverLabel.setVerticalTextPosition(JLabel.CENTER);
             infoGiverLabel.setOpaque(true);
 
+            chatRoom=new ChatRoom(administer.getClient());
+            chatRoom.addMember(enemyPlayer.getUsername());
+
             logLabel=new JLabel("Let's Win This Thing!",SwingConstants.CENTER);
             logLabel.setFont(new Font("Courier New", Font.ITALIC, 20));
             logLabel.setForeground(Color.GREEN);
@@ -103,8 +111,8 @@ public class GameView extends JPanel {
             infoGiverLabel.setPreferredSize(new Dimension(300,150));
             logLabel.setPreferredSize(new Dimension(300,200));
             this.add(infoGiverLabel,BorderLayout.SOUTH);
+            this.add(chatRoom,BorderLayout.CENTER);
             this.add(logLabel,BorderLayout.NORTH);
-
 
         }
 
@@ -234,23 +242,38 @@ public class GameView extends JPanel {
                         @Override
                         public void mouseClicked(MouseEvent e) {
                             isCardPopUp=false;
-                            if(administer.isAttackerChosen() && turn%2==1){
-                                administer.setInformation("victim chosen",false);
-                                victim=label;
+                            if(!online) {
+                                if (administer.isAttackerChosen() && !friendPlayer.isMyTurn()) {
+                                    administer.setInformation("victim chosen", false);
+                                    victim = label;
 
-                                administer.setVictimOwner(friendPlayer);
-                                administer.setVictim(administer.friend_CardsOnGround.get(t));
-                                x2=e.getXOnScreen();
+                                    administer.setVictimOwner(friendPlayer);
+                                    administer.setVictim(administer.friend_CardsOnGround.get(t));
+                                    x2 = e.getXOnScreen();
 
-                                playGround.update();
+                                    playGround.update();
+                                } else if (friendPlayer.isMyTurn()) {
+                                    administer.setAttackerIsWeapon(false);
+                                    administer.setAttackerOwner(friendPlayer);
+                                    administer.setAttacker(administer.friend_CardsOnGround.get(t));
+                                    x1 = e.getXOnScreen();
+
+                                    administer.setAttackerIndex(t);
+
+                                    administer.setInformation("Attacker chosen", false);
+                                }
                             }
-                            else if(turn%2==0){
-                                administer.setAttackerIsWeapon(false);
-                                administer.setAttackerOwner(friendPlayer);
-                                administer.setAttacker(administer.friend_CardsOnGround.get(t));
-                                x1=e.getXOnScreen();
+                            else{
+                                if(friendPlayer.isMyTurn()){
+                                    administer.setAttackerIsWeapon(false);
+                                    administer.setAttackerOwner(friendPlayer);
+                                    administer.setAttacker(administer.friend_CardsOnGround.get(t));
+                                    x1 = e.getXOnScreen();
 
-                                administer.setInformation("Attacker chosen",false);
+                                    administer.setAttackerIndex(t);
+
+                                    administer.setInformation("Attacker chosen", false);
+                                }
                             }
                         }
 
@@ -284,27 +307,50 @@ public class GameView extends JPanel {
                         @Override
                         public void mouseClicked(MouseEvent e) {
                             isCardPopUp=false;
-                            if(administer.isAttackerChosen() && turn%2==0){
-                                administer.setInformation("Victim Chosen",false);
-                                victim=label;
+                            if(!online) {
+                                if (administer.isAttackerChosen() && friendPlayer.isMyTurn()) {
+                                    administer.setInformation("Victim Chosen", false);
+                                    victim = label;
 
-                                administer.setVictimOwner(enemyPlayer);
-                                administer.setVictim(administer.enemy_CardsOnGround.get(t));
-                                x2=e.getXOnScreen();
-                                playGround.update();
+                                    administer.setVictimOwner(enemyPlayer);
+                                    administer.setVictim(administer.enemy_CardsOnGround.get(t));
+                                    x2 = e.getXOnScreen();
+                                    playGround.update();
+                                } else if (!friendPlayer.isMyTurn()) {
+                                    administer.setAttackerIsWeapon(false);
+                                    administer.setAttackerOwner(enemyPlayer);
+                                    administer.setAttacker(administer.enemy_CardsOnGround.get(t));
+                                    x1 = e.getXOnScreen();
+                                    administer.setInformation("Attacker Chosen", false);
+                                    attacker = label;
+                                }
                             }
-                            else if(turn%2==1){
-                                administer.setAttackerIsWeapon(false);
-                                administer.setAttackerOwner(enemyPlayer);
-                                administer.setAttacker(administer.enemy_CardsOnGround.get(t));
-                                x1=e.getXOnScreen();
-                                administer.setInformation("Attacker Chosen",false);
-                                attacker=label;
+                            else{
+                                if(friendPlayer.isMyTurn() && administer.isAttackerChosen()){
+                                    administer.setInformation("Victim Chosen", false);
+                                    victim = label;
+
+
+                                    if(!administer.isAttackerIsSpell()) {
+                                        administer.setVictimOwner(enemyPlayer);
+                                        administer.setVictim(administer.enemy_CardsOnGround.get(t));
+                                        administer.getClient().sendAttack(administer.getAttacker().getType(), administer.getAttackerIndex(),
+                                                administer.getAttacker().getAttack(), administer.getVictim().getType(), t);
+                                    }
+                                    else {
+                                        administer.getClient().sendVictim("Minion",t);
+                                        administer.setVictimOwner(enemyPlayer);
+                                        administer.setVictim(administer.enemy_CardsOnGround.get(t));
+                                    }
+
+                                    x2 = e.getXOnScreen();
+                                    playGround.update();
+                                }
                             }
+
                         }
                         @Override
                         public void mouseEntered(MouseEvent e) {
-                            System.out.println("entered");
                             infoGiver.initCardInfo(administer.enemy_CardsOnGround.get(t));
                         }
 
@@ -384,7 +430,6 @@ public class GameView extends JPanel {
             this.setOpaque(true);
 
             initFile();
-
         }
 
         private void initFile(){
@@ -525,10 +570,14 @@ public class GameView extends JPanel {
 
 
             endTurn.addActionListener(e -> {
-                turn=(turn+1)%2;
-                administer.newTurn(turn);
+                if(friendPlayer.isMyTurn()) {
+                    turn = (turn + 1) % 2;
+                    administer.newTurn(turn);
+                    if (administer.online)
+                        administer.getClient().sendGameMessage("endTurn", "");
 
-                cntTime=60;
+                    cntTime = 60;
+                }
             });
             endTurn.setFont(new Font("Courier New", Font.ITALIC, 18));
             endTurn.setForeground(Color.PINK);
@@ -545,8 +594,10 @@ public class GameView extends JPanel {
             quitGame.setOpaque(true);
 
 
-            friendHero=new JLabel(ImageLoader.getInstance().loadIcon(friendPlayer.getHeroName(),"jpeg",200,200));
-            enemyHero=new JLabel(ImageLoader.getInstance().loadIcon(enemyPlayer.getHeroName(),"jpeg",200,200));
+            ImageIcon friendIcon=ImageLoader.getInstance().loadIcon(friendPlayer.getHeroName(),"JPEG",100,200);
+            ImageIcon enemyIcon=ImageLoader.getInstance().loadIcon(enemyPlayer.getHeroName(),"jpeg",200,200);
+            friendHero=new JLabel(friendIcon);
+            enemyHero=new JLabel(enemyIcon);
 
             friendHero=new JLabel();
             enemyHero=new JLabel();
@@ -554,16 +605,16 @@ public class GameView extends JPanel {
             friendHero.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    if(turn%2==1){
+                    if(!friendPlayer.isMyTurn()){
                         if(administer.isAttackerChosen()){
                             administer.setInformation("Target chosen",false);
                             administer.setVictimOwner(friendPlayer);
                             administer.setVictim(friendPlayer.getHero());
                         }
                         else{
+                            if(!online)
                             administer.setInformation("choose attacker",false);
                         }
-
                     }
                     else{
                         if(administer.isAttackerChosen()){
@@ -575,9 +626,17 @@ public class GameView extends JPanel {
             enemyHero.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    if(turn%2==0){
+                    if(friendPlayer.isMyTurn()){
                         if(administer.isAttackerChosen()){
                             administer.setInformation("Target chosen",false);
+
+                            if(online) {
+                                if(!(administer.isAttackerIsSpell()))
+                                    administer.getClient().sendAttack(administer.getAttacker().getType(), administer.getAttackerIndex(),
+                                        administer.getAttacker().getAttack(), administer.getVictim().getType(), 0);
+                                else
+                                    administer.getClient().sendVictim("Hero",0);
+                            }
                             administer.setVictimOwner(enemyPlayer);
                             administer.setVictim(enemyPlayer.getHero());
                         }
@@ -639,7 +698,6 @@ public class GameView extends JPanel {
         this.enemyPlayer=enemyPlayer;
 
         administer=new Administer(this.friendPlayer,this.enemyPlayer,this,false);
-//        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,false);
         friendPlayer.setAdminister(administer);
         enemyPlayer.setAdminister(administer);
 
@@ -656,7 +714,8 @@ public class GameView extends JPanel {
         this.enemyPlayer=enemyPlayer;
 
         administer=new Administer(this.friendPlayer,this.enemyPlayer,this,true);
-//        Administer.newGameAdminister(this.friendPlayer,this.enemyPlayer,this,true);
+        this.friendPlayer.setAdminister(administer);
+        this.enemyPlayer.setAdminister(administer);
 
         initMainPanels();
         initOfflineGamePanels();
@@ -677,11 +736,9 @@ public class GameView extends JPanel {
         this.enemyPlayer=enemyPlayer;
         this.friendPlayer=friendClient.getPracticePlayer();
 
-        administer=new Administer(friendClient,enemyPlayer,this,"");
+        administer=new Administer(friendClient,enemyPlayer,this,"",friendClient.getTurnNumber(),false);
         friendPlayer.setAdminister(administer);
-        enemyPlayer.setAdminister(administer);
-
-
+        this.enemyPlayer.setAdminister(administer);
 
         initMainPanels();
         initOnlineGamePanels();
@@ -691,6 +748,16 @@ public class GameView extends JPanel {
         this.online=true;
     }
 
+
+    //watcher
+    public GameView(GameClient gameClient){
+        watcher=true;
+        initMainPanels();
+        initOfflineGamePanels();
+        addPanels();
+        animatingCards.start();
+        this.online=false;
+    }
 
     public Administer getAdminister(){
         return administer;
@@ -767,6 +834,33 @@ public class GameView extends JPanel {
             playGround.update();
             setCardIsMoving(false);
         }
+    }
+
+    public void newTurn(){
+        turn=(turn+1)%2;
+        administer.newTurn(turn);
+
+        tools.cntTime=60;
+    }
+    public void arrangeAttack(Attack attack){
+        administer.setIsAttackerChosen(true);
+
+        administer.setAttackerOwner(enemyPlayer);
+        administer.setVictimOwner(friendPlayer);
+        if(administer.isAttackerIsSpell()){
+
+        }
+        else if(attack.getKindOfAttacker().equalsIgnoreCase("Weapon"))
+        administer.setAttackerIsWeapon(true);
+        else{
+            administer.setAttacker(administer.enemy_CardsOnGround.get(attack.getIndexOfAttackerMinion()));
+        }
+
+        if(attack.getKindOfTarget().equalsIgnoreCase("Hero"))
+            administer.setVictim(friendPlayer.getHero());
+        else
+            administer.setVictim(administer.friend_CardsOnGround.get(attack.getIndexOfTargetMinion()));
+
     }
 
 

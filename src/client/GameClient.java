@@ -1,6 +1,6 @@
 package client;
 
-import Models.Card;
+import models.Card;
 import Out.MainFrame;
 import game.Out.GameView;
 import gamePlayers.OnlineEnemy;
@@ -8,11 +8,13 @@ import gamePlayers.Player;
 import gamePlayers.PracticePlayer;
 import logic.Administer;
 import messages.*;
+import util.DeckReader;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.util.List;
 
 public class GameClient extends Thread{
     private String username;
@@ -33,6 +35,7 @@ public class GameClient extends Thread{
     private PracticePlayer practicePlayer;
     public GameView gameView;
     private OnlineEnemy enemy;
+    private int turnNumber;
 
     public GameClient(String serverIP,int serverPort,String username) throws IOException {
         this.socket=new Socket(serverIP,serverPort);
@@ -55,19 +58,21 @@ public class GameClient extends Thread{
         this.authToken=authToken;
     }
 
+    public String getUsername(){
+        return username;
+    }
+
+    //sending methods
     public void sendRequest(String request){
         Request r=new Request(this.authToken,request);
 
         socketPrinter.println("Request:"+r.getJson());
     }
-    public void sendMove(){
-
-    }
     public void sendString(String message){
         socketPrinter.println(message);
     }
     public void sendCard(String type,String cardJson){
-        SendingCard sendingCard=new SendingCard(this.authToken,type,cardJson);
+        SendingCard sendingCard=new SendingCard(this.authToken,gameName,type,cardJson);
         socketPrinter.println("SendingCard:"+sendingCard.getJson());
     }
     public void sendInfoGiver(String first,String second,String third){
@@ -75,15 +80,15 @@ public class GameClient extends Thread{
         socketPrinter.println("InfoGiver:"+infoGiverMsg.getJson());
     }
 
+    public void sendList(String title, List<String> list){
+        ListMessage listMessage=new ListMessage(authToken,gameName,title,list);
+        socketPrinter.println("ListMessage:"+listMessage.getJson());
+    }
+
     public void sendGameMessage(String subject,String explanation){
         GameMessage gameMessage=new GameMessage(authToken,gameName,subject,explanation);
 
         socketPrinter.println("GameMessage:"+gameMessage.getJson());
-    }
-    public void sendAttack(boolean hero,boolean dead,int damage,String gameViewInfo,String nameOfMinion,int indexOfMinion){
-        Attack attack=new Attack(authToken,hero,dead,damage,gameViewInfo,nameOfMinion,indexOfMinion);
-
-        socketPrinter.println("Attack:"+attack.getJson());
     }
 
 
@@ -117,25 +122,44 @@ public class GameClient extends Thread{
 
         sendRequest("gameRequest");
     }
+    public void requestForDeckReaderGame(){
+        sendRequest("gameWithDeckReader");
+    }
     public void cancelRequestForGame(){
         sendRequest("cancelGameRequest");
     }
 
     //in game methods
-    public void startGame(String newGameJson){
+    public void startGame(String newGameJson,boolean deckReader){
         NewGame newGame=NewGame.getFromJson(newGameJson);
-
+        this.turnNumber=newGame.getTurnNumber();
         this.gameName=newGame.getGameName();
-        setEnemy(newGame.getEnemyUsername(),newGame.getEnemyHeroName());
 
-        setPracticePlayer();
 
-        MainFrame.getInstance().getPanelHandler().addPracticeOnline();
+        if(deckReader)
+           setEnemy(newGame.getEnemyUsername(),"Mage");
+        else
+            setEnemy(newGame.getEnemyUsername(),newGame.getEnemyHeroName());
+
+
+        if(!deckReader) {
+            setPracticePlayer(false, null);
+            MainFrame.getInstance().getPanelHandler().addPracticeOnline();
+        }
+        else{
+            if(turnNumber==0) practicePlayer=new PracticePlayer(player.getUsername(),false, DeckReader.getDeckReader());
+            else practicePlayer=new PracticePlayer(player.getUsername(),true,DeckReader.getDeckReader());
+
+            MainFrame.getInstance().getPanelHandler().addPracticeWithDeckReader_Online();
+        }
     }
 
-    public void setPracticePlayer(){
+    public void setPracticePlayer(boolean deckReader,PracticePlayer player1){
         System.out.println("practice player was setted for client");
-        this.practicePlayer=new PracticePlayer(player);
+        if(deckReader)
+            this.practicePlayer=player1;
+        else
+            this.practicePlayer=new PracticePlayer(this.player);
     }
     public PracticePlayer getPracticePlayer(){
         return practicePlayer;
@@ -154,10 +178,13 @@ public class GameClient extends Thread{
         return enemy;
     }
 
-    public void enemyPlayCard(String message){
-        String json=message.substring(9);
-        SendingCard sendingCard=SendingCard.getFromJson(json);
-        Card card=Card.getCardFromJson(sendingCard.getType(),sendingCard.getCardJson());
+    public int getTurnNumber() {
+        return turnNumber;
+    }
+
+    public void enemyPlayCard(String type,String cardJson){
+        Card card=Card.getCardFromJson(type,cardJson);
+
         gameView.events.addEvent(card.getName() + " was played.", enemy);
         gameView.events.updateEvents();
         gameView.setMovingCad(card);
@@ -166,25 +193,33 @@ public class GameClient extends Thread{
 
         if(card.getType().equalsIgnoreCase("Weapon")) gameView.enemyPanel.update();
 
-        if(card.getType().equalsIgnoreCase("Spell")){
-
-        }
-        else if(card.getType().equalsIgnoreCase("Minion")){
-
-        }
-        else if(card.getType().equalsIgnoreCase("Weapon")){
-
-        }
-        else{
-
-        }
-
     }
     public void sendPlayCard(Card card){
-        SendingCard sendingCard=new SendingCard(authToken,card.getType(),card.getThisCardsJson());
-        String message="PlayCard:"+sendingCard.getJson();
+        String message="PlayCard:"+card.getType()+"-"+card.getThisCardsJson();
         socketPrinter.println(message);
     }
+
+    public void sendVictim(String type,int indexOfMinion){
+        SendingVictim sendingVictim=new SendingVictim(authToken,gameName,type,indexOfMinion);
+        socketPrinter.println("SendingVictim:"+sendingVictim.getJson());
+    }
+    public void sendAttack(String kindOfAttacker,int indexOfAttackerMinion
+            ,int damage,String kindOfTarget,int indexOfTargetMinion){
+        Attack attack=new Attack(authToken,gameName,kindOfAttacker,indexOfAttackerMinion,damage,kindOfTarget,indexOfTargetMinion);
+
+        socketPrinter.println("Attack:"+attack.getJson());
+    }
+
+    public void sendGameChatMsg(String message){
+        GameChatMessage gameChatMessage=new GameChatMessage(authToken,gameName,message);
+        socketPrinter.println("GameChatMessage:"+gameChatMessage.getJson());
+    }
+    public void receiveGameChatMsg(String message){
+        gameView.chatRoom.sendText(enemy.getUsername(),message);
+    }
+
+
+
 
 
 }

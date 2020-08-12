@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 public class Minion extends Card implements MyCharacter{
 
@@ -54,8 +54,7 @@ public class Minion extends Card implements MyCharacter{
         String json="{'name':'"+name+"','type':'Minion','rarity':'"+rarity+"','className':'"+className+
                 "','manaCost':"+manaCost+",'HP':"+HP+",'attack':"+attack+",'finalHP':"+finalHP+
                 ",'taunt':"+taunt+",'battlecry':"+battlecry+",'lifeSteal':"+lifeSteal+
-                ",'rush':"+rush+",'permanentCause':"+permanentCause+",'battlecryExplain':'"+battlecryExplain+
-                "','permanentCauseExplain':'"+permanentCauseExplain+"','price':"+price+"}";
+                ",'rush':"+rush+",'permanentCause':"+permanentCause+",'battlecryExplain':'','permanentCauseExplain':'','price':"+price+"}";
         return json;
     }
 

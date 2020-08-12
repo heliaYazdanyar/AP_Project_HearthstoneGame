@@ -8,12 +8,16 @@ public class NewGame {
     private String enemyUsername;
     private String enemyHeroName;
     private int enemyCups;
+    private int turnNumber;
+    private boolean deckReader;
 
-    public NewGame(String gameName,String enemyUsername,String enemyHeroName){
+    public NewGame(String gameName,String enemyUsername,String enemyHeroName,int turnNumber,boolean deckReader){
         this.gameName=gameName;
         this.enemyUsername=enemyUsername;
         this.enemyHeroName=enemyHeroName;
         this.enemyCups=0;
+        this.turnNumber=turnNumber;
+        this.deckReader=deckReader;
     }
 
     public String getGameName() {
@@ -25,11 +29,16 @@ public class NewGame {
     public  String getEnemyHeroName(){
         return enemyHeroName;
     }
-
+    public int getTurnNumber(){
+        return turnNumber;
+    }
+    public boolean isDeckReader() {
+        return deckReader;
+    }
 
     public String getJson(){
         String result="{'gameName':'"+this.gameName+"','enemyUsername':'"+this.enemyUsername+"','enemyHeroName':'"
-                +this.enemyHeroName+"','enemyCups':"+this.enemyCups+"}";
+                +this.enemyHeroName+"','enemyCups':"+this.enemyCups+",'turnNumber':"+turnNumber+",'deckReader':"+deckReader+"}";
         return result;
     }
     public static NewGame getFromJson(String json){

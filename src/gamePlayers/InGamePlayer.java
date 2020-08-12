@@ -1,6 +1,6 @@
 package gamePlayers;
 
-import Models.*;
+import models.*;
 import logic.Administer;
 
 import java.util.List;
@@ -48,5 +48,6 @@ public interface InGamePlayer {
 
     public void setPassive(Passive passive);
     public Passive getPassive();
+
 
 }

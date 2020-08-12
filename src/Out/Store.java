@@ -1,7 +1,7 @@
 package Out;
 
-import Models.Card;
-import Util.ImageLoader;
+import models.Card;
+import util.ImageLoader;
 import gamePlayers.Player;
 
 import javax.swing.*;

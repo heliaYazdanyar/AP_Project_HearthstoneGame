@@ -1,7 +1,7 @@
 package Out;
 
-import Util.ImageLoader;
-import Util.SoundPlayer;
+import util.ImageLoader;
+import util.SoundPlayer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 
-import static Util.Logger.logger;
+import static util.Logger.logger;
 
 public class MainMenu extends JPanel implements ActionListener {
 
@@ -19,6 +19,7 @@ public class MainMenu extends JPanel implements ActionListener {
     private JButton collections=new JButton("Collections");
     private JButton quit=new JButton("Quit");
     private JButton setting=new JButton("Setting");
+    private JButton rank=new JButton("Rank");
     private GridBagConstraints gbc=new GridBagConstraints();
     private SoundPlayer sound= SoundPlayer.getInstance();
 
@@ -51,10 +52,17 @@ public class MainMenu extends JPanel implements ActionListener {
         collections.addActionListener(this);
 
         gbc.gridx=2; gbc.gridy=9;
+        this.add(rank,gbc);
+        rank.addActionListener(e->{
+            logger(MainFrame.player.getUsername(),"ClickButton","Rank");
+            MainFrame.getInstance().setPanel("Rank");
+        });
+
+        gbc.gridx=2; gbc.gridy=10;
         this.add(setting,gbc);
         setting.addActionListener(this);
 
-        gbc.gridx=2; gbc.gridy=10;
+        gbc.gridx=2; gbc.gridy=11;
         this.add(quit,gbc);
         quit.addActionListener(this);
     }

@@ -1,6 +1,6 @@
 package gamePlayers;
 
-import Models.*;
+import models.*;
 import logic.Administer;
 
 import java.util.ArrayList;
@@ -163,4 +163,8 @@ public class OnlineEnemy implements InGamePlayer {
     public Passive getPassive() {
         return passive;
     }
+
+
+
+
 }

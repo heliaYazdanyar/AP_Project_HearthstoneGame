@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 public class Spell extends Card {
 
@@ -50,9 +50,7 @@ public class Spell extends Card {
         String json="{'name':'"+name+"','type':'Spell','rarity':'"+rarity+"','manaCost':"+manaCost+",'className':'"+
                 className+"','price':"+price+",'drawCard':"+drawCard+",'manaBurn':"+manaBurn+",'summon':"+summon+
                 ",'dealDamage':"+dealDamage+",'discover':"+discover+",'changeMinion':"+changeMinion+
-                ",'divineShield':"+divineShield+",'summonWhat':'"+summonWhat+"','drawCardExp':'"+drawCardExp+
-                "','discoverExp':'"+discoverExp+"','damageCnt':"+damageCnt+",'damageCondition':'"+damageCondition
-                +"','changeMinionExp':'"+changeMinionExp+"'}";
+                ",'divineShield':"+divineShield+",'summonWhat':'','drawCardExp':'','discoverExp':'','damageCnt':"+damageCnt+",'damageCondition':'','changeMinionExp':''}";
         return json;
     }
 

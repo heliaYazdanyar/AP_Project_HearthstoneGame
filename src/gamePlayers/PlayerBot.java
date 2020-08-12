@@ -1,6 +1,6 @@
 package gamePlayers;
 
-import Models.*;
+import models.*;
 import logic.Administer;
 
 import java.util.List;
@@ -92,6 +92,7 @@ public class PlayerBot implements InGamePlayer{
     public Passive getPassive() {
         return null;
     }
+
 
     @Override
     public int getMana() {
