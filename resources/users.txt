@@ -1,6 +1,7 @@
 
 server server
 
-client2 22
 
 server1 server1
+
+king 1111

@@ -30,8 +30,6 @@ import java.util.List;
 public class GameView extends JPanel {
     private SoundPlayer soundPlayer;
 
-    private boolean watcher;
-
     public int turn=0;
     boolean online;
     boolean myTurn;
@@ -97,8 +95,10 @@ public class GameView extends JPanel {
             infoGiverLabel.setVerticalTextPosition(JLabel.CENTER);
             infoGiverLabel.setOpaque(true);
 
-            chatRoom=new ChatRoom(administer.getClient());
-            chatRoom.addMember(enemyPlayer.getUsername());
+            if(administer.online) {
+                chatRoom = new ChatRoom(administer.getClient());
+                chatRoom.addMember(enemyPlayer.getUsername());
+            }
 
             logLabel=new JLabel("Let's Win This Thing!",SwingConstants.CENTER);
             logLabel.setFont(new Font("Courier New", Font.ITALIC, 20));
@@ -111,7 +111,8 @@ public class GameView extends JPanel {
             infoGiverLabel.setPreferredSize(new Dimension(300,150));
             logLabel.setPreferredSize(new Dimension(300,200));
             this.add(infoGiverLabel,BorderLayout.SOUTH);
-            this.add(chatRoom,BorderLayout.CENTER);
+            if(administer.online)
+                this.add(chatRoom,BorderLayout.CENTER);
             this.add(logLabel,BorderLayout.NORTH);
 
         }
@@ -593,14 +594,10 @@ public class GameView extends JPanel {
             quitGame.setForeground(Color.DARK_GRAY);
             quitGame.setOpaque(true);
 
+            System.out.println("initing her labels");
+            friendHero=new JLabel(ImageLoader.getInstance().loadIcon(friendPlayer.getHeroName(),"jpeg",200,200));
+            enemyHero=new JLabel(ImageLoader.getInstance().loadIcon(enemyPlayer.getHeroName(),"jpeg",200,200));
 
-            ImageIcon friendIcon=ImageLoader.getInstance().loadIcon(friendPlayer.getHeroName(),"JPEG",100,200);
-            ImageIcon enemyIcon=ImageLoader.getInstance().loadIcon(enemyPlayer.getHeroName(),"jpeg",200,200);
-            friendHero=new JLabel(friendIcon);
-            enemyHero=new JLabel(enemyIcon);
-
-            friendHero=new JLabel();
-            enemyHero=new JLabel();
 
             friendHero.addMouseListener(new MouseAdapter() {
                 @Override
@@ -631,14 +628,19 @@ public class GameView extends JPanel {
                             administer.setInformation("Target chosen",false);
 
                             if(online) {
-                                if(!(administer.isAttackerIsSpell()))
+                                if(!(administer.isAttackerIsSpell())) {
+                                    administer.setVictimOwner(enemyPlayer);
+                                    administer.setVictim(enemyPlayer.getHero());
                                     administer.getClient().sendAttack(administer.getAttacker().getType(), administer.getAttackerIndex(),
-                                        administer.getAttacker().getAttack(), administer.getVictim().getType(), 0);
-                                else
+                                            administer.getAttacker().getAttack(), administer.getVictim().getType(), 0);
+                                }
+                                else {
                                     administer.getClient().sendVictim("Hero",0);
+                                    administer.setVictimOwner(enemyPlayer);
+                                    administer.setVictim(enemyPlayer.getHero());
+                                }
                             }
-                            administer.setVictimOwner(enemyPlayer);
-                            administer.setVictim(enemyPlayer.getHero());
+
                         }
                         else{
                             administer.setInformation("choose attacker",false);
@@ -748,16 +750,6 @@ public class GameView extends JPanel {
         this.online=true;
     }
 
-
-    //watcher
-    public GameView(GameClient gameClient){
-        watcher=true;
-        initMainPanels();
-        initOfflineGamePanels();
-        addPanels();
-        animatingCards.start();
-        this.online=false;
-    }
 
     public Administer getAdminister(){
         return administer;

@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameClient extends Thread{
@@ -28,6 +29,9 @@ public class GameClient extends Thread{
 
     private Transmitter transmitter;
 
+    private List<String> onlineNames;
+    private List<String> offlineNames;
+
     //in game fields
     public Administer administer;
     private boolean inGame;
@@ -41,6 +45,9 @@ public class GameClient extends Thread{
         this.socket=new Socket(serverIP,serverPort);
         this.username=username;
         this.player=new Player(username);
+
+        offlineNames=new ArrayList<>();
+        onlineNames=new ArrayList<>();
 
         System.out.println("Connected to Server at: " + serverIP + ":" + serverPort);
 
@@ -60,6 +67,28 @@ public class GameClient extends Thread{
 
     public String getUsername(){
         return username;
+    }
+
+    public void setOnlineNames(String message){
+        onlineNames.removeAll(onlineNames);
+        String[] result=message.substring(8).split(",");
+        for(int i=0;i<result.length;i++){
+            onlineNames.add(result[i]);
+        }
+    }
+    public void setOfflineNames(String message){
+        offlineNames.removeAll(offlineNames);
+        String[] result=message.substring(9).split(",");
+        for(int i=0;i<result.length;i++){
+            offlineNames.add(result[i]);
+        }
+    }
+
+    public List<String> getOnlineNames(){
+        return onlineNames;
+    }
+    public List<String> getOfflineNames(){
+        return offlineNames;
     }
 
     //sending methods
@@ -209,6 +238,11 @@ public class GameClient extends Thread{
 
         socketPrinter.println("Attack:"+attack.getJson());
     }
+    public void sendHeroPowerUse(){
+        UseHeroPower useHeroPower=new UseHeroPower(authToken,gameName);
+        socketPrinter.println("UseHeroPower:"+useHeroPower.getJson());
+    }
+
 
     public void sendGameChatMsg(String message){
         GameChatMessage gameChatMessage=new GameChatMessage(authToken,gameName,message);

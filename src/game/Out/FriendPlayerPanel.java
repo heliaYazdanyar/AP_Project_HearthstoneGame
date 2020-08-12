@@ -223,8 +223,15 @@ public class FriendPlayerPanel extends JPanel implements PlayerPanel{
             public void mouseClicked(MouseEvent e) {
                 if(player.isMyTurn()) {
                     if(player.getAdminister().canCallHeroPower(player)) {
-                        player.getAdminister().callHeroPower(player);
-                        player.getAdminister().setInformation("HeroPower chosen",false);
+                        if(player.getAdminister().online){
+                            player.getAdminister().getClient().sendHeroPowerUse();
+                            player.getAdminister().callHeroPower(player);
+                            player.getAdminister().setInformation("HeroPower chosen", false);
+                        }
+                        else {
+                            player.getAdminister().callHeroPower(player);
+                            player.getAdminister().setInformation("HeroPower chosen", false);
+                        }
                     }
                 }
             }

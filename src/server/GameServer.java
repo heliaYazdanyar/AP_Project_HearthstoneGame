@@ -13,6 +13,7 @@ import java.util.List;
 public class GameServer extends Thread{
 
     private ServerSocket serverSocket;
+    private UsersList usersList;
 
     private List<ClientHandler> clients;
     private HashMap<String,Integer> authTokens;
@@ -34,7 +35,8 @@ public class GameServer extends Thread{
         BPlayers=new HashMap<>();
 
         this.serverSocket=new ServerSocket(serverPort);
-
+        usersList=new UsersList(this);
+        usersList.start();
 
     }
 
@@ -42,6 +44,47 @@ public class GameServer extends Thread{
         SecureRandom r=new SecureRandom();
         int authToken=r.nextInt();
         authTokens.put(client.getUsername(),authToken);
+    }
+
+    public List<ClientHandler> getClients(){
+        return clients;
+    }
+    public void sendOnlineList(){
+        clients.removeIf(client -> !client.isAlive());
+
+        List<String> onlines=new ArrayList<>();
+        onlines.addAll(usersList.getOnlinePLayers());
+        String message="onlines:";
+
+        if(clients.size()>0) {
+            for (int i = 0; i < onlines.size() - 1; i++) {
+                message = message + onlines.get(i) + ",";
+            }
+            message = message + onlines.get(onlines.size() - 1);
+        }
+
+        for (ClientHandler client :
+                clients) {
+            client.send(message);
+
+        }
+
+    }
+    public void sendOfflineList(){
+        List<String> offlines=new ArrayList<>();
+        offlines.addAll(usersList.getOffLinePlayers());
+        String message="offlines:";
+
+        for(int i=0;i<offlines.size()-1;i++){
+            message=message+offlines.get(i)+",";
+        }
+        message=message+offlines.get(offlines.size()-1);
+
+        for (ClientHandler client :
+                clients) {
+            client.send(message);
+
+        }
     }
 
 
@@ -126,7 +169,6 @@ public class GameServer extends Thread{
         APlayers.remove(gamName);
         BPlayers.remove(gamName);
     }
-
 
     public void sendMsgToOpponent(ClientHandler from,String gameName,String msg){
         System.out.println("sending to opponent:" + msg);

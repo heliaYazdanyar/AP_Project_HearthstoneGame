@@ -1,5 +1,6 @@
 package Out;
 
+import gamePlayers.Player;
 import util.ImageLoader;
 import util.SoundPlayer;
 
@@ -18,7 +19,7 @@ public class MainMenu extends JPanel implements ActionListener {
     private JButton shop=new JButton("Shop");
     private JButton collections=new JButton("Collections");
     private JButton quit=new JButton("Quit");
-    private JButton setting=new JButton("Setting");
+    private JButton deleteAccount=new JButton("Delete Account");
     private JButton rank=new JButton("Rank");
     private GridBagConstraints gbc=new GridBagConstraints();
     private SoundPlayer sound= SoundPlayer.getInstance();
@@ -59,8 +60,22 @@ public class MainMenu extends JPanel implements ActionListener {
         });
 
         gbc.gridx=2; gbc.gridy=10;
-        this.add(setting,gbc);
-        setting.addActionListener(this);
+        this.add(deleteAccount,gbc);
+        deleteAccount.addActionListener(e->{
+            String pass= JOptionPane.showInputDialog("Enter Password:");
+            if(Player.logIn(MainFrame.player.getUsername(),pass)){
+                MainFrame.player.deleteAccount();
+                MainFrame.getInstance().setVisible(false);
+                Start start= new Start();
+                start.setVisible(true);
+                start.setSize(450,200);
+            }
+            else {
+                JOptionPane.showMessageDialog(this,"Wrong password",
+                        "Error",JOptionPane.ERROR_MESSAGE);
+            }
+
+        });
 
         gbc.gridx=2; gbc.gridy=11;
         this.add(quit,gbc);

@@ -171,6 +171,14 @@ public class ClientHandler extends Thread {
                     }
                     else gameServer.wrongToken(this);
                 }
+                else if(message.startsWith("UseHeroPower:")){
+                    String json=message.substring(14);
+                    UseHeroPower useHeroPower=UseHeroPower.getFromJson(json);
+                    if(useHeroPower.getAuthToken()==authToken){
+                        gameServer.sendMsgToOpponent(this,useHeroPower.getGameName(),message);
+                    }
+                    else gameServer.wrongToken(this);
+                }
 
 
 

@@ -319,37 +319,37 @@ public class Administer{
                 }
             }
         }
-//        else {
-//            if (fromDeck && enemy.getDeckCards().size() <= 0) {
-//                if(!online) gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
-//                if(enemy_handCard.size()<=0) lost(enemy);
-//            }
-//            else {
-//                //tartib
-//                int t = 0;
-//                if (deckReader && fromDeck) t = 0;
-//                else t = r.nextInt(friend_deck.size());
-//
-//                if (enemy_handCard.size() < 12) {
-//                    //applying curiocollector
-//                    for (Minion card :
-//                            enemy_CardsOnGround) {
-//                        if (card.getName().equalsIgnoreCase("CurioCollector")) {
-//                            card.setHP(card.getHP() + 1);
-//                            card.setAttack(card.getAttack() + 1);
-//                        }
-//
-//                    }
-//
-//                    addToHand(enemy, enemy_deck.get(t), fromDeck);
-//
-//                } else {
-//                   if(!online) gameView.infoGiver.logAction("Hand is Full", "", "");
-//                    if (fromDeck) removeFromDeck(enemy, enemy_deck.get(t));
-//                }
-//
-//            }
-//        }
+        else {
+            if (fromDeck && enemy.getDeckCards().size() <= 0) {
+                if(!online) gameView.infoGiver.logAction("No Card in", "enemy's deck", "");
+                if(enemy_handCard.size()<=0) lost(enemy);
+            }
+            else {
+                //tartib
+                int t = 0;
+                if (deckReader && fromDeck) t = 0;
+                else t = r.nextInt(friend_deck.size());
+
+                if (enemy_handCard.size() < 12) {
+                    //applying curiocollector
+                    for (Minion card :
+                            enemy_CardsOnGround) {
+                        if (card.getName().equalsIgnoreCase("CurioCollector")) {
+                            card.setHP(card.getHP() + 1);
+                            card.setAttack(card.getAttack() + 1);
+                        }
+
+                    }
+
+                    addToHand(enemy, enemy_deck.get(t), fromDeck);
+
+                } else {
+                   if(!online) gameView.infoGiver.logAction("Hand is Full", "", "");
+                    if (fromDeck) removeFromDeck(enemy, enemy_deck.get(t));
+                }
+
+            }
+        }
     }
     public void addToHand(InGamePlayer forWho,Card card,boolean fromDeck){
         if(forWho.getUsername().equalsIgnoreCase(friend.getUsername())){

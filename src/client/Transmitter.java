@@ -36,6 +36,12 @@ public class Transmitter extends Thread{
                 String token=message.substring(10);
                 gameClient.setToken(Integer.parseInt(token));
             }
+            else if(message.startsWith("onlines:")){
+                gameClient.setOnlineNames(message);
+            }
+            else if(message.startsWith("offlines:")){
+                gameClient.setOfflineNames(message);
+            }
 
             else if(message.startsWith("NewGame:")){
                 String gameJson=message.substring(8);
@@ -107,6 +113,11 @@ public class Transmitter extends Thread{
                 GameChatMessage gameChatMessage=GameChatMessage.getFromJson(json);
                 gameClient.receiveGameChatMsg(gameChatMessage.getMessage());
             }
+            else if(message.startsWith("UseHeroPower:")){
+                gameClient.administer.callHeroPower(gameClient.getEnemy());
+                gameClient.administer.setInformation("Enemy using HeroPower",false);
+            }
+
 
 
         }

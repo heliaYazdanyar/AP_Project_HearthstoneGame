@@ -13,7 +13,7 @@ import static util.Logger.logger;
 public class MainFrame extends JFrame {
     private static MainFrame instance;
     static Player player;
-    private GameClient client;
+    GameClient client;
 
 
 

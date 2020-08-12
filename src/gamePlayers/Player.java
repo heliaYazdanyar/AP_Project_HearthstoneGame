@@ -1,18 +1,23 @@
 package gamePlayers;
 
-import models.Card;
-import models.Deck;
-import models.Hero;
 import Out.MainFrame;
 import Out.Status;
 import Out.Store;
 import com.google.gson.Gson;
+import models.Card;
+import models.Deck;
+import models.Hero;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
+import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
 import static util.Logger.createNewLog;
 import static util.Logger.logger;
 
@@ -384,6 +389,51 @@ public class Player {
             result=Files.readAllLines(p);
         }catch(IOException w){ w.printStackTrace(); }
         return result;
+    }
+
+
+    public void deleteAccount(){
+        List<String> result;
+        try{
+            String directory=System.getProperty("user.dir");
+            Path p= Paths.get(directory+File.separator+"resources"+File.separator+"users.txt");
+            result=Files.readAllLines(p);
+            for (int i=0;i<result.size();i++){
+                if(result.get(i).startsWith(username)){
+                    result.remove(i);
+                }
+            }
+            Files.write(p,result);
+        }catch(IOException w){ w.printStackTrace(); }
+
+        //write in log
+        try {
+            Path p = Paths.get(System.getProperty("user.dir")+File.separator+"resources"+File.separator+
+                    "logs"+File.separator+username+"-Log.txt");
+            List<String> body = Files.readAllLines(p);
+            List<String> header = new ArrayList<>();
+            header.add(body.get(0));
+            header.add(body.get(1));
+            header.add(body.get(2));
+            body.removeAll(header);
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            header.add("deleted at: " + dtf.format(now));
+            List<String> log = new ArrayList<>();
+            log.addAll(header);
+            log.add("");
+            log.addAll(body);
+            Files.write(p, log);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //change directory name
+        File dir = new File(System.getProperty("user.dir")+File.separator+"resources"+File.separator+"users"+File.separator+username);
+        SecureRandom r=new SecureRandom();
+        String newDirName =r.nextInt()+"-DeletedAccount-";
+        File newDir = new File(dir.getParent() + File.separator + newDirName);
+        dir.renameTo(newDir);
     }
 }
 

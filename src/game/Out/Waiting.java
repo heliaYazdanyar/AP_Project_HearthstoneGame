@@ -19,8 +19,8 @@ public class Waiting extends JPanel {
     private JPanel centerPanel;
     private JLabel waitingLabel;
 
-    int width=600;
-    int height=400;
+    int width=1400;
+    int height=850;
 
     Waiting(GameClient client,PanelHandler panelHandler){
         this.client=client;
@@ -46,8 +46,10 @@ public class Waiting extends JPanel {
                 BufferedImage background= ImageLoader.getInstance().loadImage("waiting","jpeg",width,height);
                 g.drawImage(background,0,0,width,height,null);
 
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial", Font.BOLD, 60));
 
-                g.drawString("waiting for other player",200,200);
+                g.drawString("waiting for other player",500,200);
             }
         };
         this.add(centerPanel,BorderLayout.CENTER);
